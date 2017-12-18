@@ -66,7 +66,7 @@
         $learningInfoId = $conn->lastInsertId();
         $successInfo = "Learning Information Added successfully.";
         //insert into learning_info_examples
-        if(isset($_POST['example'])){
+        if(isset($_POST['example']) && !empty($_POST['example'])){
             foreach($_POST['example']  as $example){
                 $image = $example['image'];
                 $sub_image = $example['sub_image'];
