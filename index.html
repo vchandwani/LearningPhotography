@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Photography Learnings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <link href="select2.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#myDIV .tag").each(function () {
+                tags = $(this).attr("tag").split(' ');
+                $.each(tags, function (index, value) {
+                    var optionExists = ($('.search option[value=' + value + ']').length > 0);
+                    if (!optionExists) {
+                        $('.search').append('<option value=' + value + '>' + value + '</option>');
+                    }
+                });
+            });
+            $('.search').select2();
+            $('.search').select2({
+                placeholder: 'Search'
+            });
+
+            $('.search').on("select2:unselect", function (e) {
+                selectedtags = $('.search').val();
+                if (selectedtags.length > 0) {
+                    // make all tags hidden
+                    $("#myDIV div.tag").addClass("display-none");
+                    //display if tag attribute has the value
+                    $('#myDIV div.tag').each(function () {
+                        display = false;
+                        tag = $(this).attr('tag');
+
+                        $.each(selectedtags, function (index, value) {
+                            if (tag.indexOf(value) >= 0) {
+                                display = true;
+                                return false;
+                            }
+                        });
+                        if (display) {
+                            // Display the tag
+                            $(this).removeClass('display-none');
+                        }
+                    });
+                } else {
+                    // make all tags visible
+                    $("#myDIV div.tag").removeClass("display-none");
+
+                }
+
+            });
+            $('.search').on("select2:select", function (e) {
+                // make all tags hidden
+                $("#myDIV div.tag").addClass("display-none");
+                selectedtags = $('.search').val();
+                //display if tag attribute has the value
+                $('#myDIV div.tag').each(function () {
+                    display = false;
+                    tag = $(this).attr('tag');
+
+                    $.each(selectedtags, function (index, value) {
+                        if (tag.indexOf(value) >= 0) {
+                            display = true;
+                            return false;
+                        }
+                    });
+                    if (display) {
+                        // Display the tag
+                        $(this).removeClass('display-none');
+                    }
+                });
+            });
+        });        
+    </script>
+    <style>
+        .select2-results { background-color: #7701E4; }
+        .select2-results:active { background-color: #7701E4; }
+        .select2-results:hover { background-color: #7701E4; }
+        .select2-select2-selection__choice{color: #7701E4!important;}
+        
+        .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+            background-color: #7701E4;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        html *
+        {        
+            color: #e2e2e2 !important;        
+        }
+        .selec2{
+            color: black!important;
+        }
+        .container-fluid {
+            background-color: #2f2f2f;
+        }
+        .row.content {
+            height: 1500px
+        }
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }        
+        #myDIV {
+            width: 70%;
+        }
+        .sub-img {
+            height: 200px!important;
+            top: 70%;
+            position: absolute;
+            right: 0;
+        }
+        .header-text {
+            margin-left: 300px;
+        }      
+       
+        @media screen and (max-width: 1024px) {
+            .sub-img {
+                height: 70px!important;
+                top: 65%;
+                position: absolute;
+                right: 0;
+            }
+            .carousel-caption p {                
+                max-height: 100px;
+                overflow: scroll;                
+            }
+            .header-text {
+                margin-left: 150px;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            .sub-img {
+                height: 50px!important;
+                top: 65%;
+                position: absolute;
+                right: 0;
+            }
+            .carousel-caption p {                
+                max-height: 100px;
+                overflow: scroll;                
+            }
+            .header-text {
+                margin-left: 100px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            nav {
+                display: none;
+            }
+            .row.content {
+                height: auto;
+            }
+            #myDIV{
+                width: 100%;
+            }
+            .sub-img {
+                height: 50px!important;
+                top: 65%;
+                position: absolute;
+                right: 0;
+            }
+            .carousel-caption p {                
+                max-height: 100px;
+                overflow: scroll;                
+            }
+            .header-text {
+                margin-left: 50px;
+            }
+        }
+
+        .display-none {
+            display: none;
+        }
+
+        .display-block {
+            display: block;
+        }
+
+        .img-rounded {
+            border-radius: 24px;
+            height: 50px;
+        }
+        .float-left {
+            float: left;
+        }
+        h4 {
+            min-height: 50px;
+        }
+        .nav {
+            margin-bottom: 10px;
+        }
+        body {
+            position: relative;
+        }
+        ul.nav-pills {
+            top: 20px;
+            position: fixed;
+        }
+        button {
+            text-align: left;
+            background: transparent;
+            border: none;
+            border-bottom: solid 1px #7701E4;
+            padding: 0px;
+            width: 100%;
+        }
+        .glyphicon {
+            color: #C7AC00;
+        }
+        #home {
+            margin-top: 20px;
+        }
+        .search {
+            width: 100%;
+        }
+        .width-100 {
+            width: 100%;
+        }
+        .label-primary{
+            margin: 5px;
+        }   
+        .background-read {
+            background-color: #e1e592;
+        }     
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-sm-3" id="myScrollspy">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#potraits">Potraits</a>
+                    </li>
+                    <li>
+                        <a href="#lanscape">Landscape</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <div class="col-sm-9">
+                <div class="tab-content">
+                    <div id="head">
+                        <h4>
+                            <span class="float-left">
+                                <img class="img-rounded" alt="VC35Photography" src="https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/14925222_1276879082346493_898728771417053779_n.png?oh=75f39489632552b8c3a5bdea46087954&oe=5A90C335">
+                            </span>
+                            <span class="header-text">VC35Photography</span>
+                            
+                        </h4>
+                        <div style="width:70%">
+                            <p style="margin-top:14px"></p>
+                            <select class="search" name="searchtags[]" multiple="multiple">
+                            </select>
+                        </div>
+                    </div>
+                    <div id="myDIV">
+                        <div id="home">
+                            <h3>
+                                <button data-toggle="collapse" data-target="#home_info">
+                                <span class="glyphicon glyphicon-menu-right"></span> Overview</button>
+                            </h3>
+                            <div id="home_info" class="collapse">
+                                <div class="tag" tag="time-lapse night">
+                                    <span class="label label-primary">time-lapse</span>
+                                    <span class="label label-primary">night</span>
+                                    <p>
+                                        <ul>
+                                            <li>Turn off Image stablizer</li>
+                                            <li>ISO -> for day low</li>
+                                            <li>
+                                                Evening : decrease exposure
+                                                    increase ISO
+                                            </li>
+                                            <li>Use manual focus</li>
+                                            <li>Remote shutter control</li>
+                                        </ul>                                        
+                                    </p>
+                                </div>
+                                <div class="tag" tag="beach sun-down">
+                                    <span class="label label-primary">beach</span>
+                                    <span class="label label-primary">sun-down</span>
+                                    <p>
+                                        <ul>
+                                            <li>shutter-speed 20 secs</li>
+                                            <li>aperture f/18</li>
+                                            <li>ISO 50/100</li>
+                                        </ul>                                        
+                                    </p>
+                                </div>
+                                <div class="tag" tag="beach sun-up">
+                                    <span class="label label-primary">beach</span>
+                                    <span class="label label-primary">sun-up</span>
+                                    <p>
+                                        <ul>
+                                            <li>shutter-speed 1/100 secs</li>
+                                            <li>aperture f/8</li>
+                                            <li>ISO 100</li>
+                                        </ul>                                        
+                                    </p>
+                                </div>
+                                <div class="tag" tag="exposure-triangle">
+                                    <span class="label label-primary">exposure-triangle</span>
+                                    <p>
+                                        <ul>
+                                            <li>if one of the three is changed, then atleast one more is required to be changed</li>                                            
+                                        </ul>                                        
+                                    </p>
+                                </div>
+                                <div class="tag" tag="exposure-triangle aperture landscape">
+                                    <span class="label label-primary">exposure-triangle</span>
+                                    <span class="label label-primary">aperture</span>
+                                    <span class="label label-primary">landscape</span>
+                                    <p>
+                                        <ul>
+                                            <li>aperture effects depth of field DOF (amount of blur)</li>
+                                            <li>for landscape : should be between f/10 and f/14 </li>
+                                            <li>for potraits : f/1.8 between f/5</li>
+                                        </ul>                                        
+                                    </p>
+                                </div>
+                                <div class="tag" tag="exposure-triangle shutter-speed landscape sunrise sunset bird humming-bird">
+                                    <span class="label label-primary">exposure-triangle</span>
+                                    <span class="label label-primary">shutter-speed</span>
+                                    <span class="label label-primary">landscape</span>
+                                    <span class="label label-primary">sunrise</span>
+                                    <span class="label label-primary">sunset</span>
+                                    <span class="label label-primary">bird </span>
+                                    <span class="label label-primary">humming-bird</span>
+                                    <p>
+                                        <ul>
+                                            <li>shutter speed affects motion blur</li>
+                                            <li>for landscape : don't care as we shoot on tripod</li>
+                                            <li>sunrise/sunset : 10 - 30 sec exposure </li>
+                                            <li>bird : 1/1000 sec</li>
+                                            <li>humming bird freeze : 1/8000 sec</li>
+                                        </ul>                                        
+                                    </p>
+                                </div>
+                                <div class="tag" tag="metering hdr ev landscape exposure fog mist">
+                                    <span class="label label-primary">metering</span>
+                                    <span class="label label-primary">hdr</span>
+                                    <span class="label label-primary">ev</span>
+                                    <span class="label label-primary">landscape</span>
+                                    <span class="label label-primary">exposure</span>
+                                    <span class="label label-primary">fog</span>
+                                    <span class="label label-primary">mist</span>
+                                    <p>
+                                        <ul>
+                                            <li>measure brightness of the subject</li>
+                                            <li>Exposure bracketing three or more by one click of shutter (continious mode) , each in different exposure</li>
+                                            <li>example : -2 -1 0 +1 +2</li>
+                                            <li>hdr : blending multiple exposure to create one image</li>
+                                            <li>EV values : exposure compensation , to alter exposure from the value selected</li>
+                                            <li>For Landscape should be Ev -1, else sky is over exposed</li>
+                                            <li>Mist and Fog always over exposed EV +1</li>
+                                        </ul>                                        
+                                    </p>
+                                </div>
+                                <div class="tag" tag="exposure-triangle iso milkyway sky stars">
+                                    <span class="label label-primary">exposure-triangle</span>
+                                    <span class="label label-primary">iso</span>
+                                    <span class="label label-primary">sky</span>
+                                    <span class="label label-primary">milkyway</span>
+                                    <span class="label label-primary">stars</span>
+                                    <p>
+                                        <ul>
+                                            <li>iso manges sensitivity</li>
+                                            <li>it affects the noise</li>
+                                            <li>full frame camera , allows dynamic range</li>
+                                            <li>iso 100 and below , as low to iso 32 on full frame camera</li>
+                                            <li>milkyway above iso 1000 and iso 2000</li>
+                                        </ul>                                        
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="potraits">
+                            <h3>
+                                <button data-toggle="collapse" data-target="#potrait_info">
+                                    <span class="glyphicon glyphicon-menu-right"></span> Potraits</button>
+                            </h3>
+                            <div id="potrait_info" class="collapse">
+                                <div class="tag" tag="potraits examples">
+                                    <span class="label label-primary">potraits</span>
+                                    <span class="label label-primary">examples</span>
+                                    <p>
+                                            <div id="potraitsCarousel" class="carousel" data-ride="carousel" data-interval=false>
+                                                <!-- Indicators -->
+                                                <ol class="carousel-indicators">
+                                                    <li data-target="#potraitsCarousel" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#potraitsCarousel" data-slide-to="1"></li>
+                                                    <li data-target="#potraitsCarousel" data-slide-to="2"></li>
+                                                    <li data-target="#potraitsCarousel" data-slide-to="3"></li>
+                                                    <li data-target="#potraitsCarousel" data-slide-to="4"></li>
+                                                    <li data-target="#potraitsCarousel" data-slide-to="5"></li>
+                                                    <li data-target="#potraitsCarousel" data-slide-to="6"></li>
+                                                    <li data-target="#potraitsCarousel" data-slide-to="7"></li>
+                                                </ol>                                            
+                                                <!-- Wrapper for slides -->
+                                                <div class="carousel-inner">                                            
+                                                    <div class="item active">
+                                                        <img class="img-responsive width-100" src="https://i1.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/split-lighting-pattern1.jpg?resize=600%2C900&ssl=1" alt="Split Lighting">
+                                                        <img class="sub-img" src="https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/split-lighting-by-Darlene-Hildebrandt.png?resize=381%2C284&ssl=1" alt="Split Lighting">
+                                                        <div class="carousel-caption">
+                                                            <h3>Split Lighting</h3>
+                                                            <p>Split lighting is exactly as the name implies – it splits the face exactly into equal halves with one side being in the light, and the other in shadow. It is often used to create dramatic images for things such as a portrait of a musician or an artist. Split lighting tends to be a more masculine pattern and as such is usually more appropriate or applicable on men than it is for women.
+                                                                To achieve split lighting simply put the light source 90 degrees to the left or right of the subject, and possibly even slightly behind their head.
+                                                            </p>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="item">
+                                                        <img class="img-responsive width-100" src="https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Catch-lights-example.jpg?resize=600%2C400&ssl=1" alt="Catchlight">
+                                                        <div class="carousel-caption">
+                                                            <h3>Catchlight</h3>
+                                                            <p>See how the bright spot is actually hexagon with a dark centre? That’s the light I used which was a small hexagon shaped soft box on my Canon speedlight.
+                                                                This is what is known as the “catchlight”. Without the eye of the subject catching this light, the eyes will appear dark, dead and lifeless. You need to ensure that at least one eye has a catchlight to give the subject life. Notice it also lightens the iris and brightens the eye overall. This also adds to the feeling of life and gives them a sparkle.
+                                                            </p>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="item">
+                                                        <img class="img-responsive width-100" src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Loop-lighting-pattern.jpg?resize=600%2C900&ssl=1" alt="Loop Lighting">
+                                                        <div class="carousel-caption">
+                                                            <h3>Loop Lighting</h3>
+                                                            <p>Loop lighting is made by creating a small shadow of the subjects noses on their cheeks. To create loop lighting, the light source must be slightly higher than eye level and about 30-45 degrees from the camera (depends on the person, you have to learn how to read people’s faces).
+                                                            </p>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="item">
+                                                        <img class="img-responsive width-100" src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Loop-lighting-pattern-example.jpg?resize=600%2C400&ssl=1" alt="Loop Lighting">
+                                                        <img class="sub-img" src="https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/loop-lighting-by-Darlene-Hildebrandt.png?resize=399%2C527&ssl=1" alt="Loop Lighting">
+                                                        <div class="carousel-caption">
+                                                            <h3>Loop Lighting</h3>
+                                                            <p>Look at this image to see where the shadows fall, and on their left sides you can see a small shadow of their noses. In loop lighting the shadow of the nose and that of the cheek do NOT touch. Keep the shadow small and slightly downward pointing, but be aware of having your light source too high which will create odd shadows and cause loss of the catchlights. Loop light is probably the most common or popular lighting pattern as it is easy to create and flatters most people.
+                                                            </p>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="item">
+                                                        <img class="img-responsive width-100" src="https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Rembrandt-lighting-pattern.jpg?resize=600%2C900&ssl=1" alt="Rembrandt Lighting">
+                                                        <img class="sub-img" src="https://i1.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Rembrandt-lighting-by-Darlene-Hildebrandt.png?resize=489%2C507&ssl=1" alt="Rembrandt Lighting">
+                                                        <div class="carousel-caption">
+                                                            <h3>Rembrandt Lighting</h3>
+                                                            <p>Rembrandt lighting is so named because the Rembrandt the painter often used this pattern of light in his paintings, as you can see in his self portrait here. Rembrandt lighting is identified by the triangle of light on the cheek. Unlike loop lighting where the shadow of the nose and cheek do not touch, in Rembrandt lighting they do meet which, creates that trapped little triangle of light in the middle. To create proper Rembrandt lighting make sure the eye on the shadow side of the face has light in it and has a catch light, otherwise the eye will be “dead” and not have a nice sparkle. Rembrandt lighting is more dramatic, so like split lighting it creates more mood and a darker feel to your image. Use it appropriately.
+                                                            </p>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="item">
+                                                        <img class="img-responsive width-100" src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Butterfly-lighting-pattern.jpg?resize=600%2C900&ssl=1" alt="Butterfly Lighting">
+                                                        <img class="sub-img" src="https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/butterfly-lighting-by-Darlene-Hildebrandt-1.png?resize=202%2C459&ssl=1" alt="Butterfly Lighting">
+                                                        <div class="carousel-caption">
+                                                            <h3>Butterfly Lighting</h3>
+                                                            <p>Broad lighting is when the subject’s face is slightly turned away from centre, and the side of the face which is toward the camera (is broader) is in the light. This produces a larger area of light on the face, and a shadow side which appears smaller. Broad lighting is sometimes used for “high key” portraits. This type of lighting makes a person’s face look broader or wider (hence the name) and can be used on someone with a very slim face to widen it. Most people however want to look slimmer, not wider so this type of lighting would not be appropriate for someone who is heavier or round faced.
+                                                                To create broad lighting the face is turned away from the light source. Notice how the side of the face that is towards the camera has the most light on it and the shadows are falling on the far side of the face, furthest from the camera. Simply put broad lighting illuminates the largest part of the face showing.
+                                                            </p>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="item">
+                                                        <img class="img-responsive width-100" src="https://i1.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Broad-lighting.jpg?resize=600%2C900&ssl=1" alt="Broad Lighting">
+                                                        <img class="sub-img" src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/broad-lighting-by-Darlene-Hildebrandt.png?resize=355%2C418&ssl=1" alt="Broad Lighting">
+                                                        <div class="carousel-caption">
+                                                            <h3>Broad Lighting</h3>
+                                                            <p>Butterfly lighting is aptly named for the butterfly shaped shadow that is created under the nose by placing the main light source above and directly behind the camera. The photographer is basically shooting underneath the light source for this pattern. It is most often used for glamour style shots and to create shadows under the cheeks and chin. It is also flattering for older subjects as it emphasizes wrinkles less than side lighting.
+                                                                Butterfly lighting is created by having the light source directly behind the camera and slightly above eye or head level of the subject (depends on the person). It is sometimes supplemented by placing a reflector directly under their chin, with the subject themselves even holding it! This pattern flatters subjects with defined or prominent cheek bones and a slim face. Someone with a round, wide face would look better with loop or even split to slim their face. This pattern is tougher to create using windowlight or a reflector alone. Often a harder light source like the sun or a flash is needed to produce the more defined shadow under the nose.
+                                                            </p>
+                                                        </div>                                                        
+                                                    </div>
+                                                    <div class="item">
+                                                        <img class="img-responsive width-100" src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Short-lighting.jpg?resize=600%2C900&ssl=1" alt="Short Lighting">
+                                                        <img class="sub-img" src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/short-lighting-by-Darlene-Hildebrandt.png?resize=300%2C351&ssl=1" alt="Short Lighting">
+                                                        <div class="carousel-caption">
+                                                            <h3>Short Lighting</h3>
+                                                            <p>Short lighting is the opposite of broad lighting. As you can see by the example here, short lighting puts the side turned towards the camera (that which appears larger) in more shadow. It is often used for low key, or darker portraits. It puts more of the face in shadow, is more sculpting, add 3D qualities, and is slimming and flattering for most people.
+                                                                In short lighting, the face is turned towards the light source this time. Notice how the part of the face that is turned away from the camera has the most light on it and the shadows are falling on the near side of the face, closet to the camera. Simply put short lighting has shadows on the largest part of the face showing.
+                                                            </p>
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>                                               
+                                                <!-- Left and right controls -->
+                                                <a class="left carousel-control" href="#potraitsCarousel" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="right carousel-control" href="#potraitsCarousel" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>   
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="lanscape">
+                            <h3>
+                                <button data-toggle="collapse" data-target="#landscape_info">
+                                    <span class="glyphicon glyphicon-menu-right"></span> Landscape</button>
+                            </h3>
+                            <div id="landscape_info" class="collapse">
+                                <div class="tag" tag="aperture iso">
+                                    <span class="label label-primary">aperture</span>
+                                    <span class="label label-primary">iso</span>
+                                    <p>
+                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid">
+        <p class="text-center">VC35Photography</p>
+    </footer>
+
+</body>
+
+</html>
