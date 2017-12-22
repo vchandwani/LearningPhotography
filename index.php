@@ -17,10 +17,13 @@
             $("#myDIV .tag").each(function () {
                 tags = $(this).attr("tag").split(' ');
                 $.each(tags, function (index, value) {
-                    var optionExists = ($('.search option[value=' + value + ']').length > 0);
-                    if (!optionExists) {
-                        $('.search').append('<option value=' + value + '>' + value + '</option>');
+                    if(value && value!=null){
+                        var optionExists = ($('.search option[value=' + value + ']').length > 0);
+                        if (!optionExists) {
+                            $('.search').append('<option value=' + value + '>' + value + '</option>');
+                        }
                     }
+                    
                 });
             });
             $('.search').select2();
@@ -113,25 +116,24 @@
             array_push($categoriesIdArray,$row['id']);
             $categoriesArray[$row['id']] = $row['category'];
         }
-        if($row['description']){
-            $categoriesInfo[$row['category']][$row['infoId']]['id'] = $row['infoId'];
-            $categoriesInfo[$row['category']][$row['infoId']]['category_id'] = $row['category_id'];
-            $categoriesInfo[$row['category']][$row['infoId']]['tags'] = $row['tags'];
-            $categoriesInfo[$row['category']][$row['infoId']]['description'] = $row['description'];            
-            
-            $rowID = $row['infoId'];
-            // Query to get examples
-            $sql1 = "SELECT learning_info_examples.* 
-            FROM learning_info_examples as learning_info_examples
-            WHERE learning_info_id = $rowID
-            ORDER BY learning_info_examples.learning_info_id ASC";
-            
-            $stmt1 = $conn->prepare($sql1);
-            $stmt1->execute();  
-            while($row1 = $stmt1->fetch(PDO::FETCH_ASSOC)) {
-                $categoriesInfoExamples[$row['category']][$row['infoId']][] = $row1;
-            }
-        }        
+        
+        $categoriesInfo[$row['category']][$row['infoId']]['id'] = $row['infoId'];
+        $categoriesInfo[$row['category']][$row['infoId']]['category_id'] = $row['category_id'];
+        $categoriesInfo[$row['category']][$row['infoId']]['tags'] = $row['tags'];
+        $categoriesInfo[$row['category']][$row['infoId']]['description'] = $row['description'];            
+        
+        $rowID = $row['infoId'];
+        // Query to get examples
+        $sql1 = "SELECT learning_info_examples.* 
+        FROM learning_info_examples as learning_info_examples
+        WHERE learning_info_id = $rowID
+        ORDER BY learning_info_examples.learning_info_id ASC";
+        
+        $stmt1 = $conn->prepare($sql1);
+        $stmt1->execute();  
+        while($row1 = $stmt1->fetch(PDO::FETCH_ASSOC)) {
+            $categoriesInfoExamples[$row['category']][$row['infoId']][] = $row1;
+        }
     }
     if(isset($_POST['deleteCategory'])){
         // Send delete request
@@ -166,10 +168,7 @@
             } else {
                 $error = "Category already exist!";
             } 
-        }
-
-
-        
+        }        
     }
 
     if(isset($_POST['deleteCategoryInfoId'])){

@@ -168,6 +168,9 @@ button {
 .margin-top20 {
     margin-bottom : 20px;
 }
+.margin-right20 {
+    margin-right : 20px;
+}
 .bordered{
     border: 1px solid #ed8e1a;
     padding: 5px;
@@ -194,4 +197,7 @@ strong, .close {
 .tag{
     border-bottom: 1px solid;
     margin-bottom: 10px;
+}
+.checkbox{
+    max-height: 250px;
 }
