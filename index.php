@@ -10,6 +10,7 @@
     <link href="select2.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
 
     <script>
@@ -67,7 +68,7 @@
                 $('#myDIV div.tag').each(function () {
                     display = false;
                     tag = $(this).attr('tag');
-
+                    
                     $.each(selectedtags, function (index, value) {
                         if (tag.indexOf(value) >= 0) {
                             display = true;
@@ -80,8 +81,8 @@
                     }
                 });
             });
-            
-        });        
+                       
+        });      
     </script>
     
 </head>
@@ -232,6 +233,7 @@
         <div class="row">
             <nav class="col-sm-3" id="myScrollspy">
                 <ul class="nav nav-pills nav-stacked">
+                    <li class="hidden-sm hidden-xs"><img class="img-rounded big-img" alt="VC35Photography" src="favicon.png"></li>
                     <?php
                      foreach($categories as $val){
                         echo '<li><a href="#'.$val.'">'.$val.'</a></li>';  
@@ -244,11 +246,10 @@
                 <div class="tab-content">
                     <div id="head">
                         <h4>
-                            <span class="float-left">
-                                <img class="img-rounded" alt="VC35Photography" src="https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/14925222_1276879082346493_898728771417053779_n.png?oh=75f39489632552b8c3a5bdea46087954&oe=5A90C335">
+                            <span class="hidden-lg hidden-md float-left">
+                                <img class="img-rounded small-img" alt="VC35Photography" src="favicon.png">
                             </span>
-                            <span class="header-text">VC35Photography</span>
-                            
+                            <span class="header-text">VC35Photography</span>                            
                         </h4>
                         <div style="width:70%">
                             <p style="margin-top:14px"></p>
