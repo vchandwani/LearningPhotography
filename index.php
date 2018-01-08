@@ -327,6 +327,7 @@
                                 <?php
                                 foreach ($categoriesInfo[$category] as $id => $categoryInfo) {
                                     $tagsArray = [];
+                                    $tagsString = '';
                                     $tagsArray = explode(" ", $categoryInfo['tags']);
                                     
                                     $replaceArray = array("<ul>","<li>","</ul>");
@@ -336,7 +337,8 @@
                                 <div class="tag" tag="<?php echo $categoryInfo['tags']; ?>">
                                     <?php 
                                         echo '<div class="row"> <div class="col-xs-10">';
-                                        foreach($tagsArray as $keyVal=>$tagsval) {                                            
+                                        foreach($tagsArray as $keyVal=>$tagsval) {
+                                            $tagsString = $tagsString.$tagsval;                            
                                             echo '<span class="label label-primary span-warp">'.$tagsval.'</span>';
                                         }  ?>
                                     <?php echo '</div><div class="col-xs-2 padding-0">'; 
@@ -399,15 +401,15 @@
                                             echo htmlspecialchars_decode($categoryInfo['description']);
                                             if(isset($categoriesInfoExamples[$category][$categoryInfo['id']])) {
                                                 // Display examples
-                                                echo '<div id="'.$category.'Carousel" class="carousel" data-ride="carousel" data-interval=false>';
+                                                echo '<div id="'.$category.$tagsString.'Carousel" class="carousel" data-ride="carousel" data-interval=false>';
                                                     //Indicators
                                                     echo '<ol class="carousel-indicators">';
                                                     $ol = 0;
                                                     foreach($categoriesInfoExamples[$category][$categoryInfo['id']] as $exampleId=>$exampleVal){
                                                         if($ol == 0){
-                                                            echo '<li data-target="#'.$category.'Carousel" data-slide-to="'.$ol.'" class="active"></li>';
+                                                            echo '<li data-target="#'.$category.$tagsString.'Carousel" data-slide-to="'.$ol.'" class="active"></li>';
                                                         } else {
-                                                            echo '<li data-target="#'.$category.'Carousel" data-slide-to="'.$ol.'"></li>';
+                                                            echo '<li data-target="#'.$category.$tagsString.'Carousel" data-slide-to="'.$ol.'"></li>';
                                                         }                                                    
                                                         $ol++;                                                
                                                     }
@@ -462,7 +464,7 @@
                                                         } else {
                                                             echo '<div class="item">';
                                                         }
-                                                            echo '<img class="img-responsive width-100" src="'.$exampleVal['image'].'" alt="'.$exampleVal['image_header'].'">';
+                                                            echo '<img class="img-responsive" src="'.$exampleVal['image'].'" alt="'.$exampleVal['image_header'].'">';
                                                             if($exampleVal['sub_image']){
                                                                 echo '<img class="sub-img" src="'.$exampleVal['sub_image'].'" alt="'.$exampleVal['image_header'].'">';
                                                             }                                                            
@@ -489,11 +491,11 @@
                                                     }                                                    
                                                     echo '</div>';
                                                     // Left and right controls 
-                                                    echo '<a class="left carousel-control" href="#'.$category.'Carousel" data-slide="prev">
+                                                    echo '<a class="left carousel-control" href="#'.$category.$tagsString.'Carousel" data-slide="prev">
                                                         <span class="glyphicon glyphicon-chevron-left"></span>
                                                         <span class="sr-only">Previous</span>
                                                     </a>
-                                                    <a class="right carousel-control" href="#'.$category.'Carousel" data-slide="next">
+                                                    <a class="right carousel-control" href="#'.$category.$tagsString.'Carousel" data-slide="next">
                                                         <span class="glyphicon glyphicon-chevron-right"></span>
                                                         <span class="sr-only">Next</span>
                                                     </a>';

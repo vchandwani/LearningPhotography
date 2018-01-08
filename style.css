@@ -209,3 +209,6 @@ strong, .close {
 mark{
     background-color: #C7AC00;
 }
+.img-responsive {
+    margin: 0 auto;    
+}
