@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql100.epizy.com
--- Generation Time: Jan 08, 2018 at 12:45 AM
+-- Generation Time: Jan 08, 2018 at 09:28 PM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -86,10 +86,10 @@ INSERT INTO `learning_info` (`id`, `category_id`, `description`, `tags`) VALUES
 (20, 1, '<ul><li>Shooting in Tripod:</li><li>\r\nMax stability</li><li>\r\nshooting in low light</li><li>\r\ncan use filters</li><li>\r\ncan do long exposures</li><li>\r\nsetting up takes times</li><li>\r\ngive sense of motion</li></ul>', 'tripod'),
 (21, 1, '<ul><li>Tripod and Mono-pod:</li><li>\r\nLow light photography</li><li>\r\nLight trails Astronomical Time lapse Panorama Long Exposure</li><li>\r\nAbility to shoot of very low angles\r\n\r\nMonopod is great to shoot on move and is more portable\r\ncan be used to capture higher angles</li></ul>', 'time-lapse tripod  monopod long-exposure panorama light-trails astronomical'),
 (22, 1, '<ul><li>Shutter release:</li><li>\r\navoid camera shake</li><li>\r\nshooting in bracketing mode</li><li>\r\nshooting in low light with tripod</li><li>\r\nkeep shutter locked as long as you want</li><li>\r\nIf shutter speed is above 30 sec then use shutter release cable  else set shutter timer and set exposure length</li></ul>', 'tripod  shutter-release bracketing-mode'),
-(23, 1, '<ul><li>Hyper focal distance</li><li>\r\nright focusing distance that gives your photos the greatest depth of field</li><li>\r\nFocus at a particular point between foreground and background  which makes both foreground and background elements of the scene appear reasonably sharp</li><li>\r\nUsually 1/3rd into the frame</li><li>\r\nalways shoot in hyper focal distance if you are traveller and landscape photographer</li><li></li></ul>', 'landscape  hyper-focal-distance traveller'),
+(23, 1, '<ul><li>Hyper focal distance</li><li> \r\nright focusing distance that gives your photos the greatest depth of field</li><li> \r\nFocus at a particular point between foreground and background  which makes both foreground and background elements of the scene appear reasonably sharp</li><li> \r\nUsually 1/3rd into the frame</li><li> \r\nalways shoot in hyper focal distance if you are traveller and landscape photographer</li></ul> ', 'landscape  hyper-focal-distance traveller'),
 (24, 1, '<ul><li>Narrow DOF : Larger Aperture f/1.8 f/2.8 narrowed zone of sharpness</li><li>  \r\nWide DOF : Small aperture f/8 f/11 and above f/14 and so</li></ul>', 'dof depth-of-field'),
 (25, 1, '<ul><li>Camera mode dial in M mode or B bulb mode</li><li> Iso 100 ensure auto Iso is off</li><li> shutter speed in bulb</li><li> aperture f/11 or within f/8 and f/16</li><li> white balance in sunlight</li><li> focus in manual turn lens stabilizer  off</li></ul>', 'fireworks'),
-(26, 1, '<ul><li>Key Takeaways:\r\n\r\nBuild a strong foundation</li><li>\r\nYou can''t remember everything during your photo shoot</li><li>\r\nFocus on getting sharp image and right exposure</li><li>\r\nAvoid falling for the trap of changing lens for every shot ( Try to carry one body and one lens for e.g.: 24-70mm or 28-300mm) </li><li>\r\nTry all modes to know what works best in what condition</li><li>\r\nUnderstand the limitation of kit lens</li><li>\r\nControl the noise</li><li>\r\nWhen to use tripod and when to go hand held</li><li>\r\nUse depth of field to your advantage</li><li>\r\nHyper focal distance - key to creating sharpness across the frame. (1/3rd into frame)\r\n</li></ul>', 'Fundamentals Photography'),
+(26, 1, '<ul><li>Build a strong foundation</li><li> \r\nYou can''t remember everything during your photo shoot</li><li> \r\nFocus on getting sharp image and right exposure</li><li> \r\nAvoid falling for the trap of changing lens for every shot ( Try to carry one body and one lens for e.g.: 24-70mm or 28-300mm) </li><li> \r\nTry all modes to know what works best in what condition</li><li> \r\nUnderstand the limitation of kit lens</li><li> \r\nControl the noise</li><li> \r\nWhen to use tripod and when to go hand held</li><li> \r\nUse depth of field to your advantage</li><li> \r\nHyper focal distance - key to creating sharpness across the frame. (1/3rd into frame)\r\n</li><li> </li></ul>', 'Fundamentals Photography'),
 (27, 1, '', 'aperture-mode av aperture wildlife  BOKEH Havelock-Island Andaman starbust');
 
 -- --------------------------------------------------------
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `learning_info_examples` (
   `image_description` longtext,
   PRIMARY KEY (`id`),
   KEY `learning_info_id` (`learning_info_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Dumping data for table `learning_info_examples`
@@ -131,7 +131,14 @@ INSERT INTO `learning_info_examples` (`id`, `learning_info_id`, `image`, `sub_im
 (15, 27, 'http://vc35photography.epizy.com/resources/Aperture4.jpg', '', 'starbust', 'f/22 allows starbust'),
 (16, 27, 'http://vc35photography.epizy.com/resources/Aperture5.jpg', '', '', ''),
 (17, 27, 'http://vc35photography.epizy.com/resources/Aperture6.jpg', '', 'Wildlife', ''),
-(18, 27, 'http://vc35photography.epizy.com/resources/Aperture7.jpg', '', '', '');
+(18, 27, 'http://vc35photography.epizy.com/resources/Aperture7.jpg', '', '', ''),
+(19, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance.jpg', '', '', ''),
+(20, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance2.jpg', '', '', ''),
+(21, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance3.jpg', '', '', ''),
+(22, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance4.jpg', '', '', ''),
+(23, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance5.jpg', '', '', ''),
+(24, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance6.jpg', '', '', ''),
+(25, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance7.jpg', '', '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
