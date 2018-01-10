@@ -1,18 +1,8 @@
+<?php include 'session.php';  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Photography Learnings</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="select2.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-
-
+    <?php include 'header.html';  ?>
     <script>
         $(document).ready(function () {
             $("#myDIV .tag").each(function () {
@@ -251,8 +241,11 @@
                             </span>
                             <span class="header-text">VC35Photography</span>                            
                         </h4>
-                        <div style="width:70%">
-                            <p style="margin-top:14px"></p>
+                        <h6 class="logout search-width">
+                            <a href="logout.php">Logout</a>
+                        </h6>
+                        <div class="search-width">
+                            <p class="margin-top14"></p>
                             <select class="search" name="searchtags[]" multiple="multiple">
                             </select>
                         </div>
@@ -517,8 +510,6 @@
             </div>
         </div>
     </div>
-    <footer class="container-fluid">
-        <p class="text-center">VC35Photography</p>
-    </footer>
+    <?php include 'footer.html';  ?>    
 </body>
 </html>

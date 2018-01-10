@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql100.epizy.com
--- Generation Time: Jan 09, 2018 at 05:52 AM
+-- Generation Time: Jan 10, 2018 at 05:02 AM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -181,6 +181,28 @@ INSERT INTO `learning_info_examples` (`id`, `learning_info_id`, `image`, `sub_im
 (55, 37, 'http://vc35photography.epizy.com/resources/Metering8.JPG', '', '', 'entire center of image is illuminated'),
 (56, 37, 'http://vc35photography.epizy.com/resources/Metering10.JPG', '', '', ''),
 (57, 37, 'http://vc35photography.epizy.com/resources/Metering9.JPG', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roles`
+--
+
+CREATE TABLE IF NOT EXISTS `roles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `salt` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user` (`username`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `username`, `password`, `salt`) VALUES
+(1, 'admin', '28997f95faab2c2376e1b1bd9808dd6ddedfa7d4', '$%^7**');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

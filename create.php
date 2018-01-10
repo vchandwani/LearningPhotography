@@ -1,4 +1,4 @@
-<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+<?php include 'session.php';  ?>
 <?php
     include 'connection.php';
     $error = '';
@@ -169,15 +169,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Photography Learnings</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="select2.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <?php include 'header.html';  ?>
     <script>  
     $(document).ready(function () {
         var count = 0;
@@ -225,6 +217,9 @@
             <strong><?php echo $success ;?></strong>
         </div>
         <?php } ?>
+        <h6 class="row logout margin-right20">
+            <a href="logout.php">Logout</a>
+        </h6>
         <div class="row">
             <div class="col-sm-12">
                 <h3>Create Category</h3>
@@ -296,7 +291,5 @@
             <button type="submit" class="margin-top10 btn btn-primary col-sm-4 col-sm-push-4">Submit</button>
         </form>        
     </div>
-    <footer class="container-fluid">
-        <p class="text-center">VC35Photography</p>
-    </footer>
+    <?php include 'footer.html';  ?>    
 </body>

@@ -47,6 +47,9 @@ footer {
     max-width: 90%;
     margin: auto;
 }  
+.search-width{
+    width:70%;
+}
 
 @media screen and (max-width: 1024px) {
     .sub-img {
@@ -100,6 +103,9 @@ footer {
     }
     .header-text {
         margin-left: 50px;
+    }
+    .search-width{
+        width:100%;
     }
 }
 
@@ -211,4 +217,13 @@ mark{
 }
 .img-responsive {
     margin: 0 auto;    
+}
+.logout{
+    text-align: right;
+}
+.margin-top14 {
+    margin-top:14px;
+}
+.alert-danger {
+    color: #a94442!important;
 }
