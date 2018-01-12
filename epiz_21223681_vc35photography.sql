@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql100.epizy.com
--- Generation Time: Jan 10, 2018 at 05:02 AM
+-- Generation Time: Jan 11, 2018 at 07:34 PM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `learning` (
   `category` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `category` (`category`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `learning`
@@ -40,7 +40,8 @@ CREATE TABLE IF NOT EXISTS `learning` (
 INSERT INTO `learning` (`id`, `category`) VALUES
 (1, 'Home'),
 (2, 'Portraits'),
-(3, 'Landscape');
+(3, 'Landscape'),
+(4, 'Tools');
 
 -- --------------------------------------------------------
 
@@ -57,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `learning_info` (
   KEY `category_id` (`category_id`),
   KEY `category_id_2` (`category_id`),
   KEY `category_id_3` (`category_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=48 ;
 
 --
 -- Dumping data for table `learning_info`
@@ -100,7 +101,17 @@ INSERT INTO `learning_info` (`id`, `category_id`, `description`, `tags`) VALUES
 (34, 1, '', 'metering examples  spot-metering'),
 (35, 1, '', 'metering examples  evaluative-metering'),
 (36, 1, '', 'metering examples  partial-metering'),
-(37, 1, '', 'metering examples ');
+(37, 1, '', 'metering examples '),
+(38, 1, '<ul><li>Law of Reciprocity</li><li>  \r\nVariables : Relationship between (ISO  Shutter Speed and Aperture) and Stops of light</li></ul>', 'law-of-reciprocity'),
+(39, 1, '<ul><li>White balance : The color of an object is affected by the lighting conditions under which it is viewed.</li><li>\r\nOur eyes and our brain compensate for different types of light but digital cameras need help to emulate this process. To compensate for different types of lighting and render a white object white</li><li>\r\nThe white balance setting helps to do just that.\r\n</li></ul>', 'white-balance'),
+(40, 1, '<ul><li>UV filter : helps cut uv rays</li></ul>', 'filters uv-filter'),
+(41, 1, '<ul><li>Polarizing : helps to cut haze</li><li> reflection. Water reflection</li></ul>', 'filters  polarizing-filter reflection'),
+(42, 1, '<ul><li>Infrared : To Shoot infrared</li></ul>', 'filters  infrared-filter'),
+(43, 1, '<ul><li>Black and White : native mono chrome</li></ul>', 'filters  black-white-filter'),
+(44, 1, '<ul><li>Warming : very widely used for landscape</li></ul>', 'landscape filters  warming-filters'),
+(45, 1, '<ul><li> ND Filter</li><li>\r\n  Soft Grad : horizon is not very clear</li><li>\r\n  Hard Grad : Definitive line between. Horizon is clear and definitive line can be found</li><li> sunset at beach</li><li>\r\n  Neutral Grad : entire filter cuts specific stop of light. Used for slower shutter  waterfall  sun beach  river</li></ul>', 'beach sun-up filters  nd-filter river waterfall'),
+(46, 1, '<ul><li>Types of Filters </li><li> \r\nCircular : For a specific lens size. Easy to use. Use step up ring to fit higher sized circular filter</li><li> \r\nSquared : 100mm and higher size. Filter holder and adaptive ring   Step up and step down ring</li><li> \r\nOne fits all lenses and easier to stack</li></ul>', 'filters '),
+(47, 4, '<ul><li>Depth of Field (DOF) and Hyper Focal Distance (HFD)\r\n<div id="ppdof"></div><script src="//photopills.com/widgets/ppdof.min.js" async></script></li></ul>', 'depth-of-field dof hyper-focal-distance');
 
 -- --------------------------------------------------------
 
@@ -117,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `learning_info_examples` (
   `image_description` longtext,
   PRIMARY KEY (`id`),
   KEY `learning_info_id` (`learning_info_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=58 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=66 ;
 
 --
 -- Dumping data for table `learning_info_examples`
@@ -180,7 +191,15 @@ INSERT INTO `learning_info_examples` (`id`, `learning_info_id`, `image`, `sub_im
 (54, 37, 'http://vc35photography.epizy.com/resources/Metering6.JPG', '', '', 'entire center of image is illuminated'),
 (55, 37, 'http://vc35photography.epizy.com/resources/Metering8.JPG', '', '', 'entire center of image is illuminated'),
 (56, 37, 'http://vc35photography.epizy.com/resources/Metering10.JPG', '', '', ''),
-(57, 37, 'http://vc35photography.epizy.com/resources/Metering9.JPG', '', '', '');
+(57, 37, 'http://vc35photography.epizy.com/resources/Metering9.JPG', '', '', ''),
+(58, 39, 'http://vc35photography.epizy.com/resources/WB1.JPG', '', '', ''),
+(59, 39, 'http://vc35photography.epizy.com/resources/WB2.JPG', '', '', ''),
+(60, 39, 'http://vc35photography.epizy.com/resources/WB3.JPG', '', '', 'was hot day, feels like that'),
+(61, 39, 'http://vc35photography.epizy.com/resources/WB4.JPG', '', '', 'deliberately made the image cool, on boat white looks white not any other color'),
+(62, 39, 'http://vc35photography.epizy.com/resources/WB5.JPG', '', '', 'Misty morning'),
+(63, 39, 'http://vc35photography.epizy.com/resources/WB6.JPG', '', '', 'whole chair is not blue'),
+(64, 39, 'http://vc35photography.epizy.com/resources/WB7.JPG', '', '', 'Hills no sunrise and sunset, unless sunrise and sunset point. Tweaks WB to greener to reflect the mood'),
+(65, 39, 'http://vc35photography.epizy.com/resources/WB8.JPG', '', '', 'Very early in the morning, almost darkness, 6-7 sec exposure. Very cold and Dark place. ');
 
 -- --------------------------------------------------------
 
