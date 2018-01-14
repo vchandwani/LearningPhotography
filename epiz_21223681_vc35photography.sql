@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql100.epizy.com
--- Generation Time: Jan 11, 2018 at 07:34 PM
+-- Generation Time: Jan 13, 2018 at 11:46 PM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `learning_info` (
   KEY `category_id` (`category_id`),
   KEY `category_id_2` (`category_id`),
   KEY `category_id_3` (`category_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=48 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=54 ;
 
 --
 -- Dumping data for table `learning_info`
@@ -111,7 +111,13 @@ INSERT INTO `learning_info` (`id`, `category_id`, `description`, `tags`) VALUES
 (44, 1, '<ul><li>Warming : very widely used for landscape</li></ul>', 'landscape filters  warming-filters'),
 (45, 1, '<ul><li> ND Filter</li><li>\r\n  Soft Grad : horizon is not very clear</li><li>\r\n  Hard Grad : Definitive line between. Horizon is clear and definitive line can be found</li><li> sunset at beach</li><li>\r\n  Neutral Grad : entire filter cuts specific stop of light. Used for slower shutter  waterfall  sun beach  river</li></ul>', 'beach sun-up filters  nd-filter river waterfall'),
 (46, 1, '<ul><li>Types of Filters </li><li> \r\nCircular : For a specific lens size. Easy to use. Use step up ring to fit higher sized circular filter</li><li> \r\nSquared : 100mm and higher size. Filter holder and adaptive ring   Step up and step down ring</li><li> \r\nOne fits all lenses and easier to stack</li></ul>', 'filters '),
-(47, 4, '<ul><li>Depth of Field (DOF) and Hyper Focal Distance (HFD)\r\n<div id="ppdof"></div><script src="//photopills.com/widgets/ppdof.min.js" async></script></li></ul>', 'depth-of-field dof hyper-focal-distance');
+(47, 4, '<ul><li>Depth of Field (DOF) and Hyper Focal Distance (HFD)\r\n<div id="ppdof"></div><script src="//photopills.com/widgets/ppdof.min.js" async></script></li></ul>', 'depth-of-field dof hyper-focal-distance'),
+(48, 1, '<ul><li>1. Focal length defines how big the moon will appear in the photo\r\n</li></ul>', 'super-moon moon'),
+(49, 1, '<ul><li>2. Go to a location with an interesting subject  a beautiful landscape and space to move</li></ul>', 'landscape super-moon moon '),
+(50, 1, '<ul><li>3. The shooting spot determines the size of the moon relative to your subject</li><li> \r\nfocal length determines how big the moon will appear in the photo compared to the frame (field of view). But it is the distance between the shooting spot and your subject that determines how big the moon will appear to be in relation with the subject. This is due to the angular diameter of the moon.</li></ul>', 'super-moon moon size'),
+(51, 1, '<ul><li>1. Choose a location with room to maneuver and reduce trial and error</li><li> \r\nBe clever and start your planning in a location with a wide range of possible spots from where to shoot.\r\n2. Look for the best light</li><li> \r\n3. Assess the elevation of the moon</li><li> \r\nNow you know that to capture a nice full moon  you need the sun to be at an elevation between 0.5â° and -6â°. Next step is to find the elevation of the moon for these two moments</li><li> \r\nDrag the top panel to the right to go to the sun/moon azimuth/elevation information panel and use the time bar to move time until the elevation of the sun you read on the top panel is 0.5â°. This happens at 8:43pm. Now  jot down the elevation of the moon: 2.9â°.</li><li> \r\nKeep moving time until the elevation of the sun is -6â°  which happens at 9:17pm. Now  the elevation of the moon is 8.8â°.</li><li> \r\nIn conclusion  the best light moments to shoot the moon happen between 8:43 pm and 9:17pm. The moon will be at an elevation between 2.9â° and 8.8â° and the sun between 0.5â° and -6â°.</li><li> \r\n4. Find the shooting spot</li><li> \r\nThe time of the shoot is 8:43pm when the center of the moon is at azimuth 107.7â° and elevation 2.9â°</li><li> \r\nIf we assume that the moon has an angular diameter of 0.5â° then the lower border of the moon disk will be at an elevation of 2.65â° (2.9â°-0.25â°) and the top border at 3.15â° (2.9â°+0.25â°).</li><li> \r\n\r\nYouâ€™ll choose the shooting spot based on these three principles:\r\n\r\nIt has to be the furthest possible from the construction in order to capture a big full moon  at least 1km. The distance  of course  will always depend on the largest telephoto lens you''ll have available. In our case a 500mm prime lens. This way will manage to capture a moon bigger than the construction.</li><li> \r\nThe moon must be aligned with the construction  thus the azimuth line of the moon has to go over the construction.</li><li> \r\nThe relative elevation between the shooting spot (Observerâ€™s Pin) and the ground level of the old construction (Obstacleâ€™s pin) needs to be at last 2.65â°.</li><li> \r\n\r\nHave a look at the second screenshot. Notice that the top panel is telling you that the current Pin to Pin distance is 69.8m and the relative elevation 4.9â° (altitude difference). We need this elevation to be approximately 2.65â°.</li><li> \r\nKeep moving the Observerâ€™s pin closer until the relative elevation between pins is approximately 2.65â°.</li><li> \r\n\r\n5. Check whether the moon is large enough</li></ul> ', 'super-moon moon  plan'),
+(52, 1, '<ul><li>Focus : the position of lens at which an image is clear and sharp</li><li>\r\nSingle Area Focus Mode : One Shot AF in Canon</li><li>\r\nContinuous / AI Servo Focus Mode : AI Servo in Canon In this mode Camera tracks the subject as it moves. Used extensively for Sports and Wildlife mode.</li><li>\r\nGroup area AF Mode : Group area AF in Canon. This takes into consideration a small cluster of space within which it tracks average contrast and then focuses</li><li>\r\nFull Auto Focus  :  this is when camera uses multiple focus points 9/11/256 or so on\r\n</li></ul>', 'wildlife sports  focus ai-servo single-focus af-mode auto-focus'),
+(53, 1, '<ul><li>Graphical representation of tonal value of your image</li><li>\r\nBlack and whites are at corner  rest in middle.</li><li>\r\nMost of the data should be between shadows mid-tones and highlights.</li><li>\r\nAvoid data clipped towards black and white side</li><li>\r\nOn exposure 0 most of the data is at centre it is L curved</li></ul>', 'histogram');
 
 -- --------------------------------------------------------
 
@@ -128,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `learning_info_examples` (
   `image_description` longtext,
   PRIMARY KEY (`id`),
   KEY `learning_info_id` (`learning_info_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=66 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=92 ;
 
 --
 -- Dumping data for table `learning_info_examples`
@@ -199,7 +205,32 @@ INSERT INTO `learning_info_examples` (`id`, `learning_info_id`, `image`, `sub_im
 (62, 39, 'http://vc35photography.epizy.com/resources/WB5.JPG', '', '', 'Misty morning'),
 (63, 39, 'http://vc35photography.epizy.com/resources/WB6.JPG', '', '', 'whole chair is not blue'),
 (64, 39, 'http://vc35photography.epizy.com/resources/WB7.JPG', '', '', 'Hills no sunrise and sunset, unless sunrise and sunset point. Tweaks WB to greener to reflect the mood'),
-(65, 39, 'http://vc35photography.epizy.com/resources/WB8.JPG', '', '', 'Very early in the morning, almost darkness, 6-7 sec exposure. Very cold and Dark place. ');
+(65, 39, 'http://vc35photography.epizy.com/resources/WB8.JPG', '', '', 'Very early in the morning, almost darkness, 6-7 sec exposure. Very cold and Dark place. '),
+(66, 48, 'https://www.photopills.com/sites/default/files/articles/2015/calobra_th.jpg', '', 'Moon as a dot, wide angle lens : Use a wide angle or a fish-eye lens (8-35mm) when you want to emphasize the beauty of the landscape', 'Nikon D700 | 14mm | f/2.8 |15s | ISO 200 | 10050K\r\n04/05/14 08:57pm | Sun elevation: -9.1Â° (Nautical Twilight) | Moon elevation: 53.8Â°'),
+(67, 48, 'https://www.photopills.com/sites/default/files/articles/2015/lavall_th.jpg', '', 'Small moon, medium range focal length : By using short to medium focal lengths (50-200mm), the angle of view is narrower, increasing a little bit the size of the moon in the frame, and reducing the area of the landscape captured', 'Nikon 4Ds | 145mm | f/6.0 |1/8s | ISO 200 | 5850K\r\n07/12/14 09:26pm | Sun elevation: -2.8Â° (Golden Hour) | Moon elevation: 3.2Â°'),
+(68, 48, 'https://www.photopills.com/sites/default/files/articles/2015/moonrise-al-toro_th.jpg', '', 'Big moon, long focal lengths : Finally, if you want the moon to be the main attraction in the photo, go for focal lengths of 400mm, 500mm and beyond.', 'Nikon D7100 | 500mm | f/5.0 |1s | ISO 400 | 5400K\r\n06/13/14 09:41pm | Sun elevation: -5.1Â° (Blue Hour) | Moon elevation: 1.3Â°\r\n'),
+(70, 49, 'https://www.photopills.com/sites/default/files/articles/2015/moonrise-illa-aire_th.jpg', '', 'An interesting subject : It can be anything, a rock, a tree, a lighthouse, a building, an ancient construction', 'Nikon D7100 | 500mm | f/5.0 |1/500s | ISO 6350K\r\n05/14/14 08:45pm | Sun elevation: 0.8Â° (Golden Hour) | Moon elevation: 0.4Â°\r\n'),
+(71, 50, 'https://www.photopills.com/sites/default/files/tutorials/2014/moon-viewfinder.jpg', '', '', ''),
+(72, 50, 'https://www.photopills.com/sites/default/files/articles/2015/lluna-pont-bens_th.jpg', '', '', 'Nikon D300s | 500mm | f/5.0 |1/20s | ISO 800 | 65000K\r\n09/20/13 08:20pm | Sun elevation: -7.5Â° (Nautical Twilight) | Moon elevation: 1.4Â°'),
+(73, 51, 'https://www.photopills.com/sites/default/files/tutorials/2014/barraca-nati.jpg', '', '', ''),
+(74, 51, 'https://www.photopills.com/sites/default/files/tutorials/2014/sun-moon-elevation.jpg', '', '', 'the best time to shoot the moon is when the sun is at an elevation between 0.5â° and -6â°.'),
+(75, 51, 'https://www.photopills.com/sites/default/files/tutorials/2014/favaritx-moon_0.jpg', '', '', 'When the sun is at an elevation between 0.5â° and -6â°, the moon has a beautiful yellow glow.\r\n'),
+(76, 51, 'https://www.photopills.com/sites/default/files/tutorials/2014/planner-2_1.jpg', '', '', ''),
+(77, 51, 'https://www.photopills.com/sites/default/files/tutorials/2014/planner-3_1.jpg', '', '', ''),
+(78, 51, 'https://www.photopills.com/sites/default/files/tutorials/2014/planner-5_1.jpg', '', '', ''),
+(79, 51, 'https://www.photopills.com/sites/default/files/tutorials/2014/moon-viewfinder.jpg', '', '', ''),
+(80, 51, 'https://www.photopills.com/sites/default/files/articles/2018/photopills-rule-100-en_0.jpg', '', '', ''),
+(81, 51, 'https://www.photopills.com/sites/default/files/tutorials/2014/planner-10_0.jpg', '', '', ''),
+(82, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance2.jpg', '', '', ''),
+(83, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance3.jpg', '', '', ''),
+(84, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance4.jpg', '', '', ''),
+(85, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance5.jpg', '', '', ''),
+(86, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance6.jpg', '', '', ''),
+(87, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance7.jpg', '', '', ''),
+(88, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance8.jpg', '', '', ''),
+(89, 53, 'http://vc35photography.epizy.com/resources/Histogram1.JPG', '', '', ''),
+(90, 53, 'http://vc35photography.epizy.com/resources/Histogram2.JPG', '', '', ''),
+(91, 53, 'http://vc35photography.epizy.com/resources/Histogram3.JPG', '', '', 'On exposure 0 most of the data is at centre it is L curved');
 
 -- --------------------------------------------------------
 
