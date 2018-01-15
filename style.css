@@ -32,6 +32,23 @@ footer {
 #myDIV {
     width: 70%;
 }
+#myDIV a {
+    color: #38FFED!important;
+    -webkit-transition: color 4s; /* Safari */
+    transition: color 4s;
+}
+#myDIV a:hover {
+    animation-name: colorchange;
+    animation-duration: 4s;    
+    color: #FFF038!important;
+}
+@keyframes colorchange {
+    0%   {color:#CC38FF;}
+    25%  {color: #FF3B38;}
+    50%  {color: #47FF38;}
+    100% {color: #FF38C6;}
+}
+
 .sub-img {
     height: 200px!important;
     top: 70%;

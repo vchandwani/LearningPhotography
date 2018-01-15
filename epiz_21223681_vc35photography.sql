@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql100.epizy.com
--- Generation Time: Jan 13, 2018 at 11:46 PM
+-- Generation Time: Jan 15, 2018 at 01:14 AM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `learning_info` (
   KEY `category_id` (`category_id`),
   KEY `category_id_2` (`category_id`),
   KEY `category_id_3` (`category_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=54 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=61 ;
 
 --
 -- Dumping data for table `learning_info`
@@ -117,7 +117,14 @@ INSERT INTO `learning_info` (`id`, `category_id`, `description`, `tags`) VALUES
 (50, 1, '<ul><li>3. The shooting spot determines the size of the moon relative to your subject</li><li> \r\nfocal length determines how big the moon will appear in the photo compared to the frame (field of view). But it is the distance between the shooting spot and your subject that determines how big the moon will appear to be in relation with the subject. This is due to the angular diameter of the moon.</li></ul>', 'super-moon moon size'),
 (51, 1, '<ul><li>1. Choose a location with room to maneuver and reduce trial and error</li><li> \r\nBe clever and start your planning in a location with a wide range of possible spots from where to shoot.\r\n2. Look for the best light</li><li> \r\n3. Assess the elevation of the moon</li><li> \r\nNow you know that to capture a nice full moon  you need the sun to be at an elevation between 0.5â° and -6â°. Next step is to find the elevation of the moon for these two moments</li><li> \r\nDrag the top panel to the right to go to the sun/moon azimuth/elevation information panel and use the time bar to move time until the elevation of the sun you read on the top panel is 0.5â°. This happens at 8:43pm. Now  jot down the elevation of the moon: 2.9â°.</li><li> \r\nKeep moving time until the elevation of the sun is -6â°  which happens at 9:17pm. Now  the elevation of the moon is 8.8â°.</li><li> \r\nIn conclusion  the best light moments to shoot the moon happen between 8:43 pm and 9:17pm. The moon will be at an elevation between 2.9â° and 8.8â° and the sun between 0.5â° and -6â°.</li><li> \r\n4. Find the shooting spot</li><li> \r\nThe time of the shoot is 8:43pm when the center of the moon is at azimuth 107.7â° and elevation 2.9â°</li><li> \r\nIf we assume that the moon has an angular diameter of 0.5â° then the lower border of the moon disk will be at an elevation of 2.65â° (2.9â°-0.25â°) and the top border at 3.15â° (2.9â°+0.25â°).</li><li> \r\n\r\nYouâ€™ll choose the shooting spot based on these three principles:\r\n\r\nIt has to be the furthest possible from the construction in order to capture a big full moon  at least 1km. The distance  of course  will always depend on the largest telephoto lens you''ll have available. In our case a 500mm prime lens. This way will manage to capture a moon bigger than the construction.</li><li> \r\nThe moon must be aligned with the construction  thus the azimuth line of the moon has to go over the construction.</li><li> \r\nThe relative elevation between the shooting spot (Observerâ€™s Pin) and the ground level of the old construction (Obstacleâ€™s pin) needs to be at last 2.65â°.</li><li> \r\n\r\nHave a look at the second screenshot. Notice that the top panel is telling you that the current Pin to Pin distance is 69.8m and the relative elevation 4.9â° (altitude difference). We need this elevation to be approximately 2.65â°.</li><li> \r\nKeep moving the Observerâ€™s pin closer until the relative elevation between pins is approximately 2.65â°.</li><li> \r\n\r\n5. Check whether the moon is large enough</li></ul> ', 'super-moon moon  plan'),
 (52, 1, '<ul><li>Focus : the position of lens at which an image is clear and sharp</li><li>\r\nSingle Area Focus Mode : One Shot AF in Canon</li><li>\r\nContinuous / AI Servo Focus Mode : AI Servo in Canon In this mode Camera tracks the subject as it moves. Used extensively for Sports and Wildlife mode.</li><li>\r\nGroup area AF Mode : Group area AF in Canon. This takes into consideration a small cluster of space within which it tracks average contrast and then focuses</li><li>\r\nFull Auto Focus  :  this is when camera uses multiple focus points 9/11/256 or so on\r\n</li></ul>', 'wildlife sports  focus ai-servo single-focus af-mode auto-focus'),
-(53, 1, '<ul><li>Graphical representation of tonal value of your image</li><li>\r\nBlack and whites are at corner  rest in middle.</li><li>\r\nMost of the data should be between shadows mid-tones and highlights.</li><li>\r\nAvoid data clipped towards black and white side</li><li>\r\nOn exposure 0 most of the data is at centre it is L curved</li></ul>', 'histogram');
+(53, 1, '<ul><li>Graphical representation of tonal value of your image</li><li>\r\nBlack and whites are at corner  rest in middle.</li><li>\r\nMost of the data should be between shadows mid-tones and highlights.</li><li>\r\nAvoid data clipped towards black and white side</li><li>\r\nOn exposure 0 most of the data is at centre it is L curved</li></ul>', 'histogram'),
+(54, 4, '<ul><li>TimeLapse</li><li>\r\n<div id="pptimelapse"></div>\r\n<script src="//photopills.com/widgets/pptimelapse.min.js" async></script></li></ul>', 'timelapse'),
+(55, 4, '<ul><li>SPOT STARS CALCULATOR</li><li>\r\n<div id="ppspotstars"></div>\r\n<script src="//photopills.com/widgets/ppspotstars.min.js" async></script></li></ul>', 'spot-stars'),
+(56, 4, '<ul><li>Macro DOF</li><li>\r\n<div id="ppdofmacro"></div>\r\n<script src="//photopills.com/widgets/ppdofmacro.min.js" async></script></li></ul>', 'macro-dof'),
+(57, 4, '<ul><li>DOF Table</li><li>\r\n<div id="ppdoftable"></div>\r\n<script src="//photopills.com/widgets/ppdoftable.min.js" async></script></li></ul>', 'dof-table'),
+(58, 4, '<ul><li>Hyper Focal Distance Table</li><li>\r\n<div id="pphyperfocal"></div>\r\n<script src="//photopills.com/widgets/pphyperfocal.min.js" async></script></li></ul>', 'hyper-focal-distance  hyper-focal-distance-table'),
+(59, 1, '<ul><li>Guide to <a href="https://www.photopills.com/articles/definitive-guide-star-trails">Star Trails</a></li></ul>', 'stars  star-trails'),
+(60, 1, '<ul><li>Guide to <a href="https://www.photopills.com/articles/how-shoot-truly-contagious-milky-way-pictures">Milky Way Shoot</a></li></ul>', 'milkyway ');
 
 -- --------------------------------------------------------
 
