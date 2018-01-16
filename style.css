@@ -28,7 +28,33 @@ footer {
     background-color: #555;
     color: white;
     padding: 15px;
-}        
+}      
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+footer p {
+    width: 20%;
+    margin: 0 auto;
+}
+footer {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 3s ease-out 0s 1 slideInFromLeft;
+}
+footer p {
+    transition: transform 2s;
+}
+footer p:hover {
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);
+    color: #7701E4!important;
+}
+
 #myDIV {
     width: 70%;
 }
@@ -50,9 +76,9 @@ footer {
 }
 
 .background-animation {
-    background-image: url(resources/balloons_orange.png), url(resources/balloons_white.png), url(resources/balloons_green.png);
-    background-repeat: no-repeat;
-    background-position: bottom left;
+    background-image: url(img/balloons_orange.png), url(img/balloons_white.png), url(img/balloons_green.png);
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    background-position: bottom left,bottom center,bottom right;
 
     -webkit-animation-name: animatedBackground; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
@@ -70,21 +96,21 @@ footer {
     -webkit-transition: background-position 4s; /* Safari */
     transition: background-position 4s;    
 }
-.background-animation:hover {
-    background-position : 41% 0%
+.background-animation-active {
+    background-position : 40% 0%,50% 30px,60% 0%;
 }
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes animatedBackground {
-    0%   {background-position : 41% 0px;}
-    50%   {background-position : 45% 10px;}
-    100%   {background-position : 49% 20px;}
+    0%   {background-position : 40% 0%,50% 30px,60% 0%;}
+    50%   {background-position : 35% 20px, 55% 10px,65% 40px;}
+    100%   {background-position : 45% 50px,45% 0px,55% 50px;}
 }
 
 /* Standard syntax */
 @keyframes animatedBackground {
-    0%   {background-position : 41% 0px;}
-    50%   {background-position : 45% 10px;}
-    100%   {background-position : 49% 20px;}
+    0%   {background-position : 40% 0%,50% 30px,60% 0%;}
+    50%   {background-position : 35% 20px, 55% 10px,65% 40px;}
+    100%   {background-position : 45% 50px,45% 0px,55% 50px;}
 }
 
 .sub-img {

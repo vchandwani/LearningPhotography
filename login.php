@@ -32,7 +32,7 @@
         <?php include 'header.html'; ?>
     </head>
     <body> 
-        <div class="container-fluid">
+        <div class="container-fluid background-animation background-animation-active">
             <div class="row text-center">
                 <img class="img-rounded big-img" alt="VC35Photography" src="favicon.png">
             </div>

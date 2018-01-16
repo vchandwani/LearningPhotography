@@ -5,6 +5,9 @@
     <?php include 'header.html';  ?>
     <script>
         $(document).ready(function () {
+            if($('#myDIV').is(':visible')){
+                $(".background-animation").addClass("background-animation-active");
+            }
             $("#myDIV .tag").each(function () {
                 tags = $(this).attr("tag").split(' ');
                 $.each(tags, function (index, value) {
