@@ -2,9 +2,9 @@
 .select2-results:active { background-color: #7701E4; }
 .select2-results:hover { background-color: #7701E4; }
 .select2-select2-selection__choice{color: #7701E4!important;}
-
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+.nav>li.active>a, .nav>li>a:focus, .nav>li>a:hover {
     background-color: #7701E4;
+    opacity: 0.8;
 }
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 html *
@@ -47,6 +47,44 @@ footer {
     25%  {color: #FF3B38;}
     50%  {color: #47FF38;}
     100% {color: #FF38C6;}
+}
+
+.background-animation {
+    background-image: url(resources/balloons_orange.png), url(resources/balloons_white.png), url(resources/balloons_green.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+
+    -webkit-animation-name: animatedBackground; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay : 6s;
+    -webkit-animation-direction: alternate;
+    animation-name: animatedBackground;
+    animation-duration: 4s;
+    animation-iteration-count:  infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay : 6s;
+    animation-direction: alternate;
+    
+    -webkit-transition: background-position 4s; /* Safari */
+    transition: background-position 4s;    
+}
+.background-animation:hover {
+    background-position : 41% 0%
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animatedBackground {
+    0%   {background-position : 41% 0px;}
+    50%   {background-position : 45% 10px;}
+    100%   {background-position : 49% 20px;}
+}
+
+/* Standard syntax */
+@keyframes animatedBackground {
+    0%   {background-position : 41% 0px;}
+    50%   {background-position : 45% 10px;}
+    100%   {background-position : 49% 20px;}
 }
 
 .sub-img {
@@ -243,4 +281,23 @@ mark{
 }
 .alert-danger {
     color: #a94442!important;
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 5%;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgba(85, 85, 85,0.5);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    width: 40px;
+    text-align: center;
+}
+#myBtn:hover {
+    background-color: rgba(85, 85, 85,1); /* Add a dark-grey background on hover */
 }
