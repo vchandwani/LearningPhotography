@@ -52,9 +52,31 @@ footer p {
 footer p:hover {
     -webkit-transform: rotate(360deg); /* Safari */
     transform: rotate(360deg);
-    color: #7701E4!important;
+    color: #7701E4!important;   
 }
-
+footer img{
+    margin-left: -10px;
+    margin-bottom: -5px;
+}
+.shutterClick {
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    animation: cameraFlash 5s alternate-reverse infinite;
+    background-color: #2f2f2f;
+  }
+  @keyframes cameraFlash {
+    0% { box-shadow: 0;}
+    29% { box-shadow: inset 0px 0px 10px 100px #2f2f2f;}
+    30% { box-shadow: inset 0px 0px 10px 100px #333;}
+    30% { box-shadow: inset 0px 0px 10px 100px #4d4d4d;}
+    32% { box-shadow: inset 0px 0px 10px 100px #999999;}
+    33% { box-shadow: inset 0px 0px 10px 100px #4d4d4d;}
+    34% { box-shadow: inset 0px 0px 10px 100px #333;}
+    36% { box-shadow: inset 0px 0px 10px 100px #2f2f2f;}
+    65% { box-shadow: 0;}
+  }
 #myDIV {
     width: 70%;
 }

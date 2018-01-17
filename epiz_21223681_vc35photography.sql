@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql100.epizy.com
--- Generation Time: Jan 15, 2018 at 01:14 AM
+-- Generation Time: Jan 17, 2018 at 12:37 AM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `learning_info` (
   KEY `category_id` (`category_id`),
   KEY `category_id_2` (`category_id`),
   KEY `category_id_3` (`category_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=61 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=68 ;
 
 --
 -- Dumping data for table `learning_info`
@@ -123,8 +123,15 @@ INSERT INTO `learning_info` (`id`, `category_id`, `description`, `tags`) VALUES
 (56, 4, '<ul><li>Macro DOF</li><li>\r\n<div id="ppdofmacro"></div>\r\n<script src="//photopills.com/widgets/ppdofmacro.min.js" async></script></li></ul>', 'macro-dof'),
 (57, 4, '<ul><li>DOF Table</li><li>\r\n<div id="ppdoftable"></div>\r\n<script src="//photopills.com/widgets/ppdoftable.min.js" async></script></li></ul>', 'dof-table'),
 (58, 4, '<ul><li>Hyper Focal Distance Table</li><li>\r\n<div id="pphyperfocal"></div>\r\n<script src="//photopills.com/widgets/pphyperfocal.min.js" async></script></li></ul>', 'hyper-focal-distance  hyper-focal-distance-table'),
-(59, 1, '<ul><li>Guide to <a href="https://www.photopills.com/articles/definitive-guide-star-trails">Star Trails</a></li></ul>', 'stars  star-trails'),
-(60, 1, '<ul><li>Guide to <a href="https://www.photopills.com/articles/how-shoot-truly-contagious-milky-way-pictures">Milky Way Shoot</a></li></ul>', 'milkyway ');
+(59, 1, '<ul><li>Guide to <a target="blank" href="https://www.photopills.com/articles/definitive-guide-star-trails">Star Trails</a></li></ul>', 'stars  star-trails'),
+(60, 1, '<ul><li>Guide to <a target="blank" href="https://www.photopills.com/articles/how-shoot-truly-contagious-milky-way-pictures">Milky Way Shoot</a></li></ul>', 'milkyway '),
+(61, 1, '<ul><li>Shoot with left rule (underexpose the image)</li><li>\r\nGives darker mood to image</li><li>\r\nmaintains histogram</li><li>\r\nachieve Natural Dynamic range</li><li>\r\nto retains details (landscape pics)</li><li>\r\nShoot semi silhouette image</li><li>\r\nBest for low-key photography</li></ul>', 'landscape  light silhouette low-key'),
+(62, 1, '<ul><li>Shoot to right (deliberate over exposed)</li><li>\r\nTo get desirable exposure for your image</li><li>\r\nShooting in fog</li><li> snow and mist</li><li>\r\nShooting against white or grey background</li><li>\r\nShooting High-key photographs (fashion</li><li> models)</li></ul>', 'fog mist light  fashion models high-key snow'),
+(63, 1, '<ul><li>Shoot in manual mode</li><li>\r\nto take creative control of light</li><li>\r\nshooting silhouette</li><li>\r\ncreating high key and low-key images</li><li>\r\nshooting in difficult lighting conditions (astro</li><li> light trails</li><li> light painting)</li><li>\r\nto get consistent exposure (light changes quickly) keep an eye on exposure triangle</li></ul>', 'manual-mode light-trails astronomical light silhouette '),
+(64, 1, '<ul><li>Use filters to control light</li><li>\r\nEvens out the exposure of the image</li><li>\r\nND filters give you longer exposure to bring in sense of motion in your image</li><li>\r\nCPL / polarizing filter cuts reflection and balances exposure</li></ul>', 'filters polarizing-filter nd-filter light '),
+(65, 1, '<ul><li>Shoot HDR</li><li>\r\nDynamic range is basically difference between the lightest light and darkest dark you can capture in a photo</li><li>\r\nNotoriously difficult to snap a photo that captures both ends of this spectrum</li></ul>', 'hdr light '),
+(66, 1, '<ul><li>Use light to your advantage</li><li>\r\nDiffused light: softer than direct or natural light and produces less sharply-defined shadows on your subjects. It creates unique images by capturing details you may not see in harsher light. Good for portraits.</li><li>\r\nReflected Light: reflected from particular surface. Creates soft light.</li></ul>', 'portrait light  diffused reflected'),
+(67, 1, '<ul><li>Use long exposure to control amount and duration of light</li><li>\r\nLong exposure photography is when we are using a much longer shutter speed to control amount and duration of light</li><li>\r\nShould use only when subject is stationary</li></ul>', 'long-exposure light ');
 
 -- --------------------------------------------------------
 
