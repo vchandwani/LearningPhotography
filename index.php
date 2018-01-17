@@ -73,6 +73,13 @@
                         $(this).removeClass('display-none');
                     }
                 });
+            });
+            $(".carousel").swipe({
+                swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+                if (direction == 'left') $(this).carousel('next');
+                if (direction == 'right') $(this).carousel('prev');
+                },
+                allowPageScroll:"vertical"
             });                    
         }); 
         // When the user scrolls down 20px from the top of the document, show the button
