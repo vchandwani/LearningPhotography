@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql100.epizy.com
--- Generation Time: Jan 17, 2018 at 12:37 AM
+-- Generation Time: Jan 18, 2018 at 04:22 AM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `learning` (
   `category` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `category` (`category`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `learning`
@@ -41,7 +41,8 @@ INSERT INTO `learning` (`id`, `category`) VALUES
 (1, 'Home'),
 (2, 'Portraits'),
 (3, 'Landscape'),
-(4, 'Tools');
+(4, 'Tools'),
+(5, 'Wildlife');
 
 -- --------------------------------------------------------
 
@@ -58,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `learning_info` (
   KEY `category_id` (`category_id`),
   KEY `category_id_2` (`category_id`),
   KEY `category_id_3` (`category_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=68 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=71 ;
 
 --
 -- Dumping data for table `learning_info`
@@ -131,7 +132,10 @@ INSERT INTO `learning_info` (`id`, `category_id`, `description`, `tags`) VALUES
 (64, 1, '<ul><li>Use filters to control light</li><li>\r\nEvens out the exposure of the image</li><li>\r\nND filters give you longer exposure to bring in sense of motion in your image</li><li>\r\nCPL / polarizing filter cuts reflection and balances exposure</li></ul>', 'filters polarizing-filter nd-filter light '),
 (65, 1, '<ul><li>Shoot HDR</li><li>\r\nDynamic range is basically difference between the lightest light and darkest dark you can capture in a photo</li><li>\r\nNotoriously difficult to snap a photo that captures both ends of this spectrum</li></ul>', 'hdr light '),
 (66, 1, '<ul><li>Use light to your advantage</li><li>\r\nDiffused light: softer than direct or natural light and produces less sharply-defined shadows on your subjects. It creates unique images by capturing details you may not see in harsher light. Good for portraits.</li><li>\r\nReflected Light: reflected from particular surface. Creates soft light.</li></ul>', 'portrait light  diffused reflected'),
-(67, 1, '<ul><li>Use long exposure to control amount and duration of light</li><li>\r\nLong exposure photography is when we are using a much longer shutter speed to control amount and duration of light</li><li>\r\nShould use only when subject is stationary</li></ul>', 'long-exposure light ');
+(67, 1, '<ul><li>Use long exposure to control amount and duration of light</li><li>\r\nLong exposure photography is when we are using a much longer shutter speed to control amount and duration of light</li><li>\r\nShould use only when subject is stationary</li></ul>', 'long-exposure light '),
+(68, 5, '<ul><li>Know your gear (min shutter speed to obtain sharp image how to quickly toggle max ISO that is acceptable)</li><li>  \r\nKnow your subject</li><li>  \r\nwork the light (sunrise and sunset)</li><li>  \r\nwhat the background (scan viewfinder for distracting objects)</li><li>  \r\nBe ethical</li><li>  \r\nObserve 3P''s Perseverance Patience and Planning</li><li>  \r\nBe ready for unexpected</li><li>  \r\nUse selective focus (widest aperture f/2.8)</li><li>  \r\nZoom In</li><li>  \r\nBurst Mode | Watch the eye (focus on eyes)</li></ul>', 'wildlife'),
+(69, 3, '<ul><li>Is there a subject? Is the light good? Should be Yes</li><li>  \r\nStrong subject is a must (what you want to convey?)</li><li>  \r\nMake the light work (light should be interesting)</li><li>  \r\nHow to use the elements</li><li>  \r\nApply the rule of thirds</li><li>  \r\nMake your subject work</li><li>  \r\nEliminate Junk (too much of foreground bright spots) always check corner</li><li>  \r\nHorizontal or Vertical (try both ways and see which one is more pleasing)</li><li>  \r\nUse the right lens</li><li>  \r\nPhotograph less and Look more</li><li>  \r\nBe an Artist</li></ul>', 'landscape'),
+(70, 2, '<ul><li>Plan and Prepare</li><li>\r\nPick the right location</li><li>\r\nWhat about the background</li><li>\r\nConnect with your subject</li><li>\r\nKnow your light</li><li>\r\nDirect your subject (keep example from 500px or Flickr)</li><li>\r\nCapture the narrative (absorb the story)</li><li>\r\nImperfections can create perfections</li><li>\r\nUse right tones textures and effects</li><li>\r\nEdit responsibly (donâ€™t create artificial looking image)</li></ul>', 'portrait ');
 
 -- --------------------------------------------------------
 
@@ -148,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `learning_info_examples` (
   `image_description` longtext,
   PRIMARY KEY (`id`),
   KEY `learning_info_id` (`learning_info_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=92 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=105 ;
 
 --
 -- Dumping data for table `learning_info_examples`
@@ -244,7 +248,20 @@ INSERT INTO `learning_info_examples` (`id`, `learning_info_id`, `image`, `sub_im
 (88, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance8.jpg', '', '', ''),
 (89, 53, 'http://vc35photography.epizy.com/resources/Histogram1.JPG', '', '', ''),
 (90, 53, 'http://vc35photography.epizy.com/resources/Histogram2.JPG', '', '', ''),
-(91, 53, 'http://vc35photography.epizy.com/resources/Histogram3.JPG', '', '', 'On exposure 0 most of the data is at centre it is L curved');
+(91, 53, 'http://vc35photography.epizy.com/resources/Histogram3.JPG', '', '', 'On exposure 0 most of the data is at centre it is L curved'),
+(92, 69, 'http://vc35photography.epizy.com/resources/Landscape1.JPG', '', '', ''),
+(93, 69, 'http://vc35photography.epizy.com/resources/Landscape2.JPG', '', '', ''),
+(94, 69, 'http://vc35photography.epizy.com/resources/Landscape3.JPG', '', '', ''),
+(95, 69, 'http://vc35photography.epizy.com/resources/Landscape4.JPG', '', '', ''),
+(96, 69, 'http://vc35photography.epizy.com/resources/Landscape5.JPG', '', '', ''),
+(97, 69, 'http://vc35photography.epizy.com/resources/Landscape6.JPG', '', '', ''),
+(98, 69, 'http://vc35photography.epizy.com/resources/Landscape7.JPG', '', '', ''),
+(99, 69, 'http://vc35photography.epizy.com/resources/Landscape8.JPG', '', '', ''),
+(100, 70, 'http://vc35photography.epizy.com/resources/Portrait1.JPG', '', '', ''),
+(101, 70, 'http://vc35photography.epizy.com/resources/Portrait2.JPG', '', '', ''),
+(102, 70, 'http://vc35photography.epizy.com/resources/Portrait3.JPG', '', '', ''),
+(103, 70, 'http://vc35photography.epizy.com/resources/Portrait4.JPG', '', '', ''),
+(104, 70, 'http://vc35photography.epizy.com/resources/Portrait5.JPG', '', '', '');
 
 -- --------------------------------------------------------
 
