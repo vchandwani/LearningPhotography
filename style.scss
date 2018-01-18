@@ -1,0 +1,729 @@
+.select2-results {
+  background-color: #7701E4;
+  &:active, &:hover {
+    background-color: #7701E4;
+  }
+}
+
+.select2-select2-selection__choice {
+  color: #7701E4 !important;
+}
+
+.nav > li {
+  &.active > a {
+    background-color: #7701E4;
+    opacity: 0.8;
+  }
+  > a {
+    &:focus, &:hover {
+      background-color: #7701E4;
+      opacity: 0.8;
+    }
+  }
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+
+html * {
+  color: #e2e2e2 !important;
+}
+
+input, textarea, select {
+  color: #6d6d6d !important;
+}
+
+.selec2 {
+  color: black !important;
+}
+
+.container-fluid, .container, .modal-content {
+  background-color: #2f2f2f;
+}
+
+.row.content {
+  height: 1500px;
+}
+
+/* Set black background color, white text and some padding */
+
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+  p {
+    margin: 0 auto;
+    transition: transform 2s;
+    &:hover {
+      -webkit-transform: rotate(360deg);
+      /* Safari */
+      transform: rotate(360deg);
+      color: #7701E4 !important;
+    }
+  }
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 3s ease-out 0s 1 slideInFromLeft;
+  img {
+    margin-left: -10px;
+    margin-bottom: -5px;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.shutterClick {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  animation: cameraFlash 5s alternate-reverse infinite;
+  background-color: #2f2f2f;
+}
+
+@keyframes cameraFlash {
+  0% {
+    box-shadow: 0;
+  }
+
+  29% {
+    box-shadow: inset 0px 0px 10px 100px #2f2f2f;
+  }
+
+  30% {
+    box-shadow: inset 0px 0px 10px 100px #333;
+  }
+
+  30% {
+    box-shadow: inset 0px 0px 10px 100px #4d4d4d;
+  }
+
+  32% {
+    box-shadow: inset 0px 0px 10px 100px #999999;
+  }
+
+  33% {
+    box-shadow: inset 0px 0px 10px 100px #4d4d4d;
+  }
+
+  34% {
+    box-shadow: inset 0px 0px 10px 100px #333;
+  }
+
+  36% {
+    box-shadow: inset 0px 0px 10px 100px #2f2f2f;
+  }
+
+  65% {
+    box-shadow: 0;
+  }
+}
+
+
+.illumination {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 30px 15px 0;
+  border-color: transparent #2f2f2f transparent transparent;
+  animation: illuminationFlash 5s normal infinite;
+}
+
+@keyframes illuminationFlash {
+  0% {
+    border-color: transparent #2f2f2f transparent transparent;
+  }
+
+  6% {
+    border-color: transparent #454436 transparent transparent;
+  }
+
+  12% {
+    border-color: transparent #5B5A3D transparent transparent;
+  }
+
+  18% {
+    border-color: transparent #727044 transparent transparent;
+  }
+
+  24% {
+    border-color: transparent #88864B transparent transparent;
+  }
+
+  30% {
+    border-color: transparent #9F9C52 transparent transparent;
+  }
+
+  36% {
+    border-color: transparent #B5B259 transparent transparent;
+  }
+
+  42% {
+    border-color: transparent #CCC861 transparent transparent;
+  }
+
+  48% {
+    border-color: transparent #B5B259 transparent transparent;
+  }
+
+  54% {
+    border-color: transparent #9F9C52 transparent transparent;
+  }
+
+  60% {
+    border-color: transparent #88864B transparent transparent;
+  }
+
+  66% {
+    border-color: transparent #727044 transparent transparent;
+  }
+
+  72% {
+    border-color: transparent #5B5A3D transparent transparent;
+  }
+
+  78% {
+    border-color: transparent #454436 transparent transparent;
+  }
+
+  84% {
+    border-color: transparent #2f2f2f transparent transparent;
+  }
+
+  100% {
+    border-color: transparent #2f2f2f transparent transparent;
+  }
+}
+
+
+#myDIV {
+  width: 70%;
+  a {
+    color: #38FFED !important;
+    -webkit-transition: color 4s;
+    /* Safari */
+    transition: color 4s;
+    &:hover {
+      animation-name: colorchange;
+      animation-duration: 4s;
+      color: #FFF038 !important;
+    }
+  }
+}
+
+@keyframes colorchange {
+  0% {
+    color: #CC38FF;
+  }
+
+  25% {
+    color: #FF3B38;
+  }
+
+  50% {
+    color: #47FF38;
+  }
+
+  100% {
+    color: #FF38C6;
+  }
+}
+
+
+.background-animation {
+  background-image: url(img/balloons_orange.png), url(img/balloons_white.png), url(img/balloons_green.png);
+  background-repeat: no-repeat,no-repeat,no-repeat;
+  background-position: bottom left,bottom center,bottom right;
+  -webkit-animation-name: animatedBackground;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 8s;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 6s;
+  -webkit-animation-direction: alternate;
+  animation-name: animatedBackground;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 6s;
+  animation-direction: alternate;
+  -webkit-transition: background-position 4s;
+  /* Safari */
+  transition: background-position 4s;
+}
+
+.background-animation-active {
+  background-position: 40% 0%,50% 30px,60% 0%;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animatedBackground {
+  0% {
+    background-position: 40% 0%,50% 30px,60% 0%;
+  }
+  25% {
+    background-position: (random(35) + 10)* 1% (random(1) + 50)+px, (random(35) + 10)* 1% (random(1) + 50)+px,(random(35) + 10)* 1% (random(1) + 50)+px;
+  }
+  50% {
+    background-position: (random(35) + 30)* 1% (random(1) + 50)+px, (random(35) + 30)* 1% (random(1) + 50)+px,(random(35) + 30)* 1% (random(1) + 50)+px;
+  }
+  75% {
+    background-position: (random(35) + 20)* 1% (random(1) + 50)+px, (random(35) + 20)* 1% (random(1) + 50)+px,(random(35) + 20)* 1% (random(1) + 50)+px;
+  }
+  100% {
+    background-position: (random(35) + 30)* 1% (random(1) + 50)+px, (random(35) + 30)* 1% (random(1) + 50)+px,(random(35) + 30)* 1% (random(1) + 50)+px;
+  }
+}
+
+
+/* Standard syntax */
+@keyframes animatedBackground {
+  0% {
+    background-position: 40% 0%,50% 30px,60% 0%;
+  }
+  25% {
+    background-position: (random(35) + 10)* 1% (random(1) + 50)+px, (random(35) + 10)* 1% (random(1) + 50)+px,(random(35) + 10)* 1% (random(1) + 50)+px;
+  }
+  50% {
+    background-position: (random(35) + 30)* 1% (random(1) + 50)+px, (random(35) + 30)* 1% (random(1) + 50)+px,(random(35) + 30)* 1% (random(1) + 50)+px;
+  }
+  75% {
+    background-position: (random(35) + 20)* 1% (random(1) + 50)+px, (random(35) + 20)* 1% (random(1) + 50)+px,(random(35) + 20)* 1% (random(1) + 50)+px;
+  }
+  100% {
+    background-position: (random(35) + 30)* 1% (random(1) + 50)+px, (random(35) + 30)* 1% (random(1) + 50)+px,(random(35) + 30)* 1% (random(1) + 50)+px;
+  }
+}
+
+.sub-img {
+  height: 200px !important;
+  top: 70%;
+  position: absolute;
+  right: 0;
+}
+
+.header-text {
+  margin-left: 300px;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  max-width: 90%;
+  margin: auto;
+}
+
+.search-width {
+  width: 70%;
+}
+
+@media screen and (max-width: 1024px) {
+  .sub-img {
+    height: 70px !important;
+    top: 65%;
+    position: absolute;
+    right: 0;
+  }
+  .carousel-caption p {
+    max-height: 100px;
+    overflow: scroll;
+  }
+  .header-text {
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sub-img {
+    height: 50px !important;
+    top: 65%;
+    position: absolute;
+    right: 0;
+  }
+  .carousel-caption p {
+    max-height: 100px;
+    overflow: scroll;
+  }
+  .header-text {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    display: none;
+  }
+  .row.content {
+    height: auto;
+  }
+  #myDIV {
+    width: 100%;
+  }
+  .sub-img {
+    height: 50px !important;
+    top: 65%;
+    position: absolute;
+    right: 0;
+  }
+  .carousel-caption p {
+    max-height: 100px;
+    overflow: scroll;
+  }
+  .header-text {
+    margin-left: 50px;
+  }
+  .search-width {
+    width: 100%;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.img-rounded {
+  border-radius: 24px;
+}
+
+.big-img {
+  height: 120px !important;
+}
+
+.small-img {
+  height: 70px !important;
+}
+
+.float-left {
+  float: left;
+}
+
+h4 {
+  min-height: 50px;
+}
+
+h3 {
+  border-bottom: solid 1px #7701E4;
+}
+
+.height30 {
+  height: 30px;
+}
+
+.nav {
+  margin-bottom: 10px;
+}
+
+body {
+  position: relative;
+}
+
+ul.nav-pills {
+  top: 20px;
+  position: fixed;
+}
+
+button {
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 0px;
+  width: 100%;
+}
+
+.glyphicon {
+  color: #C7AC00;
+}
+
+#home {
+  margin-top: 20px;
+}
+
+.search, .width-100 {
+  width: 100%;
+}
+
+.label-primary {
+  margin: 5px;
+}
+
+.background-read {
+  background-color: #e1e592;
+}
+
+.margin-top10 {
+  margin-top: 10px;
+}
+
+.margin-top20 {
+  margin-bottom: 20px;
+}
+
+.margin-right20 {
+  margin-right: 20px;
+}
+
+.bordered {
+  border: 1px solid #ed8e1a;
+  padding: 5px;
+}
+
+.btn-link {
+  text-decoration: underline;
+  text-decoration-color: purple;
+  margin-top: 10px;
+}
+
+strong, .close {
+  color: #7701E4 !important;
+}
+
+.form-control {
+  color: #555 !important;
+}
+
+.padding-0 {
+  padding: 0px;
+}
+
+.span-warp {
+  line-height: 1.8;
+  word-wrap: normal;
+  display: inline-block;
+}
+
+.tag {
+  border-bottom: 1px solid;
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  max-height: 250px;
+}
+
+mark {
+  background-color: #C7AC00;
+}
+
+.img-responsive {
+  margin: 0 auto;
+}
+
+.logout {
+  text-align: right;
+}
+
+.margin-top14 {
+  margin-top: 14px;
+}
+
+.alert-danger {
+  color: #a94442 !important;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 5%;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgba(85, 85, 85, 0.5);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  width: 40px;
+  text-align: center;
+  &:hover {
+    background-color: rgba(85, 85, 85, 1);
+    /* Add a dark-grey background on hover */
+  }
+}
+
+/* Animation for background */
+@function decimal-round ($number, $digits: 0, $mode: round) {
+	$n: 1;
+	// $number must be a number
+	@if type-of($number) !=number {
+		@warn '#{ $number } is not a number.';
+		@return $number;
+	}
+	// $digits must be a unitless number
+	@if type-of($digits) !=number {
+		@warn '#{ $digits } is not a number.';
+		@return $number;
+	}
+	@else if not unitless($digits) {
+		@warn '#{ $digits } has a unit.';
+		@return $number;
+	}
+	@for $i from 1 through $digits {
+		$n: $n * 10;
+	}
+	@if $mode==round {
+		@return round($number * $n) / $n;
+	}
+	@else if $mode==ceil {
+		@return ceil($number * $n) / $n;
+	}
+	@else if $mode==floor {
+		@return floor($number * $n) / $n;
+	}
+	@else {
+		@warn '#{ $mode } is undefined keyword.';
+		@return $number;
+	}
+}
+
+
+@function decimal-ceil ($number, $digits: 0) {
+	@return decimal-round($number, $digits, ceil);
+}
+
+@function decimal-floor ($number, $digits: 0) {
+	@return decimal-round($number, $digits, floor);
+}
+
+@function v($x, $y) {
+	$start-x: -100px;
+	$end-x: 1500px;
+	$steps-x: 50;
+	$steps-x-value: (($start-x - $end-x) / $steps-x) * -1;
+
+	$start-y: -50px;
+	$end-y: 1300px;
+	$steps-y: 50;
+	$steps-y-value: (($start-y - $end-y) / $steps-y) * -1;
+
+	$x-list: ();
+	$y-list: ();
+	
+	$nextval: $start-x;
+	@while $nextval < $end-x {
+		$x-list: append( $x-list, $nextval);
+		$nextval: $nextval + $steps-x-value;
+	}
+	
+	$nextval: $start-y;
+	@while $nextval < $end-y {
+		$y-list: append( $y-list, $nextval);
+		$nextval: $nextval + $steps-y-value;
+	}
+
+	@return nth($x-list, $x),
+	nth($y-list, $y);
+}
+
+@function randomVList() {
+	$x-maxsteps: 50;
+	$y-maxsteps: 50;
+	$x: random($x-maxsteps - 10); //Startvalue
+	$y: random($y-maxsteps - 10); //Startvalue
+	$list: ();
+	$list: append($list, $x $y);
+	$random-x-steps: random($x-maxsteps - 5) + 5;
+	@while $x < $random-x-steps {
+		$x: $x + 1;
+		@if $y==$y-maxsteps {
+			$y: $y + (random(2) - 2); //y + [-1|0]
+		}
+		@else if $y==1 {
+			$y: $y + (random(2) - 1); //y + [0|1]
+		}
+		@else {
+			$y: $y + (random(3) - 2); //y + [-1|0|1]
+		}
+		$list: append($list, $x $y);
+	}
+	@return $list;
+}
+
+@mixin animation($name, $tupleList) {
+	@keyframes #{$name} {
+		$steps: length($tupleList);
+		//@debug "Steps: " + $steps;
+		@if $steps > 1{
+			@for $i from 0 to $steps {
+				// <start> to <end> -> not include <end>
+				$percentage: decimal-round( $i*(100/($steps - 1)), 2); //calc percentage with 2 decimals
+				#{$percentage}% {
+					$tuple: nth($tupleList, $i+1);
+					transform: translate( v(nth($tuple, 1), nth($tuple, 2)));
+				}
+			}
+			0% 	{ opacity: 0 }
+			15% { opacity: 1 }
+			85% { opacity: 1 }
+			100%{ opacity: 0 }
+		}
+	}
+}
+
+//Create random animations
+@for $i from 1 to 20 {
+	$randomlist:  randomVList();
+	@while length($randomlist) < 3{
+		$randomlist:  randomVList();
+	}
+	@include animation("animation" + $i, $randomlist);
+}
+
+.particle{
+	position: absolute;
+	opacity: 0;		
+	overflow: visible;
+	background-size: contain; //auto|length|cover|contain|initial|inherit
+}
+
+@for $i from 1 to 20 {
+	.elem#{$i} {
+		$position: v(random(10), random(10));
+		left: nth($position, 1);
+		top: nth($position, 2);
+		//$duration: 12+ random(7);
+		//for demo:
+		$duration: 15 + random(5);
+		animation: animation#{$i} linear #{$duration}s infinite;
+		$size: 12px + random(20);
+		height: $size;
+		width: $size; 
+    $imglist: url(http://vc35photography.epizy.com/img/buddhism-wheel.svg),
+              url(http://vc35photography.epizy.com/img/camera-shutter.svg),
+              url(http://vc35photography.epizy.com/img/photo-camera.svg),
+              url(http://vc35photography.epizy.com/img/spark-green.svg),
+              url(http://vc35photography.epizy.com/img/spark-white.svg),
+              url(http://vc35photography.epizy.com/img/spark-orange.svg);
+		background-image: nth($imglist, ($i % 5) + 1);
+	}
+}
+
+@for $i from 1 through 20 {
+	.anim-delay#{$i}{
+		//$animationdelay: random(20);
+		//for demo:
+		$animationdelay: random(5);
+		animation-delay: #{$animationdelay}s;
+	}
+}
+.wrapper {
+	height: 100vh;
+	overflow: hidden;
+	width: 100%;
+	margin: 0 auto;
+	background: #2f2f2f;
+	position: relative;
+}

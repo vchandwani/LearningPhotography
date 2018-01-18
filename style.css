@@ -1,351 +1,1967 @@
-.select2-results { background-color: #7701E4; }
-.select2-results:active { background-color: #7701E4; }
-.select2-results:hover { background-color: #7701E4; }
-.select2-select2-selection__choice{color: #7701E4!important;}
-.nav>li.active>a, .nav>li>a:focus, .nav>li>a:hover {
-    background-color: #7701E4;
-    opacity: 0.8;
+.select2-results {
+  background-color: #7701E4;
 }
+
+.select2-results:active, .select2-results:hover {
+  background-color: #7701E4;
+}
+
+.select2-select2-selection__choice {
+  color: #7701E4 !important;
+}
+
+.nav > li.active > a {
+  background-color: #7701E4;
+  opacity: 0.8;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+  background-color: #7701E4;
+  opacity: 0.8;
+}
+
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-html *
-{        
-    color: #e2e2e2 !important;        
+html * {
+  color: #e2e2e2 !important;
 }
+
 input, textarea, select {
-    color: #6d6d6d!important;
+  color: #6d6d6d !important;
 }
-.selec2{
-    color: black!important;
+
+.selec2 {
+  color: black !important;
 }
+
 .container-fluid, .container, .modal-content {
-    background-color: #2f2f2f;
+  background-color: #2f2f2f;
 }
+
 .row.content {
-    height: 1500px
+  height: 1500px;
 }
+
 /* Set black background color, white text and some padding */
 footer {
-    background-color: #555;
-    color: white;
-    padding: 15px;
-}      
-@keyframes slideInFromLeft {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  background-color: #555;
+  color: white;
+  padding: 15px;
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 3s ease-out 0s 1 slideInFromLeft;
 }
 
 footer p {
-    width: 20%;
-    margin: 0 auto;
+  margin: 0 auto;
+  transition: transform 2s;
 }
-footer {  
-    /* This section calls the slideInFromLeft animation we defined above */
-    animation: 3s ease-out 0s 1 slideInFromLeft;
-}
-footer p {
-    transition: transform 2s;
-}
+
 footer p:hover {
-    -webkit-transform: rotate(360deg); /* Safari */
-    transform: rotate(360deg);
-    color: #7701E4!important;   
+  -webkit-transform: rotate(360deg);
+  /* Safari */
+  transform: rotate(360deg);
+  color: #7701E4 !important;
 }
-footer img{
-    margin-left: -10px;
-    margin-bottom: -5px;
+
+footer img {
+  margin-left: -10px;
+  margin-bottom: -5px;
 }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .shutterClick {
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    vertical-align: middle;
-    animation: cameraFlash 5s alternate-reverse infinite;
-    background-color: #2f2f2f;
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  animation: cameraFlash 5s alternate-reverse infinite;
+  background-color: #2f2f2f;
+}
+
+@keyframes cameraFlash {
+  0% {
+    box-shadow: 0;
   }
-  @keyframes cameraFlash {
-    0% { box-shadow: 0;}
-    29% { box-shadow: inset 0px 0px 10px 100px #2f2f2f;}
-    30% { box-shadow: inset 0px 0px 10px 100px #333;}
-    30% { box-shadow: inset 0px 0px 10px 100px #4d4d4d;}
-    32% { box-shadow: inset 0px 0px 10px 100px #999999;}
-    33% { box-shadow: inset 0px 0px 10px 100px #4d4d4d;}
-    34% { box-shadow: inset 0px 0px 10px 100px #333;}
-    36% { box-shadow: inset 0px 0px 10px 100px #2f2f2f;}
-    65% { box-shadow: 0;}
+  29% {
+    box-shadow: inset 0px 0px 10px 100px #2f2f2f;
   }
+  30% {
+    box-shadow: inset 0px 0px 10px 100px #333;
+  }
+  30% {
+    box-shadow: inset 0px 0px 10px 100px #4d4d4d;
+  }
+  32% {
+    box-shadow: inset 0px 0px 10px 100px #999999;
+  }
+  33% {
+    box-shadow: inset 0px 0px 10px 100px #4d4d4d;
+  }
+  34% {
+    box-shadow: inset 0px 0px 10px 100px #333;
+  }
+  36% {
+    box-shadow: inset 0px 0px 10px 100px #2f2f2f;
+  }
+  65% {
+    box-shadow: 0;
+  }
+}
+
+.illumination {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 30px 15px 0;
+  border-color: transparent #2f2f2f transparent transparent;
+  animation: illuminationFlash 5s normal infinite;
+}
+
+@keyframes illuminationFlash {
+  0% {
+    border-color: transparent #2f2f2f transparent transparent;
+  }
+  6% {
+    border-color: transparent #454436 transparent transparent;
+  }
+  12% {
+    border-color: transparent #5B5A3D transparent transparent;
+  }
+  18% {
+    border-color: transparent #727044 transparent transparent;
+  }
+  24% {
+    border-color: transparent #88864B transparent transparent;
+  }
+  30% {
+    border-color: transparent #9F9C52 transparent transparent;
+  }
+  36% {
+    border-color: transparent #B5B259 transparent transparent;
+  }
+  42% {
+    border-color: transparent #CCC861 transparent transparent;
+  }
+  48% {
+    border-color: transparent #B5B259 transparent transparent;
+  }
+  54% {
+    border-color: transparent #9F9C52 transparent transparent;
+  }
+  60% {
+    border-color: transparent #88864B transparent transparent;
+  }
+  66% {
+    border-color: transparent #727044 transparent transparent;
+  }
+  72% {
+    border-color: transparent #5B5A3D transparent transparent;
+  }
+  78% {
+    border-color: transparent #454436 transparent transparent;
+  }
+  84% {
+    border-color: transparent #2f2f2f transparent transparent;
+  }
+  100% {
+    border-color: transparent #2f2f2f transparent transparent;
+  }
+}
+
 #myDIV {
-    width: 70%;
+  width: 70%;
 }
+
 #myDIV a {
-    color: #38FFED!important;
-    -webkit-transition: color 4s; /* Safari */
-    transition: color 4s;
+  color: #38FFED !important;
+  -webkit-transition: color 4s;
+  /* Safari */
+  transition: color 4s;
 }
+
 #myDIV a:hover {
-    animation-name: colorchange;
-    animation-duration: 4s;    
-    color: #FFF038!important;
+  animation-name: colorchange;
+  animation-duration: 4s;
+  color: #FFF038 !important;
 }
+
 @keyframes colorchange {
-    0%   {color:#CC38FF;}
-    25%  {color: #FF3B38;}
-    50%  {color: #47FF38;}
-    100% {color: #FF38C6;}
+  0% {
+    color: #CC38FF;
+  }
+  25% {
+    color: #FF3B38;
+  }
+  50% {
+    color: #47FF38;
+  }
+  100% {
+    color: #FF38C6;
+  }
 }
 
 .background-animation {
-    background-image: url(img/balloons_orange.png), url(img/balloons_white.png), url(img/balloons_green.png);
-    background-repeat: no-repeat,no-repeat,no-repeat;
-    background-position: bottom left,bottom center,bottom right;
+  background-image: url(img/balloons_orange.png), url(img/balloons_white.png), url(img/balloons_green.png);
+  background-repeat: no-repeat,no-repeat,no-repeat;
+  background-position: bottom left,bottom center,bottom right;
+  -webkit-animation-name: animatedBackground;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 8s;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite;
+  /* Safari 4.0 - 8.0 */
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 6s;
+  -webkit-animation-direction: alternate;
+  animation-name: animatedBackground;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 6s;
+  animation-direction: alternate;
+  -webkit-transition: background-position 4s;
+  /* Safari */
+  transition: background-position 4s;
+}
 
-    -webkit-animation-name: animatedBackground; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-delay : 6s;
-    -webkit-animation-direction: alternate;
-    animation-name: animatedBackground;
-    animation-duration: 4s;
-    animation-iteration-count:  infinite;
-    animation-timing-function: ease-in-out;
-    animation-delay : 6s;
-    animation-direction: alternate;
-    
-    -webkit-transition: background-position 4s; /* Safari */
-    transition: background-position 4s;    
-}
 .background-animation-active {
-    background-position : 40% 0%,50% 30px,60% 0%;
+  background-position: 40% 0%,50% 30px,60% 0%;
 }
+
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes animatedBackground {
-    0%   {background-position : 40% 0%,50% 30px,60% 0%;}
-    50%   {background-position : 35% 20px, 55% 10px,65% 40px;}
-    100%   {background-position : 45% 50px,45% 0px,55% 50px;}
+  0% {
+    background-position: 40% 0%,50% 30px,60% 0%;
+  }
+  25% {
+    background-position: 26% 51px, 36% 51px, 15% 51px;
+  }
+  50% {
+    background-position: 56% 51px, 33% 51px, 36% 51px;
+  }
+  75% {
+    background-position: 34% 51px, 46% 51px, 42% 51px;
+  }
+  100% {
+    background-position: 32% 51px, 44% 51px, 31% 51px;
+  }
 }
 
 /* Standard syntax */
 @keyframes animatedBackground {
-    0%   {background-position : 40% 0%,50% 30px,60% 0%;}
-    50%   {background-position : 35% 20px, 55% 10px,65% 40px;}
-    100%   {background-position : 45% 50px,45% 0px,55% 50px;}
+  0% {
+    background-position: 40% 0%,50% 30px,60% 0%;
+  }
+  25% {
+    background-position: 23% 51px, 26% 51px, 25% 51px;
+  }
+  50% {
+    background-position: 33% 51px, 55% 51px, 62% 51px;
+  }
+  75% {
+    background-position: 46% 51px, 36% 51px, 52% 51px;
+  }
+  100% {
+    background-position: 44% 51px, 45% 51px, 44% 51px;
+  }
 }
 
 .sub-img {
-    height: 200px!important;
-    top: 70%;
-    position: absolute;
-    right: 0;
+  height: 200px !important;
+  top: 70%;
+  position: absolute;
+  right: 0;
 }
+
 .header-text {
-    margin-left: 300px;
-}    
+  margin-left: 300px;
+}
+
 .modal-dialog {
-    position: relative;
-    width: auto;
-    max-width: 90%;
-    margin: auto;
-}  
-.search-width{
-    width:70%;
+  position: relative;
+  width: auto;
+  max-width: 90%;
+  margin: auto;
+}
+
+.search-width {
+  width: 70%;
 }
 
 @media screen and (max-width: 1024px) {
-    .sub-img {
-        height: 70px!important;
-        top: 65%;
-        position: absolute;
-        right: 0;
-    }
-    .carousel-caption p {                
-        max-height: 100px;
-        overflow: scroll;                
-    }
-    .header-text {
-        margin-left: 150px;
-    }
+  .sub-img {
+    height: 70px !important;
+    top: 65%;
+    position: absolute;
+    right: 0;
+  }
+  .carousel-caption p {
+    max-height: 100px;
+    overflow: scroll;
+  }
+  .header-text {
+    margin-left: 150px;
+  }
 }
+
 @media screen and (max-width: 992px) {
-    .sub-img {
-        height: 50px!important;
-        top: 65%;
-        position: absolute;
-        right: 0;
-    }
-    .carousel-caption p {                
-        max-height: 100px;
-        overflow: scroll;                
-    }
-    .header-text {
-        margin-left: 100px;
-    }
+  .sub-img {
+    height: 50px !important;
+    top: 65%;
+    position: absolute;
+    right: 0;
+  }
+  .carousel-caption p {
+    max-height: 100px;
+    overflow: scroll;
+  }
+  .header-text {
+    margin-left: 100px;
+  }
 }
+
 @media screen and (max-width: 767px) {
-    nav {
-        display: none;
-    }
-    .row.content {
-        height: auto;
-    }
-    #myDIV{
-        width: 100%;
-    }
-    .sub-img {
-        height: 50px!important;
-        top: 65%;
-        position: absolute;
-        right: 0;
-    }
-    .carousel-caption p {                
-        max-height: 100px;
-        overflow: scroll;                
-    }
-    .header-text {
-        margin-left: 50px;
-    }
-    .search-width{
-        width:100%;
-    }
+  nav {
+    display: none;
+  }
+  .row.content {
+    height: auto;
+  }
+  #myDIV {
+    width: 100%;
+  }
+  .sub-img {
+    height: 50px !important;
+    top: 65%;
+    position: absolute;
+    right: 0;
+  }
+  .carousel-caption p {
+    max-height: 100px;
+    overflow: scroll;
+  }
+  .header-text {
+    margin-left: 50px;
+  }
+  .search-width {
+    width: 100%;
+  }
 }
 
 .display-none {
-    display: none;
+  display: none;
 }
 
 .display-block {
-    display: block;
+  display: block;
 }
 
 .img-rounded {
-    border-radius: 24px;
+  border-radius: 24px;
 }
+
 .big-img {
-    height: 120px!important;
+  height: 120px !important;
 }
+
 .small-img {
-    height: 70px!important;
+  height: 70px !important;
 }
+
 .float-left {
-    float: left;
+  float: left;
 }
+
 h4 {
-    min-height: 50px;
+  min-height: 50px;
 }
-h3{
-    border-bottom: solid 1px #7701E4;
+
+h3 {
+  border-bottom: solid 1px #7701E4;
 }
+
 .height30 {
-    height: 30px;
+  height: 30px;
 }
+
 .nav {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
+
 body {
-    position: relative;
+  position: relative;
 }
+
 ul.nav-pills {
-    top: 20px;
-    position: fixed;
+  top: 20px;
+  position: fixed;
 }
+
 button {
-    text-align: left;
-    background: transparent;
-    border: none;    
-    padding: 0px;
-    width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 0px;
+  width: 100%;
 }
+
 .glyphicon {
-    color: #C7AC00;
+  color: #C7AC00;
 }
+
 #home {
-    margin-top: 20px;
+  margin-top: 20px;
 }
-.search {
-    width: 100%;
+
+.search, .width-100 {
+  width: 100%;
 }
-.width-100 {
-    width: 100%;
+
+.label-primary {
+  margin: 5px;
 }
-.label-primary{
-    margin: 5px;
-}   
+
 .background-read {
-    background-color: #e1e592;
+  background-color: #e1e592;
 }
+
 .margin-top10 {
-    margin-top : 10px;
+  margin-top: 10px;
 }
+
 .margin-top20 {
-    margin-bottom : 20px;
+  margin-bottom: 20px;
 }
+
 .margin-right20 {
-    margin-right : 20px;
+  margin-right: 20px;
 }
-.bordered{
-    border: 1px solid #ed8e1a;
-    padding: 5px;
+
+.bordered {
+  border: 1px solid #ed8e1a;
+  padding: 5px;
 }
-.btn-link{
-    text-decoration: underline;
-    text-decoration-color: purple;
-    margin-top: 10px;
+
+.btn-link {
+  text-decoration: underline;
+  text-decoration-color: purple;
+  margin-top: 10px;
 }
+
 strong, .close {
-    color : #7701E4!important;
+  color: #7701E4 !important;
 }
-.form-control{
-    color: #555!important;
+
+.form-control {
+  color: #555 !important;
 }
-.padding-0{
-    padding: 0px;
+
+.padding-0 {
+  padding: 0px;
 }
-.span-warp{
-    line-height: 1.8;
-    word-wrap: normal;
-    display: inline-block;
+
+.span-warp {
+  line-height: 1.8;
+  word-wrap: normal;
+  display: inline-block;
 }
-.tag{
-    border-bottom: 1px solid;
-    margin-bottom: 10px;
+
+.tag {
+  border-bottom: 1px solid;
+  margin-bottom: 10px;
 }
-.checkbox{
-    max-height: 250px;
+
+.checkbox {
+  max-height: 250px;
 }
-mark{
-    background-color: #C7AC00;
+
+mark {
+  background-color: #C7AC00;
 }
+
 .img-responsive {
-    margin: 0 auto;    
+  margin: 0 auto;
 }
-.logout{
-    text-align: right;
+
+.logout {
+  text-align: right;
 }
+
 .margin-top14 {
-    margin-top:14px;
+  margin-top: 14px;
 }
+
 .alert-danger {
-    color: #a94442!important;
+  color: #a94442 !important;
 }
+
 #myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 5%;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: rgba(85, 85, 85,0.5);
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-    width: 40px;
-    text-align: center;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 5%;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgba(85, 85, 85, 0.5);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  width: 40px;
+  text-align: center;
 }
+
 #myBtn:hover {
-    background-color: rgba(85, 85, 85,1); /* Add a dark-grey background on hover */
+  background-color: #555555;
+  /* Add a dark-grey background on hover */
 }
+
+/* Animation for background */
+@keyframes animation1 {
+  0% {
+    transform: translate(828px, 814px);
+  }
+  5.88% {
+    transform: translate(860px, 814px);
+  }
+  11.76% {
+    transform: translate(892px, 787px);
+  }
+  17.65% {
+    transform: translate(924px, 787px);
+  }
+  23.53% {
+    transform: translate(956px, 787px);
+  }
+  29.41% {
+    transform: translate(988px, 814px);
+  }
+  35.29% {
+    transform: translate(1020px, 787px);
+  }
+  41.18% {
+    transform: translate(1052px, 787px);
+  }
+  47.06% {
+    transform: translate(1084px, 814px);
+  }
+  52.94% {
+    transform: translate(1116px, 787px);
+  }
+  58.82% {
+    transform: translate(1148px, 814px);
+  }
+  64.71% {
+    transform: translate(1180px, 814px);
+  }
+  70.59% {
+    transform: translate(1212px, 841px);
+  }
+  76.47% {
+    transform: translate(1244px, 868px);
+  }
+  82.35% {
+    transform: translate(1276px, 895px);
+  }
+  88.24% {
+    transform: translate(1308px, 868px);
+  }
+  94.12% {
+    transform: translate(1340px, 868px);
+  }
+  100% {
+    transform: translate(1372px, 868px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation2 {
+  0% {
+    transform: translate(476px, 274px);
+  }
+  3.33% {
+    transform: translate(508px, 301px);
+  }
+  6.67% {
+    transform: translate(540px, 301px);
+  }
+  10% {
+    transform: translate(572px, 301px);
+  }
+  13.33% {
+    transform: translate(604px, 328px);
+  }
+  16.67% {
+    transform: translate(636px, 328px);
+  }
+  20% {
+    transform: translate(668px, 328px);
+  }
+  23.33% {
+    transform: translate(700px, 328px);
+  }
+  26.67% {
+    transform: translate(732px, 328px);
+  }
+  30% {
+    transform: translate(764px, 328px);
+  }
+  33.33% {
+    transform: translate(796px, 328px);
+  }
+  36.67% {
+    transform: translate(828px, 328px);
+  }
+  40% {
+    transform: translate(860px, 301px);
+  }
+  43.33% {
+    transform: translate(892px, 274px);
+  }
+  46.67% {
+    transform: translate(924px, 301px);
+  }
+  50% {
+    transform: translate(956px, 301px);
+  }
+  53.33% {
+    transform: translate(988px, 328px);
+  }
+  56.67% {
+    transform: translate(1020px, 328px);
+  }
+  60% {
+    transform: translate(1052px, 355px);
+  }
+  63.33% {
+    transform: translate(1084px, 382px);
+  }
+  66.67% {
+    transform: translate(1116px, 355px);
+  }
+  70% {
+    transform: translate(1148px, 355px);
+  }
+  73.33% {
+    transform: translate(1180px, 328px);
+  }
+  76.67% {
+    transform: translate(1212px, 355px);
+  }
+  80% {
+    transform: translate(1244px, 382px);
+  }
+  83.33% {
+    transform: translate(1276px, 382px);
+  }
+  86.67% {
+    transform: translate(1308px, 382px);
+  }
+  90% {
+    transform: translate(1340px, 382px);
+  }
+  93.33% {
+    transform: translate(1372px, 409px);
+  }
+  96.67% {
+    transform: translate(1404px, 409px);
+  }
+  100% {
+    transform: translate(1436px, 409px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation3 {
+  0% {
+    transform: translate(92px, 598px);
+  }
+  50% {
+    transform: translate(124px, 598px);
+  }
+  100% {
+    transform: translate(156px, 625px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation4 {
+  0% {
+    transform: translate(540px, 139px);
+  }
+  50% {
+    transform: translate(572px, 166px);
+  }
+  100% {
+    transform: translate(604px, 193px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation5 {
+  0% {
+    transform: translate(476px, 4px);
+  }
+  33.33% {
+    transform: translate(508px, 31px);
+  }
+  66.67% {
+    transform: translate(540px, 58px);
+  }
+  100% {
+    transform: translate(572px, 85px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation6 {
+  0% {
+    transform: translate(284px, 598px);
+  }
+  11.11% {
+    transform: translate(316px, 571px);
+  }
+  22.22% {
+    transform: translate(348px, 571px);
+  }
+  33.33% {
+    transform: translate(380px, 598px);
+  }
+  44.44% {
+    transform: translate(412px, 571px);
+  }
+  55.56% {
+    transform: translate(444px, 544px);
+  }
+  66.67% {
+    transform: translate(476px, 544px);
+  }
+  77.78% {
+    transform: translate(508px, 517px);
+  }
+  88.89% {
+    transform: translate(540px, 490px);
+  }
+  100% {
+    transform: translate(572px, 463px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation7 {
+  0% {
+    transform: translate(1084px, 301px);
+  }
+  25% {
+    transform: translate(1116px, 301px);
+  }
+  50% {
+    transform: translate(1148px, 301px);
+  }
+  75% {
+    transform: translate(1180px, 328px);
+  }
+  100% {
+    transform: translate(1212px, 355px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation8 {
+  0% {
+    transform: translate(540px, 652px);
+  }
+  9.09% {
+    transform: translate(572px, 652px);
+  }
+  18.18% {
+    transform: translate(604px, 625px);
+  }
+  27.27% {
+    transform: translate(636px, 598px);
+  }
+  36.36% {
+    transform: translate(668px, 571px);
+  }
+  45.45% {
+    transform: translate(700px, 571px);
+  }
+  54.55% {
+    transform: translate(732px, 598px);
+  }
+  63.64% {
+    transform: translate(764px, 571px);
+  }
+  72.73% {
+    transform: translate(796px, 571px);
+  }
+  81.82% {
+    transform: translate(828px, 598px);
+  }
+  90.91% {
+    transform: translate(860px, 571px);
+  }
+  100% {
+    transform: translate(892px, 571px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation9 {
+  0% {
+    transform: translate(668px, 463px);
+  }
+  25% {
+    transform: translate(700px, 490px);
+  }
+  50% {
+    transform: translate(732px, 490px);
+  }
+  75% {
+    transform: translate(764px, 517px);
+  }
+  100% {
+    transform: translate(796px, 517px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation10 {
+  0% {
+    transform: translate(796px, 355px);
+  }
+  11.11% {
+    transform: translate(828px, 355px);
+  }
+  22.22% {
+    transform: translate(860px, 328px);
+  }
+  33.33% {
+    transform: translate(892px, 355px);
+  }
+  44.44% {
+    transform: translate(924px, 382px);
+  }
+  55.56% {
+    transform: translate(956px, 355px);
+  }
+  66.67% {
+    transform: translate(988px, 382px);
+  }
+  77.78% {
+    transform: translate(1020px, 355px);
+  }
+  88.89% {
+    transform: translate(1052px, 355px);
+  }
+  100% {
+    transform: translate(1084px, 355px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation11 {
+  0% {
+    transform: translate(-4px, 598px);
+  }
+  3.7% {
+    transform: translate(28px, 571px);
+  }
+  7.41% {
+    transform: translate(60px, 544px);
+  }
+  11.11% {
+    transform: translate(92px, 571px);
+  }
+  14.81% {
+    transform: translate(124px, 598px);
+  }
+  18.52% {
+    transform: translate(156px, 598px);
+  }
+  22.22% {
+    transform: translate(188px, 571px);
+  }
+  25.93% {
+    transform: translate(220px, 544px);
+  }
+  29.63% {
+    transform: translate(252px, 571px);
+  }
+  33.33% {
+    transform: translate(284px, 571px);
+  }
+  37.04% {
+    transform: translate(316px, 544px);
+  }
+  40.74% {
+    transform: translate(348px, 544px);
+  }
+  44.44% {
+    transform: translate(380px, 571px);
+  }
+  48.15% {
+    transform: translate(412px, 571px);
+  }
+  51.85% {
+    transform: translate(444px, 544px);
+  }
+  55.56% {
+    transform: translate(476px, 544px);
+  }
+  59.26% {
+    transform: translate(508px, 571px);
+  }
+  62.96% {
+    transform: translate(540px, 598px);
+  }
+  66.67% {
+    transform: translate(572px, 571px);
+  }
+  70.37% {
+    transform: translate(604px, 571px);
+  }
+  74.07% {
+    transform: translate(636px, 598px);
+  }
+  77.78% {
+    transform: translate(668px, 571px);
+  }
+  81.48% {
+    transform: translate(700px, 571px);
+  }
+  85.19% {
+    transform: translate(732px, 598px);
+  }
+  88.89% {
+    transform: translate(764px, 571px);
+  }
+  92.59% {
+    transform: translate(796px, 544px);
+  }
+  96.3% {
+    transform: translate(828px, 517px);
+  }
+  100% {
+    transform: translate(860px, 490px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation12 {
+  0% {
+    transform: translate(188px, 166px);
+  }
+  3.23% {
+    transform: translate(220px, 139px);
+  }
+  6.45% {
+    transform: translate(252px, 139px);
+  }
+  9.68% {
+    transform: translate(284px, 112px);
+  }
+  12.9% {
+    transform: translate(316px, 139px);
+  }
+  16.13% {
+    transform: translate(348px, 139px);
+  }
+  19.35% {
+    transform: translate(380px, 112px);
+  }
+  22.58% {
+    transform: translate(412px, 112px);
+  }
+  25.81% {
+    transform: translate(444px, 112px);
+  }
+  29.03% {
+    transform: translate(476px, 139px);
+  }
+  32.26% {
+    transform: translate(508px, 139px);
+  }
+  35.48% {
+    transform: translate(540px, 139px);
+  }
+  38.71% {
+    transform: translate(572px, 112px);
+  }
+  41.94% {
+    transform: translate(604px, 139px);
+  }
+  45.16% {
+    transform: translate(636px, 112px);
+  }
+  48.39% {
+    transform: translate(668px, 139px);
+  }
+  51.61% {
+    transform: translate(700px, 112px);
+  }
+  54.84% {
+    transform: translate(732px, 112px);
+  }
+  58.06% {
+    transform: translate(764px, 139px);
+  }
+  61.29% {
+    transform: translate(796px, 112px);
+  }
+  64.52% {
+    transform: translate(828px, 112px);
+  }
+  67.74% {
+    transform: translate(860px, 139px);
+  }
+  70.97% {
+    transform: translate(892px, 166px);
+  }
+  74.19% {
+    transform: translate(924px, 139px);
+  }
+  77.42% {
+    transform: translate(956px, 112px);
+  }
+  80.65% {
+    transform: translate(988px, 112px);
+  }
+  83.87% {
+    transform: translate(1020px, 112px);
+  }
+  87.1% {
+    transform: translate(1052px, 112px);
+  }
+  90.32% {
+    transform: translate(1084px, 85px);
+  }
+  93.55% {
+    transform: translate(1116px, 85px);
+  }
+  96.77% {
+    transform: translate(1148px, 112px);
+  }
+  100% {
+    transform: translate(1180px, 85px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation13 {
+  0% {
+    transform: translate(-36px, 166px);
+  }
+  14.29% {
+    transform: translate(-4px, 193px);
+  }
+  28.57% {
+    transform: translate(28px, 193px);
+  }
+  42.86% {
+    transform: translate(60px, 166px);
+  }
+  57.14% {
+    transform: translate(92px, 166px);
+  }
+  71.43% {
+    transform: translate(124px, 166px);
+  }
+  85.71% {
+    transform: translate(156px, 166px);
+  }
+  100% {
+    transform: translate(188px, 139px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation14 {
+  0% {
+    transform: translate(348px, 571px);
+  }
+  3.03% {
+    transform: translate(380px, 544px);
+  }
+  6.06% {
+    transform: translate(412px, 571px);
+  }
+  9.09% {
+    transform: translate(444px, 598px);
+  }
+  12.12% {
+    transform: translate(476px, 598px);
+  }
+  15.15% {
+    transform: translate(508px, 598px);
+  }
+  18.18% {
+    transform: translate(540px, 625px);
+  }
+  21.21% {
+    transform: translate(572px, 652px);
+  }
+  24.24% {
+    transform: translate(604px, 652px);
+  }
+  27.27% {
+    transform: translate(636px, 679px);
+  }
+  30.3% {
+    transform: translate(668px, 679px);
+  }
+  33.33% {
+    transform: translate(700px, 706px);
+  }
+  36.36% {
+    transform: translate(732px, 679px);
+  }
+  39.39% {
+    transform: translate(764px, 652px);
+  }
+  42.42% {
+    transform: translate(796px, 679px);
+  }
+  45.45% {
+    transform: translate(828px, 652px);
+  }
+  48.48% {
+    transform: translate(860px, 652px);
+  }
+  51.52% {
+    transform: translate(892px, 652px);
+  }
+  54.55% {
+    transform: translate(924px, 625px);
+  }
+  57.58% {
+    transform: translate(956px, 652px);
+  }
+  60.61% {
+    transform: translate(988px, 625px);
+  }
+  63.64% {
+    transform: translate(1020px, 625px);
+  }
+  66.67% {
+    transform: translate(1052px, 652px);
+  }
+  69.7% {
+    transform: translate(1084px, 625px);
+  }
+  72.73% {
+    transform: translate(1116px, 598px);
+  }
+  75.76% {
+    transform: translate(1148px, 625px);
+  }
+  78.79% {
+    transform: translate(1180px, 598px);
+  }
+  81.82% {
+    transform: translate(1212px, 571px);
+  }
+  84.85% {
+    transform: translate(1244px, 544px);
+  }
+  87.88% {
+    transform: translate(1276px, 571px);
+  }
+  90.91% {
+    transform: translate(1308px, 598px);
+  }
+  93.94% {
+    transform: translate(1340px, 625px);
+  }
+  96.97% {
+    transform: translate(1372px, 598px);
+  }
+  100% {
+    transform: translate(1404px, 625px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation15 {
+  0% {
+    transform: translate(252px, 652px);
+  }
+  3.57% {
+    transform: translate(284px, 652px);
+  }
+  7.14% {
+    transform: translate(316px, 625px);
+  }
+  10.71% {
+    transform: translate(348px, 652px);
+  }
+  14.29% {
+    transform: translate(380px, 625px);
+  }
+  17.86% {
+    transform: translate(412px, 652px);
+  }
+  21.43% {
+    transform: translate(444px, 652px);
+  }
+  25% {
+    transform: translate(476px, 625px);
+  }
+  28.57% {
+    transform: translate(508px, 652px);
+  }
+  32.14% {
+    transform: translate(540px, 652px);
+  }
+  35.71% {
+    transform: translate(572px, 679px);
+  }
+  39.29% {
+    transform: translate(604px, 679px);
+  }
+  42.86% {
+    transform: translate(636px, 679px);
+  }
+  46.43% {
+    transform: translate(668px, 706px);
+  }
+  50% {
+    transform: translate(700px, 706px);
+  }
+  53.57% {
+    transform: translate(732px, 679px);
+  }
+  57.14% {
+    transform: translate(764px, 679px);
+  }
+  60.71% {
+    transform: translate(796px, 679px);
+  }
+  64.29% {
+    transform: translate(828px, 706px);
+  }
+  67.86% {
+    transform: translate(860px, 679px);
+  }
+  71.43% {
+    transform: translate(892px, 652px);
+  }
+  75% {
+    transform: translate(924px, 679px);
+  }
+  78.57% {
+    transform: translate(956px, 706px);
+  }
+  82.14% {
+    transform: translate(988px, 679px);
+  }
+  85.71% {
+    transform: translate(1020px, 679px);
+  }
+  89.29% {
+    transform: translate(1052px, 679px);
+  }
+  92.86% {
+    transform: translate(1084px, 679px);
+  }
+  96.43% {
+    transform: translate(1116px, 706px);
+  }
+  100% {
+    transform: translate(1148px, 679px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation16 {
+  0% {
+    transform: translate(828px, 922px);
+  }
+  16.67% {
+    transform: translate(860px, 922px);
+  }
+  33.33% {
+    transform: translate(892px, 949px);
+  }
+  50% {
+    transform: translate(924px, 976px);
+  }
+  66.67% {
+    transform: translate(956px, 949px);
+  }
+  83.33% {
+    transform: translate(988px, 976px);
+  }
+  100% {
+    transform: translate(1020px, 1003px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation17 {
+  0% {
+    transform: translate(380px, 598px);
+  }
+  3.13% {
+    transform: translate(412px, 625px);
+  }
+  6.25% {
+    transform: translate(444px, 598px);
+  }
+  9.38% {
+    transform: translate(476px, 598px);
+  }
+  12.5% {
+    transform: translate(508px, 598px);
+  }
+  15.63% {
+    transform: translate(540px, 625px);
+  }
+  18.75% {
+    transform: translate(572px, 625px);
+  }
+  21.88% {
+    transform: translate(604px, 625px);
+  }
+  25% {
+    transform: translate(636px, 625px);
+  }
+  28.13% {
+    transform: translate(668px, 625px);
+  }
+  31.25% {
+    transform: translate(700px, 652px);
+  }
+  34.38% {
+    transform: translate(732px, 625px);
+  }
+  37.5% {
+    transform: translate(764px, 625px);
+  }
+  40.63% {
+    transform: translate(796px, 625px);
+  }
+  43.75% {
+    transform: translate(828px, 598px);
+  }
+  46.88% {
+    transform: translate(860px, 571px);
+  }
+  50% {
+    transform: translate(892px, 571px);
+  }
+  53.13% {
+    transform: translate(924px, 544px);
+  }
+  56.25% {
+    transform: translate(956px, 571px);
+  }
+  59.38% {
+    transform: translate(988px, 571px);
+  }
+  62.5% {
+    transform: translate(1020px, 544px);
+  }
+  65.63% {
+    transform: translate(1052px, 544px);
+  }
+  68.75% {
+    transform: translate(1084px, 517px);
+  }
+  71.88% {
+    transform: translate(1116px, 490px);
+  }
+  75% {
+    transform: translate(1148px, 463px);
+  }
+  78.13% {
+    transform: translate(1180px, 436px);
+  }
+  81.25% {
+    transform: translate(1212px, 436px);
+  }
+  84.38% {
+    transform: translate(1244px, 436px);
+  }
+  87.5% {
+    transform: translate(1276px, 409px);
+  }
+  90.63% {
+    transform: translate(1308px, 382px);
+  }
+  93.75% {
+    transform: translate(1340px, 409px);
+  }
+  96.88% {
+    transform: translate(1372px, 382px);
+  }
+  100% {
+    transform: translate(1404px, 382px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation18 {
+  0% {
+    transform: translate(700px, 4px);
+  }
+  9.09% {
+    transform: translate(732px, -23px);
+  }
+  18.18% {
+    transform: translate(764px, -23px);
+  }
+  27.27% {
+    transform: translate(796px, -50px);
+  }
+  36.36% {
+    transform: translate(828px, -50px);
+  }
+  45.45% {
+    transform: translate(860px, -50px);
+  }
+  54.55% {
+    transform: translate(892px, -23px);
+  }
+  63.64% {
+    transform: translate(924px, 4px);
+  }
+  72.73% {
+    transform: translate(956px, 4px);
+  }
+  81.82% {
+    transform: translate(988px, -23px);
+  }
+  90.91% {
+    transform: translate(1020px, -23px);
+  }
+  100% {
+    transform: translate(1052px, -50px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animation19 {
+  0% {
+    transform: translate(-36px, 544px);
+  }
+  9.09% {
+    transform: translate(-4px, 544px);
+  }
+  18.18% {
+    transform: translate(28px, 517px);
+  }
+  27.27% {
+    transform: translate(60px, 517px);
+  }
+  36.36% {
+    transform: translate(92px, 517px);
+  }
+  45.45% {
+    transform: translate(124px, 517px);
+  }
+  54.55% {
+    transform: translate(156px, 544px);
+  }
+  63.64% {
+    transform: translate(188px, 544px);
+  }
+  72.73% {
+    transform: translate(220px, 517px);
+  }
+  81.82% {
+    transform: translate(252px, 517px);
+  }
+  90.91% {
+    transform: translate(284px, 544px);
+  }
+  100% {
+    transform: translate(316px, 571px);
+  }
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.particle {
+  position: absolute;
+  opacity: 0;
+  overflow: visible;
+  background-size: contain;
+}
+
+.elem1 {
+  left: 188px;
+  top: -50px;
+  animation: animation1 linear 20s infinite;
+  height: 29px;
+  width: 29px;
+  background-image: url(http://vc35photography.epizy.com/img/camera-shutter.svg);
+}
+
+.elem2 {
+  left: 156px;
+  top: 139px;
+  animation: animation2 linear 18s infinite;
+  height: 31px;
+  width: 31px;
+  background-image: url(http://vc35photography.epizy.com/img/photo-camera.svg);
+}
+
+.elem3 {
+  left: -100px;
+  top: 31px;
+  animation: animation3 linear 18s infinite;
+  height: 22px;
+  width: 22px;
+  background-image: url(http://vc35photography.epizy.com/img/spark-green.svg);
+}
+
+.elem4 {
+  left: 92px;
+  top: 58px;
+  animation: animation4 linear 17s infinite;
+  height: 17px;
+  width: 17px;
+  background-image: url(http://vc35photography.epizy.com/img/spark-white.svg);
+}
+
+.elem5 {
+  left: 92px;
+  top: 139px;
+  animation: animation5 linear 16s infinite;
+  height: 21px;
+  width: 21px;
+  background-image: url(http://vc35photography.epizy.com/img/buddhism-wheel.svg);
+}
+
+.elem6 {
+  left: -100px;
+  top: 4px;
+  animation: animation6 linear 16s infinite;
+  height: 28px;
+  width: 28px;
+  background-image: url(http://vc35photography.epizy.com/img/camera-shutter.svg);
+}
+
+.elem7 {
+  left: -68px;
+  top: 4px;
+  animation: animation7 linear 18s infinite;
+  height: 27px;
+  width: 27px;
+  background-image: url(http://vc35photography.epizy.com/img/photo-camera.svg);
+}
+
+.elem8 {
+  left: 92px;
+  top: -50px;
+  animation: animation8 linear 16s infinite;
+  height: 14px;
+  width: 14px;
+  background-image: url(http://vc35photography.epizy.com/img/spark-green.svg);
+}
+
+.elem9 {
+  left: 156px;
+  top: 85px;
+  animation: animation9 linear 19s infinite;
+  height: 21px;
+  width: 21px;
+  background-image: url(http://vc35photography.epizy.com/img/spark-white.svg);
+}
+
+.elem10 {
+  left: -68px;
+  top: 4px;
+  animation: animation10 linear 16s infinite;
+  height: 17px;
+  width: 17px;
+  background-image: url(http://vc35photography.epizy.com/img/buddhism-wheel.svg);
+}
+
+.elem11 {
+  left: -100px;
+  top: -50px;
+  animation: animation11 linear 16s infinite;
+  height: 28px;
+  width: 28px;
+  background-image: url(http://vc35photography.epizy.com/img/camera-shutter.svg);
+}
+
+.elem12 {
+  left: -100px;
+  top: 166px;
+  animation: animation12 linear 20s infinite;
+  height: 16px;
+  width: 16px;
+  background-image: url(http://vc35photography.epizy.com/img/photo-camera.svg);
+}
+
+.elem13 {
+  left: -100px;
+  top: 139px;
+  animation: animation13 linear 19s infinite;
+  height: 30px;
+  width: 30px;
+  background-image: url(http://vc35photography.epizy.com/img/spark-green.svg);
+}
+
+.elem14 {
+  left: -4px;
+  top: 112px;
+  animation: animation14 linear 20s infinite;
+  height: 13px;
+  width: 13px;
+  background-image: url(http://vc35photography.epizy.com/img/spark-white.svg);
+}
+
+.elem15 {
+  left: -4px;
+  top: -50px;
+  animation: animation15 linear 19s infinite;
+  height: 29px;
+  width: 29px;
+  background-image: url(http://vc35photography.epizy.com/img/buddhism-wheel.svg);
+}
+
+.elem16 {
+  left: -68px;
+  top: -50px;
+  animation: animation16 linear 19s infinite;
+  height: 24px;
+  width: 24px;
+  background-image: url(http://vc35photography.epizy.com/img/camera-shutter.svg);
+}
+
+.elem17 {
+  left: 28px;
+  top: 166px;
+  animation: animation17 linear 18s infinite;
+  height: 19px;
+  width: 19px;
+  background-image: url(http://vc35photography.epizy.com/img/photo-camera.svg);
+}
+
+.elem18 {
+  left: 60px;
+  top: -50px;
+  animation: animation18 linear 20s infinite;
+  height: 17px;
+  width: 17px;
+  background-image: url(http://vc35photography.epizy.com/img/spark-green.svg);
+}
+
+.elem19 {
+  left: -36px;
+  top: 4px;
+  animation: animation19 linear 18s infinite;
+  height: 25px;
+  width: 25px;
+  background-image: url(http://vc35photography.epizy.com/img/spark-white.svg);
+}
+
+.anim-delay1 {
+  animation-delay: 2s;
+}
+
+.anim-delay2 {
+  animation-delay: 5s;
+}
+
+.anim-delay3 {
+  animation-delay: 1s;
+}
+
+.anim-delay4 {
+  animation-delay: 4s;
+}
+
+.anim-delay5 {
+  animation-delay: 5s;
+}
+
+.anim-delay6 {
+  animation-delay: 4s;
+}
+
+.anim-delay7 {
+  animation-delay: 4s;
+}
+
+.anim-delay8 {
+  animation-delay: 2s;
+}
+
+.anim-delay9 {
+  animation-delay: 4s;
+}
+
+.anim-delay10 {
+  animation-delay: 5s;
+}
+
+.anim-delay11 {
+  animation-delay: 1s;
+}
+
+.anim-delay12 {
+  animation-delay: 2s;
+}
+
+.anim-delay13 {
+  animation-delay: 5s;
+}
+
+.anim-delay14 {
+  animation-delay: 3s;
+}
+
+.anim-delay15 {
+  animation-delay: 4s;
+}
+
+.anim-delay16 {
+  animation-delay: 2s;
+}
+
+.anim-delay17 {
+  animation-delay: 1s;
+}
+
+.anim-delay18 {
+  animation-delay: 2s;
+}
+
+.anim-delay19 {
+  animation-delay: 5s;
+}
+
+.anim-delay20 {
+  animation-delay: 2s;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  background: #2f2f2f;
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */
