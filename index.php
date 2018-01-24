@@ -248,7 +248,7 @@
         <div class="row">
             <nav class="col-sm-3" id="myScrollspy">
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="hidden-sm hidden-xs"><img class="img-rounded big-img" alt="VC35Photography" src="favicon.png"></li>
+                    <li class="hidden-sm hidden-xs"><img class="icon-rotate img-rounded big-img" alt="VC35Photography" src="favicon.png"></li>
                     <?php
                      foreach($categories as $val){
                         echo '<li><a href="#'.$val.'">'.$val.'</a></li>';  
@@ -262,7 +262,7 @@
                     <div id="head">
                         <h4>
                             <span class="hidden-lg hidden-md float-left">
-                                <img class="img-rounded small-img" alt="VC35Photography" src="favicon.png">
+                                <img class="icon-rotate img-rounded small-img" alt="VC35Photography" src="favicon.png">
                             </span>
                             <span class="header-text">VC35Photography</span>                            
                         </h4>
