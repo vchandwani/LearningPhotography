@@ -88,12 +88,14 @@
         // break description by command seperate        
         $desc = '';
         if(isset($_POST['description']) && !empty($_POST['description'])){
-            $description = explode(",", $_POST['description']);
-            $desc .= '<ul>';
-            foreach($description as $key=>$val){
-                $desc .= '<li>'.$val.'</li>';
-            }
-            $desc .= '</ul>';
+            $description = explode(".,", $_POST['description']);
+            foreach($description as $key=>$val) {
+                if(isset($val) && !empty($val)){
+                    $desc .= '<ul>';
+                    $desc .= '<li>'.$val.'</li>';
+                    $desc .= '</ul>';    
+                }   
+             }
         }       
         $newInfo = false;     
         if(isset($_POST['tags']) && !empty($_POST['tags'])){

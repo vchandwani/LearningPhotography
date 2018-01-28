@@ -179,8 +179,9 @@
                 $stmt->bindParam(':Id', $_POST['updateCategoryId'], PDO::PARAM_INT);
                 $stmt->execute();
                 $_POST['updateCategoryId'] = null;
-                header("Refresh:0; url=index.php?admin=true");
                 $messageUpdate = "Category updated successfully";
+                sleep(2);
+                header("Refresh:0; url=index.php?admin=true");
             } else {
                 $error = "Category already exist!";
             } 
@@ -198,13 +199,15 @@
     } 
     if(isset($_POST['updateCategoryInfoId'])) {
         // Send update request
-        $description = explode(",", $_POST['description']);
-        $desc = '';
-        $desc .= '<ul>';
-        foreach($description as $key=>$val){
-            $desc .= '<li>'.$val.'</li>';
-        }
-        $desc .= '</ul>';
+        $description = explode(".,", $_POST['description']);
+        foreach($description as $key=>$val) {
+            if(isset($val) && !empty($val)){
+                $desc .= '<ul>';
+                $desc .= '<li>'.$val.'</li>';
+                $desc .= '</ul>';    
+            }   
+         }
+
         $sql = "UPDATE learning_info SET  category_id = :categoryIdVal, description = :descriptionVal, tags = :tagsVal
         WHERE id = :Id";
         $stmt = $conn->prepare($sql);									 
@@ -213,9 +216,10 @@
         $stmt->bindParam(':tagsVal', $_POST['tags'], PDO::PARAM_STR);
         $stmt->bindParam(':Id', $_POST['updateCategoryInfoId'], PDO::PARAM_INT);
         $stmt->execute();
-        $_POST['updateCategoryInfoId'] = null;
-        header("Refresh:0; url=index.php?admin=true");
+        $_POST['updateCategoryInfoId'] = null;        
         $messageUpdate = "Category Infromation updated successfully";
+        sleep(2);
+        header("Refresh:0; url=index.php?admin=true");
     }
 
     if(isset($_POST['deleteInfoExampleId'])){
@@ -239,8 +243,7 @@
         $stmt->bindParam(':Id', $_POST['updateInfoExampleId'], PDO::PARAM_INT);
         $stmt->execute();
         $_POST['updateInfoExampleId'] = null;
-        header("Refresh:0; url=index.php?admin=true");
-        $messageUpdate = "Example updated successfully";
+        $messageUpdate = "Example updated successfully. Refresh the page to see the change.";
     }
     $_POST = null;
     ?>
@@ -350,7 +353,7 @@
                                     
                                     $replaceArray = array("<ul>","<li>","</ul>");
                                     $descriptionView = str_replace($replaceArray, "", $categoryInfo['description']);
-                                    $descriptionView = str_replace("</li>", ", ", $descriptionView);
+                                    $descriptionView = str_replace("</li>", ".,", $descriptionView);
                                 ?>
                                 <div class="tag" tag="<?php echo $categoryInfo['tags']; ?>">
                                     <?php 
@@ -394,7 +397,7 @@
                                                                 </div>    
                                                                         
                                                                 <div class="form-group">
-                                                                    <label for="email">Description(comma seperated): </label>
+                                                                    <label for="email">Description(full top comma seperated .,): </label>
                                                                     <textarea class="form-control" name="description"  required id="description" rows="4" cols="50"><?php echo $descriptionView; ?></textarea>
                                                                 </div>            
                                                                 <div class="form-group">
