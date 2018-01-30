@@ -27,49 +27,66 @@
                 selectedtags = $('.search').val();
                 if (selectedtags.length > 0) {
                     // make all tags hidden
+                    $("#myDIV div.parentDiv").addClass("display-none");
                     $("#myDIV div.tag").addClass("display-none");
-                    //display if tag attribute has the value
-                    $('#myDIV div.tag').each(function () {
-                        display = false;
-                        tag = $(this).attr('tag');
+                    $('#myDIV div.parentDiv').each(function () {
+                        var $this = $(this);
+                        $this.children("div").each(function () {
+                            var $div = $(this);                    
+                            //display if tag attribute has the value
+                            $div.children("div.tag").each(function () {
+                                display = false;
+                                tag = $(this).attr('tag');
 
-                        $.each(selectedtags, function (index, value) {
-                            if (tag.indexOf(value) >= 0) {
-                                display = true;
-                                return false;
-                            }
+                                $.each(selectedtags, function (index, value) {
+                                    if (tag.indexOf(value) >= 0) {
+                                        display = true;
+                                        return false;
+                                    }
+                                });
+                                if (display) {
+                                    // Display the tag
+                                    $(this).removeClass('display-none');
+                                    $this.removeClass('display-none');
+                                }
+                            });
                         });
-                        if (display) {
-                            // Display the tag
-                            $(this).removeClass('display-none');
-                        }
                     });
                 } else {
                     // make all tags visible
                     $("#myDIV div.tag").removeClass("display-none");
+                    $("#myDIV div.parentDiv").removeClass("display-none");
 
                 }
 
             });
             $('.search').on("select2:select", function (e) {
                 // make all tags hidden
+                $("#myDIV div.parentDiv").addClass("display-none");
                 $("#myDIV div.tag").addClass("display-none");
-                selectedtags = $('.search').val();
-                //display if tag attribute has the value
-                $('#myDIV div.tag').each(function () {
-                    display = false;
-                    tag = $(this).attr('tag');
-                    
-                    $.each(selectedtags, function (index, value) {
-                        if (tag.indexOf(value) >= 0) {
-                            display = true;
-                            return false;
-                        }
+                selectedtags = $('.search').val();                
+                $('#myDIV div.parentDiv').each(function () {
+                    var $this = $(this);
+                    $this.children("div").each(function () {
+                        var $div = $(this);
+                        //display if tag attribute has the value
+                        $div.children("div.tag").each(function () {
+                            display = false;
+                            tag = $(this).attr('tag');
+                            
+                            $.each(selectedtags, function (index, value) {
+                                if (tag.indexOf(value) >= 0) {
+                                    display = true;
+                                    return false;
+                                }
+                            });
+                            if (display) {
+                                // Display the tag
+                                $(this).removeClass('display-none');
+                                $this.removeClass('display-none');
+                            }
+                        });
                     });
-                    if (display) {
-                        // Display the tag
-                        $(this).removeClass('display-none');
-                    }
                 });
             });
             $(".carousel").swipe({
@@ -297,7 +314,7 @@
                             <?php } ?>
                         <?php
                         foreach ($categories as $key=>$category) {
-                                echo '<div id="'.$category.'">'; 
+                                echo '<div id="'.$category.'" class="parentDiv">'; 
                         ?>                            
                                 <h3 class="height30 row">
                                     <button class="col-xs-10" data-toggle="collapse" data-target="#<?php echo $category; ?>_info">

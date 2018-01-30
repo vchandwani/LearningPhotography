@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql100.epizy.com
--- Generation Time: Jan 28, 2018 at 06:48 PM
+-- Generation Time: Jan 29, 2018 at 10:40 PM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -316,7 +316,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
 --
 
 INSERT INTO `roles` (`id`, `username`, `password`, `salt`) VALUES
-(1, 'admin', '28997f95faab2c2376e1b1bd9808dd6ddedfa7d4', '$%^7**');
+(1, 'admin', '9884fead145f1c7e92a5e532b0dbf18dfbd2e5f2', '$%^7**');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
