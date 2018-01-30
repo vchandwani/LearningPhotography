@@ -284,8 +284,12 @@
                             </span>
                             <span class="header-text">VC35Photography</span>                            
                         </h4>
-                        <h6 class="logout search-width">
-                            <a href="logout.php">Logout</a>
+                        <h6 class="search-width">
+                            <span>
+                                <a href="https://www.instagram.com/vc35photography/" target="blank"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/vc35photography/" target="blank"><i class="fa fa-facebook"></i></a>
+                            </span>
+                            <a class="logout" href="logout.php">Logout</a>
                         </h6>
                         <div class="search-width">
                             <p class="margin-top14"></p>

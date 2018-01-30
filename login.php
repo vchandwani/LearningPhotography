@@ -39,6 +39,14 @@
             <div class="row text-center">
                 <h3>VC35Photography Learnings</h3>
             </div>
+            <div class="row text-center">
+                <h6>
+                    <span>
+                        <a href="https://www.instagram.com/vc35photography/" target="blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/vc35photography/" target="blank"><i class="fa fa-facebook"></i></a>
+                    </span>
+                </h6>
+            </div>
             <div class="row text-center"><h2>Kindly Login</h2></div>
             <div class="row text-center margin-top10">
                 <form action="" method="post">

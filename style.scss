@@ -1,22 +1,24 @@
+$color-purple : #7701E4;
+$color-icon : #C7AC00;
 .select2-results {
-  background-color: #7701E4;
+  background-color: $color-purple;
   &:active, &:hover {
-    background-color: #7701E4;
+    background-color: $color-purple;
   }
 }
 
 .select2-select2-selection__choice {
-  color: #7701E4 !important;
+  color: $color-purple !important;
 }
 
 .nav > li {
   &.active > a {
-    background-color: #7701E4;
+    background-color: $color-purple;
     opacity: 0.8;
   }
   > a {
     &:focus, &:hover {
-      background-color: #7701E4;
+      background-color: $color-purple;
       opacity: 0.8;
     }
   }
@@ -57,7 +59,7 @@ footer {
       -webkit-transform: rotateY(360deg);
       /* Safari */
       transform: rotateY(360deg);
-      color: #7701E4 !important;
+      color: $color-purple !important;
     }
   }
   /* This section calls the slideInFromLeft animation we defined above */
@@ -428,7 +430,7 @@ h4 {
 }
 
 h3 {
-  border-bottom: solid 1px #7701E4;
+  border-bottom: solid 1px $color-purple;
 }
 
 .height30 {
@@ -460,7 +462,7 @@ button {
 }
 
 .glyphicon {
-  color: #C7AC00;
+  color: $color-icon;
 }
 
 #home {
@@ -503,7 +505,7 @@ button {
 }
 
 strong, .close {
-  color: #7701E4 !important;
+  color: $color-purple !important;
 }
 
 .form-control {
@@ -530,7 +532,7 @@ strong, .close {
 }
 
 mark {
-  background-color: #C7AC00;
+  background-color: $color-icon;
 }
 
 .img-responsive {
@@ -538,7 +540,7 @@ mark {
 }
 
 .logout {
-  text-align: right;
+  float: right;
 }
 
 .margin-top14 {
@@ -742,4 +744,13 @@ mark {
 	margin: 0 auto;
 	background: #2f2f2f;
 	position: relative;
+}
+.fa {
+  margin-right: 10px;
+}
+.fa-instagram , .fa-facebook {
+  font-size: 24px!important;
+  &:hover{
+    color: $color-icon!important;
+  }
 }
