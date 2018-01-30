@@ -5,9 +5,7 @@
     <?php include 'header.html';  ?>
     <script>
         $(document).ready(function () {
-            if($('#myDIV').is(':visible')){
-                $(".background-animation").addClass("background-animation-active");
-            }
+            
             $("#myDIV .tag").each(function () {
                 tags = $(this).attr("tag").split(' ');
                 $.each(tags, function (index, value) {
@@ -247,7 +245,7 @@
     }
     $_POST = null;
     ?>
-    <div class="container-fluid background-animation">
+    <div class="container-fluid">
         <div class="row">
             <nav class="col-sm-3" id="myScrollspy">
                 <ul class="nav nav-pills nav-stacked">

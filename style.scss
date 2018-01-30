@@ -454,7 +454,7 @@ button {
   padding: 0px;
   width: 100%;
   &:focus{
-    outline: none;
+    outline: none!important;
   }
 }
 
