@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql100.epizy.com
--- Generation Time: Jan 29, 2018 at 10:40 PM
+-- Generation Time: Feb 04, 2018 at 04:36 AM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -78,7 +78,7 @@ INSERT INTO `learning_info` (`id`, `category_id`, `description`, `tags`) VALUES
 (6, 1, '<ul> <li>shutter speed affects motion blur</li> <li>for landscape : don''t care as we shoot on tripod</li> <li>sunrise/sunset : 10 - 30 sec exposure </li> <li>bird : 1/1000 sec</li> <li>humming bird freeze : 1/8000 sec</li> </ul>\r\n', 'exposure-triangle shutter-speed landscape sunrise sunset bird humming-bird'),
 (7, 1, '<ul> <li>measure brightness of the subject</li> <li>Exposure bracketing three or more by one click of shutter (continious mode) , each in different exposure</li> <li>example : -2 -1 0 +1 +2</li> <li>hdr : blending multiple exposure to create one image</li> <li>EV values : exposure compensation , to alter exposure from the value selected</li> <li>For Landscape should be Ev -1, else sky is over exposed</li> <li>Mist and Fog always over exposed EV +1</li> </ul>\r\n <ul><li>Mist and Fog exposure from EV+1 upto EV+3 until you get it correct</li><li> Never Over expose an Image</li></ul>', 'metering hdr ev landscape exposure fog mist'),
 (8, 1, '<ul><li>Iso manges sensitivity</li><li>\r\nThe digital gain that your camera applies to add more light</li><li>\r\nThe lower the ISO number the less sensitive camera is to light. The higher ISO number increases the sensitivity of your camera</li><li>\r\nTrade off with high sensitivity is the noise element the camera applies in creating the digital gain</li><li>    \r\nOn full frame camera : allows dynamic range : iso 100 and below  as low to iso 32 on full frame camera</li><li>\r\nFor landscape shoot at ISO 100 or below</li><li>\r\nHandheld on low light ISO 1000 or ISO 1600 will create grain but is fine</li><li>\r\nGalaxies : ISO 2000 or above (noise adds to the stars)</li></ul>', 'exposure-triangle iso milkyway stars galaxies landscape handheld'),
-(9, 3, 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 'aperture iso'),
+(9, 3, '<ul><li>Retain details of highlight, for example when clicking Sun covered with clouds, retain details of cloud covering Sun</li></ul>', 'landscape'),
 (10, 2, '<ul><li>Examples</li></ul>', 'portraits examples'),
 (11, 1, '<ul><li>dont change the EV value instead alter ISO shutter speed or aperture</li><li>\r\nfor Kingfisher bird change the EV value to get exposure on the bird correct</li><li> for eg: -3 -1 +1 +3\r\n</li></ul>', 'manual-mode kingfisher-bird'),
 (12, 1, '<ul><li>Full control</li><li>\r\nFlexibility to set your shots</li><li>\r\nAllows creative freedom</li><li>\r\nStrong knowledge of exposure triangle</li><li>\r\nIdeal for all genres of photography</li></ul>', 'manual-mode '),
@@ -305,18 +305,22 @@ INSERT INTO `learning_info_examples` (`id`, `learning_info_id`, `image`, `sub_im
 CREATE TABLE IF NOT EXISTS `roles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `passWord1` varchar(255) NOT NULL,
   `salt` varchar(255) NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `user` (`username`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `roles`
 --
 
-INSERT INTO `roles` (`id`, `username`, `password`, `salt`) VALUES
-(1, 'admin', '9884fead145f1c7e92a5e532b0dbf18dfbd2e5f2', '$%^7**');
+INSERT INTO `roles` (`id`, `username`, `passWord1`, `salt`, `active`) VALUES
+(1, 'admin', '9884fead145f1c7e92a5e532b0dbf18dfbd2e5f2', '$%^7**', 1),
+(3, 'test', '0913090c179748bebb4fd5f8f50fe13c2b3c9a68', 'wWDeCBWMue', 0),
+(4, 'ok', 'd24a2fe999d818a9f8491a386baee994fcc450c5', 'ylVw2gDitX', 0),
+(5, 'sdsd', '0a1a23a483dfe21fcaf87311e42166127d19cde5', 'M6Rvd1LTmC', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
