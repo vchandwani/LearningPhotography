@@ -1,5 +1,8 @@
 <?php include 'session.php';  ?>
 <?php
+    if(!$_SESSION['admin']){
+        header("Location: index.php");
+    }
     include 'connection.php';
     $error = '';
     $success = '';
@@ -220,7 +223,7 @@
         </div>
         <?php } ?>
         <h6 class="row logout margin-right20">
-            <a href="logout.php">Logout</a>
+            <span class="logout">Welcome, <?php echo $_SESSION['login_user'].'  ';  ?> <a href="logout.php">Logout</a></span>
         </h6>
         <div class="row">
             <div class="col-sm-12">

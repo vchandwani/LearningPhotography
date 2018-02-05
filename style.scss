@@ -1,5 +1,8 @@
 $color-purple : #7701E4;
 $color-icon : #C7AC00;
+$base-color : #2f2f2f;
+$base-color-light : lighten( $base-color, 10% );
+
 .select2-results {
   background-color: $color-purple;
   &:active, &:hover {
@@ -39,7 +42,7 @@ input, textarea, select {
 }
 
 .container-fluid, .container, .modal-content {
-  background-color: #2f2f2f;
+  background-color: $base-color;
 }
 
 .row.content {
@@ -87,7 +90,7 @@ footer {
   display: inline-block;
   vertical-align: middle;
   animation: cameraFlash 5s alternate-reverse infinite;
-  background-color: #2f2f2f;
+  background-color: $base-color;
 }
 
 @keyframes cameraFlash {
@@ -96,7 +99,7 @@ footer {
   }
 
   29% {
-    box-shadow: inset 0px 0px 10px 100px #2f2f2f;
+    box-shadow: inset 0px 0px 10px 100px $base-color;
   }
 
   30% {
@@ -120,7 +123,7 @@ footer {
   }
 
   36% {
-    box-shadow: inset 0px 0px 10px 100px #2f2f2f;
+    box-shadow: inset 0px 0px 10px 100px $base-color;
   }
 
   65% {
@@ -134,13 +137,13 @@ footer {
   height: 0;
   border-style: solid;
   border-width: 15px 30px 15px 0;
-  border-color: transparent #2f2f2f transparent transparent;
+  border-color: transparent $base-color transparent transparent;
   animation: illuminationFlash 5s normal infinite;
 }
 
 @keyframes illuminationFlash {
   0% {
-    border-color: transparent #2f2f2f transparent transparent;
+    border-color: transparent $base-color transparent transparent;
   }
 
   6% {
@@ -196,11 +199,11 @@ footer {
   }
 
   84% {
-    border-color: transparent #2f2f2f transparent transparent;
+    border-color: transparent $base-color transparent transparent;
   }
 
   100% {
-    border-color: transparent #2f2f2f transparent transparent;
+    border-color: transparent $base-color transparent transparent;
   }
 }
 
@@ -515,6 +518,9 @@ strong, .close {
 .padding-0 {
   padding: 0px;
 }
+.padding-10-0 {
+  padding: 10px 0px;
+}
 
 .span-warp {
   line-height: 1.8;
@@ -742,7 +748,7 @@ mark {
 	overflow: hidden;
 	width: 100%;
 	margin: 0 auto;
-	background: #2f2f2f;
+	background: $base-color;
 	position: relative;
 }
 .fa {
@@ -753,4 +759,14 @@ mark {
   &:hover{
     color: $color-icon!important;
   }
+}
+.btntransparent {
+  background-color: $base-color;
+  padding: 6px 0px;
+  &:hover,&:active,&:focus {
+    background-color: $base-color-light;
+  }
+}
+.hidden {
+  visibility: hidden;
 }

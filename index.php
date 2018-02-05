@@ -121,7 +121,7 @@
     $error = '';
     $messageDelete = '';
     $messageUpdate = '';
-    if(isset($_GET['admin'])){
+    if(isset($_GET['admin']) && isset($_SESSION['admin'])){
         $editUpdate = true;
     } else{
         $editUpdate = false;
@@ -289,7 +289,7 @@
                                 <a href="https://www.instagram.com/vc35photography/" target="blank"><i class="fa fa-instagram"></i></a>
                                 <a href="https://www.facebook.com/vc35photography/" target="blank"><i class="fa fa-facebook"></i></a>
                             </span>
-                            <a class="logout" href="logout.php">Logout</a>
+                            <span class="logout">Welcome, <?php echo $_SESSION['login_user'].'  ';  ?> <a href="logout.php">Logout</a></span>
                         </h6>
                         <div class="search-width">
                             <p class="margin-top14"></p>
