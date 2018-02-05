@@ -185,26 +185,34 @@
                 
             <div class="row text-center margin-top10 <?php if(isset($hideLogin) && $hideLogin){ echo "hidden"; }?>" id="loginDiv">
                 <input type="hidden" value="true" id="displayLogin" name="displayLogin">        
-                <div class="row text-center"><h2>Kindly Login</h2></div>
+                <div class="col-xs-12 text-center"><div class="row"><h2>Kindly Login</h2></div></div>
                 <form action="" method="post">
-                    <div class="row">
-                        <p class="col-sm-3 hidden-xs"></p>
-                        <label class="col-sm-2 col-xs-4 text-right" for="username">Username:</label>
-                        <input class="col-sm-2 col-xs-5" type="username" id="username" name="username">
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <p class="col-sm-3 hidden-xs"></p>
+                            <label class="col-sm-2 col-xs-4 text-right" for="username">Username:</label>
+                            <input class="col-sm-2 col-xs-7" type="username" id="username" name="username">
+                            <p class="col-sm-5 hidden-xs"></p>
+                        </div>
                     </div>
-                    <div class="row margin-top10">
-                        <p class="col-sm-3 hidden-xs"></p>
-                        <label class="col-sm-2 text-right col-xs-4" for="password">Password:</label>
-                        <input class="col-sm-2 col-xs-5" type="password" id="password" name="password">
+                    <div class="col-xs-12 margin-top10">
+                        <div class="row">
+                            <p class="col-sm-3 hidden-xs"></p>
+                            <label class="col-sm-2 text-right col-xs-4" for="password">Password:</label>
+                            <input class="col-sm-2 col-xs-7" type="password" id="password" name="password">
+                            <p class="col-sm-3 hidden-xs"></p>
+                        </div>
                     </div>
-                    <div class='row text-center margin-top10'>
-                        <div class="col-sm-push-4 col-sm-4 col-xs-push-2 col-xs-8">
-                            <button type="submit" class="btn btn-primary btn-md">Submit</button> 
+                    <div class='col-xs-12 text-center margin-top10'>
+                        <div class="row">
+                            <div class="col-sm-push-4 col-sm-4 col-xs-push-2 col-xs-8">
+                                <button type="submit" class="btn btn-primary btn-md">Submit</button> 
+                            </div>
                         </div>
                     </div>                    
                 </form>               
             </div>        
-            <div class="row">
+            <div class="row margin-top10">
                 <div class="col-sm-3 col-xs-1"></div>
                 <div class="col-sm-3 col-xs-5">
                     <button type="button" class="btn btn-default btntransparent" id="changePasswordButton">Change Password</button>
@@ -217,63 +225,79 @@
             
             <div id="changePasswordDiv" class="row <?php if(isset($hideChangePassword) && $hideChangePassword){ echo "hidden"; }?>">
                 <input type="hidden" value="true" id="displayChangePassword" name="displayChangePassword">
-                <div class="row text-center"><h2>Change Password</h2></div>
+                <div class="col-xs-12 text-center"><div class="row"><h2>Change Password</h2></div></div>
                 <form action="" method="post">
                     <input type="hidden" name="changePassword" id="changePassword" value="true">                    
-                    <div class="row">
-                        <p class="col-sm-3 hidden-xs"></p>
-                        <label class="col-sm-2 col-xs-5 text-right" for="username">Username:</label>
-                        <input class="col-sm-2 col-xs-6" type="username" id="existingUsername" name="existingUsername" required>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <p class="col-sm-3 hidden-xs"></p>
+                            <label class="col-sm-2 col-xs-5 text-right" for="username">Username:</label>
+                            <input class="col-sm-2 col-xs-6" type="username" id="existingUsername" name="existingUsername" required>
                     </div>
-                    <div class="row margin-top10">
-                        <p class="col-sm-3 hidden-xs"></p>
-                        <label class="col-sm-2 col-xs-5 text-right" for="password">Old Password:</label>
-                        <input class="col-sm-2 col-xs-6" type="password" id="oldpassword" name="oldpassword" required>
                     </div>
-                    <div class="row margin-top10">
-                        <p class="col-sm-3 hidden-xs"></p>
-                        <label class="col-sm-2 col-xs-5 text-right" for="password">New Password:</label>
-                        <input class="col-sm-2 col-xs-6" type="password" id="newpassword" name="newpassword" required>
-                    </div>
-                    <div class="row margin-top10">
-                        <p class="col-sm-3 hidden-xs"></p>
-                        <label class="col-sm-2 col-xs-5 text-right" for="password">Confirm Password:</label>
-                        <input class="col-sm-2 col-xs-6" type="password" id="confirmnewpassword" name="confirmnewpassword" required>
-                    </div>
-                    <div class='row text-center margin-top10'>
-                        <div class="col-sm-3"></div>
-                        <div class="col-sm-3 col-xs-6">
-                            <button type="submit" class="btn btn-primary btn-md">Submit</button> 
+                    <div class="col-xs-12 margin-top10">
+                        <div class="row">
+                            <p class="col-sm-3 hidden-xs"></p>
+                            <label class="col-sm-2 col-xs-5 text-right" for="password">Old Password:</label>
+                            <input class="col-sm-2 col-xs-6" type="password" id="oldpassword" name="oldpassword" required>
                         </div>
-                        <div class="col-sm-3 col-xs-6">
-                            <button type="button" class="btn btn-default btn-md btntransparent" id="cancelChangePassword">Close</button> 
+                    </div>
+                    <div class="col-xs-12 margin-top10">
+                        <div class="row">
+                            <p class="col-sm-3 hidden-xs"></p>
+                            <label class="col-sm-2 col-xs-5 text-right" for="password">New Password:</label>
+                            <input class="col-sm-2 col-xs-6" type="password" id="newpassword" name="newpassword" required>
                         </div>
+                    </div>
+                    <div class="col-xs-12 margin-top10">
+                        <div class="row">
+                          <p class="col-sm-3 hidden-xs"></p>
+                            <label class="col-sm-2 col-xs-5 text-right padding-left-0" for="password">Confirm Password:</label>
+                            <input class="col-sm-2 col-xs-6" type="password" id="confirmnewpassword" name="confirmnewpassword" required>
+                        </div>
+                    </div>
+                    <div class='col-xs-12 text-center margin-top10'>
+                        <div class='row'>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3 col-xs-6">
+                                <button type="submit" class="btn btn-primary btn-md">Submit</button> 
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <button type="button" class="btn btn-default btn-md btntransparent" id="cancelChangePassword">Close</button> 
+                            </div>
+                        </div>                    
                     </div>                    
                 </form>
             </div>   
             <div id="newUserDiv" class="row <?php if(isset($hideNewUser) && $hideNewUser){ echo "hidden"; }?>">
                 <input type="hidden" value="true" id="displayNewUser" name="displayNewUser">
-                <div class="row text-center"><h2>New User</h2></div>
+                <div class="col-xs-12 text-center"><div class="row"><h2>New User</h2></div></div>
                 <form action="" method="post">
                     <input type="hidden" name="newUser" id="newUser" value="true">                    
-                    <div class="row">
-                        <p class="col-sm-3 hidden-xs"></p>
-                        <label class="col-sm-2 col-xs-5 text-right" for="username">Username:</label>
-                        <input class="col-sm-2 col-xs-6" type="username" id="newUsername" name="newUsername" required>
-                    </div>
-                    <div class="row margin-top10">
-                        <p class="col-sm-3 hidden-xs"></p>
-                        <label class="col-sm-2 col-xs-5 text-right" for="password">Password:</label>
-                        <input class="col-sm-2 col-xs-6" type="password" id="newUserPassword" name="newUserPassword" required>
-                    </div>
-                    <div class='row text-center margin-top10'>
-                        <div class="col-sm-3"></div>
-                        <div class="col-sm-3 col-xs-6">
-                            <button type="submit" class="btn btn-primary btn-md">Submit</button> 
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <p class="col-sm-3 hidden-xs"></p>
+                            <label class="col-sm-2 col-xs-5 text-right" for="username">Username:</label>
+                            <input class="col-sm-2 col-xs-6" type="username" id="newUsername" name="newUsername" required>
                         </div>
-                        <div class="col-sm-3 col-xs-6">
-                            <button type="button" class="btn btn-default btn-md btntransparent" id="cancelNewUser">Close</button> 
+                    </div>
+                    <div class="col-xs-12 margin-top10">
+                        <div class="row">
+                            <p class="col-sm-3 hidden-xs"></p>
+                            <label class="col-sm-2 col-xs-5 text-right" for="password">Password:</label>
+                            <input class="col-sm-2 col-xs-6" type="password" id="newUserPassword" name="newUserPassword" required>
                         </div>
+                    </div>
+                    <div class='col-xs-12 text-center margin-top10'>
+                        <div class='row'>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-3 col-xs-6">
+                                <button type="submit" class="btn btn-primary btn-md">Submit</button> 
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <button type="button" class="btn btn-default btn-md btntransparent" id="cancelNewUser">Close</button> 
+                            </div>
+                        </div>                    
                     </div>                    
                 </form>
             </div>     
