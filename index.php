@@ -416,7 +416,7 @@
                                                                 </div>    
                                                                         
                                                                 <div class="form-group">
-                                                                    <label for="email">Description(full top comma seperated .,): </label>
+                                                                    <label for="email">Description(full stop comma seperated .,): </label>
                                                                     <textarea class="form-control" name="description"  required id="description" rows="4" cols="50"><?php echo $descriptionView; ?></textarea>
                                                                 </div>            
                                                                 <div class="form-group">

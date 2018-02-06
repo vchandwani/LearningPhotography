@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql100.epizy.com
--- Generation Time: Feb 04, 2018 at 10:14 PM
+-- Generation Time: Feb 06, 2018 at 12:54 AM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `learning` (
   `category` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `category` (`category`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `learning`
@@ -46,7 +46,8 @@ INSERT INTO `learning` (`id`, `category`) VALUES
 (6, 'Macro'),
 (7, 'Street'),
 (8, 'BlackAndWhite'),
-(9, 'PostProcessing');
+(9, 'PostProcessing'),
+(10, 'UploadStock');
 
 -- --------------------------------------------------------
 
@@ -63,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `learning_info` (
   KEY `category_id` (`category_id`),
   KEY `category_id_2` (`category_id`),
   KEY `category_id_3` (`category_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=81 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=82 ;
 
 --
 -- Dumping data for table `learning_info`
@@ -149,7 +150,8 @@ INSERT INTO `learning_info` (`id`, `category_id`, `description`, `tags`) VALUES
 (77, 9, '<ul><li>Raw and Jpeg</li><li>\r\nRAW : is RAW data which is not processed and Exported out as JPEG</li><li>\r\nJPEG : compressed graphic format standard format Join Photographic Experts Group</li><li>\r\nJPEG Supports 24 bit color and is compressed using compression algorithm</li><li>\r\nJPEG can be created within the camera or from a software\r\n</li></ul> <ul><li>Raw Over Jpeg : </li><li>\r\n\r\nRAW gives highest quality</li><li>\r\nCamera does processing to convert RAW to JPEG</li><li>\r\nWith RAW you can process on your OWN and make a better decission</li><li>\r\nJPEG captures 8 bit RAW captures 12 bit or 14bit</li><li>\r\nHigher dynamic range</li></ul>', 'raw jpeg'),
 (78, 9, '<ul><li>Adjust White Balance</li><li>\r\nWith RAW white balance is recorded but not applied. So it is easier to adjust</li><li>\r\nShooting RAW makes Wb adjustment easier\r\n</li></ul>', 'white-balance raw '),
 (79, 9, '<ul><li>When you make adjustment and save again it loses quality. So if you edit JPEg you always have to be duplicating the image and saving out a new version, if you don''t want to lose the quality</li></ul>', 'jpeg '),
-(80, 9, '<ul><li>What not to do ?<br/></li><li>\r\n\r\nDon''t ignore the histogram. Keep an eye while capturing post processing the image</li><li>\r\nAlso if histogram of a RAW file originally is not towards the desired ''bell curve'' discard that image in the beginning itself.</li><li>\r\nAlways try to get best exposure possible in camera</li><li>\r\nNoise and banding can show up</li><li>\r\n\r\nOver saturation:<br/>\r\nIt creates unnatural looking image<br/>\r\nIt''s tempting thing to do because a little bump in saturation and vibrance make such a big difference<br/>\r\nInstead consider selective color saturation</li><li>\r\n\r\nOver Sharpening:<br/>\r\nNever use sharpening to try to fix a photo that is out of focus or blurred<br/>\r\nAdding a bit of sharpening can make it extra crisp and realistic it can also make the images very textual and grungy</li><li>\r\n\r\nToo much Noise reduction<br/>\r\nFixing heavily noisy image will just degrade the quality and details of the image<br/>\r\nInstead shooting with wide aperture low ISO and slow shutter speed</li><li>\r\n\r\nUsing filters and Lens flair<br/>\r\nUsing filters and lens flair makes image very artificial and gives an over-processed look<br/>\r\nGive an unprofessional look amateurish feel and essence goes away</li><li>\r\n\r\nHDR Effect:<br/>\r\nNot understanding what HDR is and how it works in processing does more harm to the image than good<br/>\r\nHDR effect gives a grungy feel to image<br/>\r\nImages look animated</li><li>\r\n\r\nFixing Bad Images during Post-Processing<br/>\r\nGood processing can''t save bad images<br/>\r\nPictures taken in a bad light condition can not be corrected or fixed in Post-processing\r\n</li></ul>', 'post-processing  what-not-to-do');
+(80, 9, '<ul><li>What not to do ?<br/></li><li>\r\n\r\nDon''t ignore the histogram. Keep an eye while capturing post processing the image</li><li>\r\nAlso if histogram of a RAW file originally is not towards the desired ''bell curve'' discard that image in the beginning itself.</li><li>\r\nAlways try to get best exposure possible in camera</li><li>\r\nNoise and banding can show up</li><li>\r\n\r\nOver saturation:<br/>\r\nIt creates unnatural looking image<br/>\r\nIt''s tempting thing to do because a little bump in saturation and vibrance make such a big difference<br/>\r\nInstead consider selective color saturation</li><li>\r\n\r\nOver Sharpening:<br/>\r\nNever use sharpening to try to fix a photo that is out of focus or blurred<br/>\r\nAdding a bit of sharpening can make it extra crisp and realistic it can also make the images very textual and grungy</li><li>\r\n\r\nToo much Noise reduction<br/>\r\nFixing heavily noisy image will just degrade the quality and details of the image<br/>\r\nInstead shooting with wide aperture low ISO and slow shutter speed</li><li>\r\n\r\nUsing filters and Lens flair<br/>\r\nUsing filters and lens flair makes image very artificial and gives an over-processed look<br/>\r\nGive an unprofessional look amateurish feel and essence goes away</li><li>\r\n\r\nHDR Effect:<br/>\r\nNot understanding what HDR is and how it works in processing does more harm to the image than good<br/>\r\nHDR effect gives a grungy feel to image<br/>\r\nImages look animated</li><li>\r\n\r\nFixing Bad Images during Post-Processing<br/>\r\nGood processing can''t save bad images<br/>\r\nPictures taken in a bad light condition can not be corrected or fixed in Post-processing\r\n</li></ul>', 'post-processing  what-not-to-do'),
+(81, 10, '<ul><li><a href="https://www.facebook.com/vc35photography/" target="blank">Facebook</a></li></ul><ul><li><a href="https://www.instagram.com/vc35photography/" target="blank">Instagram</a></li></ul><ul><li>\r\n<a href="https://www.flickr.com" target="blank">Flickr</a></li></ul><ul><li>\r\n<a href="http://contributor-accounts.shutterstock.com/" target="blank">ShutterStock</a></li></ul><ul><li>\r\n<a href="https://www.dreamstime.com/uploadfile" target="blank">DreamSite</a></li></ul><ul><li>\r\n<a href="https://contributors.gettyimages.com/" target="blank">iStock / Getty Images</a> </li></ul><ul><li>\r\n<a href="https://www.bigstockphoto.com/account/uploads/" target="blank">BigStock</a></li></ul>', '');
 
 -- --------------------------------------------------------
 

@@ -265,7 +265,7 @@
             </div>    
                     
             <div class="form-group">
-                <label for="email">Description(comma seperated): </label>
+                <label for="email">Description(full stop comma seperated .,): </label>
                 <textarea class="form-control" name="description"  id="description" rows="4" cols="50"></textarea>
             </div>            
             <div class="form-group">
