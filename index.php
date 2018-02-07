@@ -211,7 +211,7 @@
         $messageDelete = "Category Information successfully deleted";  
         $_POST['deleteCategoryInfoId'] = null;
         header("Refresh:0; url=index.php?admin=true");        
-    } 
+    }
     if(isset($_POST['updateCategoryInfoId'])) {
         // Send update request
         $description = explode(".,", $_POST['description']);

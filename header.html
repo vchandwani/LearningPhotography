@@ -11,3 +11,10 @@
 <script src="script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+<script>
+        $(document).ready(function () {
+            $(".alert").fadeTo(2000, 500).slideUp(500, function(){
+                $(".alert").slideUp(500);
+            });
+        });
+</script>
