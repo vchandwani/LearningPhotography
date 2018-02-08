@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql100.epizy.com
--- Generation Time: Feb 06, 2018 at 12:54 AM
+-- Generation Time: Feb 08, 2018 at 06:19 AM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `learning` (
   `category` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `category` (`category`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `learning`
@@ -47,7 +47,8 @@ INSERT INTO `learning` (`id`, `category`) VALUES
 (7, 'Street'),
 (8, 'BlackAndWhite'),
 (9, 'PostProcessing'),
-(10, 'UploadStock');
+(10, 'UploadStock'),
+(11, 'Image');
 
 -- --------------------------------------------------------
 
@@ -64,14 +65,14 @@ CREATE TABLE IF NOT EXISTS `learning_info` (
   KEY `category_id` (`category_id`),
   KEY `category_id_2` (`category_id`),
   KEY `category_id_3` (`category_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=82 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=86 ;
 
 --
 -- Dumping data for table `learning_info`
 --
 
 INSERT INTO `learning_info` (`id`, `category_id`, `description`, `tags`) VALUES
-(1, 1, '<ul><li>Turn off Image stablizer</li><li>ISO -> for day low</li><li>Evening : decrease exposure increase ISO</li><li>Use manual focus</li><li>Remote shutter control</li></ul>', 'time-lapse night'),
+(1, 1, '<ul><li>Turn off Image stablizer</li></ul><ul><li>ISO -> for day low</li></ul><ul><li>Evening : decrease exposure increase ISO</li></ul><ul><li>Use manual focus</li></ul><ul><li>Remote shutter control</li></ul>', 'time-lapse night'),
 (3, 1, '<ul> <li>shutter-speed 1/100 secs</li> <li>aperture f/8</li> <li>ISO 100</li> </ul>\r\n', 'beach sun-up'),
 (2, 1, '<ul> <li>shutter-speed 20 secs</li> <li>aperture f/18</li> <li>ISO 50/100</li> </ul>\r\n', 'beach sun-down'),
 (4, 1, '<ul><li>if one of the three is changed, then atleast one more is required to be changed</li></ul>  ', 'exposure-triangle'),
@@ -151,7 +152,11 @@ INSERT INTO `learning_info` (`id`, `category_id`, `description`, `tags`) VALUES
 (78, 9, '<ul><li>Adjust White Balance</li><li>\r\nWith RAW white balance is recorded but not applied. So it is easier to adjust</li><li>\r\nShooting RAW makes Wb adjustment easier\r\n</li></ul>', 'white-balance raw '),
 (79, 9, '<ul><li>When you make adjustment and save again it loses quality. So if you edit JPEg you always have to be duplicating the image and saving out a new version, if you don''t want to lose the quality</li></ul>', 'jpeg '),
 (80, 9, '<ul><li>What not to do ?<br/></li><li>\r\n\r\nDon''t ignore the histogram. Keep an eye while capturing post processing the image</li><li>\r\nAlso if histogram of a RAW file originally is not towards the desired ''bell curve'' discard that image in the beginning itself.</li><li>\r\nAlways try to get best exposure possible in camera</li><li>\r\nNoise and banding can show up</li><li>\r\n\r\nOver saturation:<br/>\r\nIt creates unnatural looking image<br/>\r\nIt''s tempting thing to do because a little bump in saturation and vibrance make such a big difference<br/>\r\nInstead consider selective color saturation</li><li>\r\n\r\nOver Sharpening:<br/>\r\nNever use sharpening to try to fix a photo that is out of focus or blurred<br/>\r\nAdding a bit of sharpening can make it extra crisp and realistic it can also make the images very textual and grungy</li><li>\r\n\r\nToo much Noise reduction<br/>\r\nFixing heavily noisy image will just degrade the quality and details of the image<br/>\r\nInstead shooting with wide aperture low ISO and slow shutter speed</li><li>\r\n\r\nUsing filters and Lens flair<br/>\r\nUsing filters and lens flair makes image very artificial and gives an over-processed look<br/>\r\nGive an unprofessional look amateurish feel and essence goes away</li><li>\r\n\r\nHDR Effect:<br/>\r\nNot understanding what HDR is and how it works in processing does more harm to the image than good<br/>\r\nHDR effect gives a grungy feel to image<br/>\r\nImages look animated</li><li>\r\n\r\nFixing Bad Images during Post-Processing<br/>\r\nGood processing can''t save bad images<br/>\r\nPictures taken in a bad light condition can not be corrected or fixed in Post-processing\r\n</li></ul>', 'post-processing  what-not-to-do'),
-(81, 10, '<ul><li><a href="https://www.facebook.com/vc35photography/" target="blank">Facebook</a></li></ul><ul><li><a href="https://www.instagram.com/vc35photography/" target="blank">Instagram</a></li></ul><ul><li>\r\n<a href="https://www.flickr.com" target="blank">Flickr</a></li></ul><ul><li>\r\n<a href="http://contributor-accounts.shutterstock.com/" target="blank">ShutterStock</a></li></ul><ul><li>\r\n<a href="https://www.dreamstime.com/uploadfile" target="blank">DreamSite</a></li></ul><ul><li>\r\n<a href="https://contributors.gettyimages.com/" target="blank">iStock / Getty Images</a> </li></ul><ul><li>\r\n<a href="https://www.bigstockphoto.com/account/uploads/" target="blank">BigStock</a></li></ul>', '');
+(81, 10, '<ul><li><a href="https://www.facebook.com/vc35photography/" target="blank">Facebook</a></li></ul><ul><li><a href="https://www.instagram.com/vc35photography/" target="blank">Instagram</a></li></ul><ul><li>\r\n<a href="https://www.flickr.com" target="blank">Flickr</a></li></ul><ul><li>\r\n<a href="http://contributor-accounts.shutterstock.com/" target="blank">ShutterStock</a></li></ul><ul><li>\r\n<a href="https://www.dreamstime.com/uploadfile" target="blank">DreamSite</a></li></ul><ul><li>\r\n<a href="https://contributors.gettyimages.com/" target="blank">iStock / Getty Images</a> </li></ul><ul><li>\r\n<a href="https://www.bigstockphoto.com/account/uploads/" target="blank">BigStock</a></li></ul>', ''),
+(82, 11, '<ul><li>Construction : What goes into an image</li></ul><ul><li>\r\nThis includes : <br/>Subject<br/> \r\n		Foreground <br/>\r\n		Middle ground <br/>\r\n		Background <br/>\r\n		Visual weight of your image<br/>\r\n		Any other element that adds to the frame of your image<br/>\r\n		Excluding anything that you don''t want in the frame</li></ul><ul><li>\r\n\r\nGuiding viewers attention to most important part of your image</li></ul><ul><li>\r\nAchieved using various rules in photography</li></ul><ul><li>\r\nBy paying attention to light, motion and other elements	</li></ul><ul><li>\r\nChose or find elements that helps you in creating a story through your image.\r\nImportance of elements and where they are in the image</li></ul><ul><li>\r\nDecide key elements that need to be included</li></ul><ul><li>\r\nDiscard unwanted elements\r\n</li></ul>', 'image construction'),
+(83, 11, '<ul><li>Concerned with position and perspective of the viewer. Position of viewer has tremendous impact on their perception of main subject</li></ul><ul><li>\r\n\r\nAllows you to emphasize on subject</li></ul><ul><li>\r\nIsolates subject from background</li></ul><ul><li>\r\nBring sense and structure</li></ul><ul><li>\r\nViewers attraction to specific area</li></ul><ul><li>\r\nIt gives context</li></ul><ul><li>\r\n\r\nTechniques : <br/>\r\n\r\nTrees, leaves make natural frame<br/>\r\nArchitectural frame : doors, windows, gates<br/>\r\nFrame in frame technique<br/>\r\nShape of other elements<br/>\r\nFraming using light and shadow</li></ul><ul><li>\r\n</li></ul>', 'image  framing'),
+(84, 11, '<ul><li>Go Minimalist </li></ul><ul><li>\r\n\r\nIsolate the Subject, makes your photos stand out</li></ul><ul><li>\r\nStand out enough to stand out as main focus</li></ul><ul><li>\r\n\r\nTechniques:<br/>\r\nPlain/ Textured background <br/>\r\nCentered Subject<br/>\r\nShallow DOF<br/>\r\nColor Pop<br/>\r\nCombinations <br/>\r\nLong Exposures<br/></li></ul>', 'image  minimalist'),
+(85, 11, '<ul><li>Objects closest to us, they appear larger clearer and brighter than those behind</li></ul><ul><li>\r\nTechniques:\r\nget down low<br/>\r\nRaise / Lower your horizon : you change influence that a foreground has on the image.<br/>\r\nAperture : Small aperture (larger number) will have a larger depth of field. This keep much of image in focus as possible from foreground to background<br/>\r\nLook for interesting subjects or elements in foreground with like flowers, rocks with diff textures and contrasting elements<br/></li></ul>', 'image  foreground');
 
 -- --------------------------------------------------------
 
@@ -168,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `learning_info_examples` (
   `image_description` longtext,
   PRIMARY KEY (`id`),
   KEY `learning_info_id` (`learning_info_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=124 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=152 ;
 
 --
 -- Dumping data for table `learning_info_examples`
@@ -296,7 +301,35 @@ INSERT INTO `learning_info_examples` (`id`, `learning_info_id`, `image`, `sub_im
 (120, 73, 'http://vc35photography.epizy.com/resources/B&W5.JPG', '', '', ''),
 (121, 73, 'http://vc35photography.epizy.com/resources/B&W6.JPG', '', '', ''),
 (122, 73, 'http://vc35photography.epizy.com/resources/B&W7.JPG', '', '', 'Long exposure with ND filter'),
-(123, 73, 'http://vc35photography.epizy.com/resources/B&W8.JPG', '', '', '');
+(123, 73, 'http://vc35photography.epizy.com/resources/B&W8.JPG', '', '', ''),
+(124, 83, 'http://vc35photography.epizy.com/resources/Frame1.JPG', '', '', ''),
+(125, 83, 'http://vc35photography.epizy.com/resources/Frame2.JPG', '', 'Leaves, sky was not impressive', ''),
+(126, 83, 'http://vc35photography.epizy.com/resources/Frame3.JPG', '', '', ''),
+(127, 83, 'http://vc35photography.epizy.com/resources/Frame4.JPG', '', 'Tree as frame', ''),
+(128, 83, 'http://vc35photography.epizy.com/resources/Frame5.JPG', '', '', ''),
+(129, 83, 'http://vc35photography.epizy.com/resources/Frame6.JPG', '', '', ''),
+(130, 83, 'http://vc35photography.epizy.com/resources/Frame7.JPG', '', '', ''),
+(131, 83, 'http://vc35photography.epizy.com/resources/Frame8.JPG', '', 'Frame in frame', ''),
+(132, 83, 'http://vc35photography.epizy.com/resources/Frame9.JPG', '', '', ''),
+(133, 84, 'http://vc35photography.epizy.com/resources/Minimalist1.JPG', '', '900 sec exposure', ''),
+(134, 84, 'http://vc35photography.epizy.com/resources/Minimalist2.JPG', '', '30 sec', ''),
+(135, 84, 'http://vc35photography.epizy.com/resources/Minimalist3.JPG', '', '', ''),
+(136, 84, 'http://vc35photography.epizy.com/resources/Minimalist4.JPG', '', '30 sec 16-35mm', ''),
+(137, 84, 'http://vc35photography.epizy.com/resources/Minimalist5.JPG', '', '', ''),
+(138, 84, 'http://vc35photography.epizy.com/resources/Minimalist6.JPG', '', 'Action in Mid ground', ''),
+(139, 84, 'http://vc35photography.epizy.com/resources/Minimalist7.JPG', '', '', ''),
+(140, 84, 'http://vc35photography.epizy.com/resources/Minimalist8.JPG', '', '', ''),
+(141, 85, 'http://vc35photography.epizy.com/resources/Foreground1.jpg', '', '', ''),
+(142, 85, 'http://vc35photography.epizy.com/resources/Foreground2.jpg', '', 'Chennai Fishermans Cove', ''),
+(143, 85, 'http://vc35photography.epizy.com/resources/Foreground3.jpg', '', '14mm texture and subject is close ', ''),
+(144, 85, 'http://vc35photography.epizy.com/resources/Foreground4.jpg', '', '', ''),
+(145, 85, 'http://vc35photography.epizy.com/resources/Foreground5.jpg', '', '', ''),
+(146, 85, 'http://vc35photography.epizy.com/resources/Foreground6.jpg', '', '', ''),
+(147, 85, 'http://vc35photography.epizy.com/resources/Foreground7.jpg', '', '', ''),
+(148, 85, 'http://vc35photography.epizy.com/resources/Foreground8.jpg', '', '', ''),
+(149, 85, 'http://vc35photography.epizy.com/resources/Foreground9.jpg', '', '', ''),
+(150, 85, 'http://vc35photography.epizy.com/resources/Foreground10.jpg', '', '', ''),
+(151, 85, 'http://vc35photography.epizy.com/resources/Foreground11.jpg', '', '', '');
 
 -- --------------------------------------------------------
 
