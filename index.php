@@ -504,26 +504,26 @@
                                                         } else {
                                                             echo '<div class="item">';
                                                         }
-                                                            echo '<img class="img-responsive" src="'.$exampleVal['image'].'" alt="'.$exampleVal['image_header'].'">';
-                                                            if($exampleVal['sub_image']){
-                                                                echo '<img class="sub-img" src="'.$exampleVal['sub_image'].'" alt="'.$exampleVal['image_header'].'">';
-                                                            }                                                            
-                                                            echo '<div class="carousel-caption">';
-                                                            ?>
-                                                            <?php
-                                                                echo '<h3>'.$exampleVal['image_header'].'</h3>';
-                                                                echo '<p>'.$exampleVal['image_description'].'</p>';
-                                                            echo '</div>'; 
-                                                            ?>
-                                                            <?php if($editUpdate){  ?>
-                                                                <div class="col-xs-2 col-xs-push-5 padding-0">
-                                                                    <button type="button" class="btn btn-link col-xs-6 btn-xs" data-toggle="modal" data-target="#infoExampleModal<?php echo $exampleVal['id'] ?>"><span class="glyphicon glyphicon-pencil"></span></button>
-                                                                    <form method="POST" name="exampleDelete<?php echo $exampleVal['id'] ?>" action="index.php?admin=true" onsubmit="return confirm('Do you really want to submit the form?');">
-                                                                        <input type="hidden" name="deleteInfoExampleId" id="deleteInfoExampleId" value="<?php echo $exampleVal['id'] ?>">
-                                                                        <button type="submit" class="btn btn-link col-xs-6 btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
-                                                                    </form>
-                                                                </div>
-                                                            <?php } ?>
+                                                                echo '<img class="img-responsive loader" src="'.$exampleVal['image'].'" alt="'.$exampleVal['image_header'].'">';
+                                                                if($exampleVal['sub_image']){
+                                                                    echo '<img class="sub-img" src="'.$exampleVal['sub_image'].'" alt="'.$exampleVal['image_header'].'">';
+                                                                }                                                            
+                                                                echo '<div class="carousel-caption">';
+                                                        ?>
+                                                                <?php
+                                                                        echo '<h3>'.$exampleVal['image_header'].'</h3>';
+                                                                        echo '<p>'.$exampleVal['image_description'].'</p>';
+                                                                echo '</div>'; 
+                                                                ?>
+                                                                <?php if($editUpdate){  ?>
+                                                                    <div class="col-xs-2 col-xs-push-2 padding-0">
+                                                                        <button type="button" class="btn btn-link col-xs-6 btn-xs" data-toggle="modal" data-target="#infoExampleModal<?php echo $exampleVal['id'] ?>"><span class="glyphicon glyphicon-pencil"></span></button>
+                                                                        <form method="POST" name="exampleDelete<?php echo $exampleVal['id'] ?>" action="index.php?admin=true" onsubmit="return confirm('Do you really want to submit the form?');">
+                                                                            <input type="hidden" name="deleteInfoExampleId" id="deleteInfoExampleId" value="<?php echo $exampleVal['id'] ?>">
+                                                                            <button type="submit" class="btn btn-link col-xs-6 btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
+                                                                        </form>
+                                                                    </div>
+                                                                <?php } ?>
                                                         <?php
                                                         echo '</div>';
                                                         ?>                                                        

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql100.epizy.com
--- Generation Time: Feb 08, 2018 at 06:19 AM
+-- Generation Time: Feb 11, 2018 at 10:13 PM
 -- Server version: 5.6.35-81.0
 -- PHP Version: 5.3.3
 
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `learning_info` (
   KEY `category_id` (`category_id`),
   KEY `category_id_2` (`category_id`),
   KEY `category_id_3` (`category_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=86 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=87 ;
 
 --
 -- Dumping data for table `learning_info`
@@ -156,7 +156,8 @@ INSERT INTO `learning_info` (`id`, `category_id`, `description`, `tags`) VALUES
 (82, 11, '<ul><li>Construction : What goes into an image</li></ul><ul><li>\r\nThis includes : <br/>Subject<br/> \r\n		Foreground <br/>\r\n		Middle ground <br/>\r\n		Background <br/>\r\n		Visual weight of your image<br/>\r\n		Any other element that adds to the frame of your image<br/>\r\n		Excluding anything that you don''t want in the frame</li></ul><ul><li>\r\n\r\nGuiding viewers attention to most important part of your image</li></ul><ul><li>\r\nAchieved using various rules in photography</li></ul><ul><li>\r\nBy paying attention to light, motion and other elements	</li></ul><ul><li>\r\nChose or find elements that helps you in creating a story through your image.\r\nImportance of elements and where they are in the image</li></ul><ul><li>\r\nDecide key elements that need to be included</li></ul><ul><li>\r\nDiscard unwanted elements\r\n</li></ul>', 'image construction'),
 (83, 11, '<ul><li>Concerned with position and perspective of the viewer. Position of viewer has tremendous impact on their perception of main subject</li></ul><ul><li>\r\n\r\nAllows you to emphasize on subject</li></ul><ul><li>\r\nIsolates subject from background</li></ul><ul><li>\r\nBring sense and structure</li></ul><ul><li>\r\nViewers attraction to specific area</li></ul><ul><li>\r\nIt gives context</li></ul><ul><li>\r\n\r\nTechniques : <br/>\r\n\r\nTrees, leaves make natural frame<br/>\r\nArchitectural frame : doors, windows, gates<br/>\r\nFrame in frame technique<br/>\r\nShape of other elements<br/>\r\nFraming using light and shadow</li></ul><ul><li>\r\n</li></ul>', 'image  framing'),
 (84, 11, '<ul><li>Go Minimalist </li></ul><ul><li>\r\n\r\nIsolate the Subject, makes your photos stand out</li></ul><ul><li>\r\nStand out enough to stand out as main focus</li></ul><ul><li>\r\n\r\nTechniques:<br/>\r\nPlain/ Textured background <br/>\r\nCentered Subject<br/>\r\nShallow DOF<br/>\r\nColor Pop<br/>\r\nCombinations <br/>\r\nLong Exposures<br/></li></ul>', 'image  minimalist'),
-(85, 11, '<ul><li>Objects closest to us, they appear larger clearer and brighter than those behind</li></ul><ul><li>\r\nTechniques:\r\nget down low<br/>\r\nRaise / Lower your horizon : you change influence that a foreground has on the image.<br/>\r\nAperture : Small aperture (larger number) will have a larger depth of field. This keep much of image in focus as possible from foreground to background<br/>\r\nLook for interesting subjects or elements in foreground with like flowers, rocks with diff textures and contrasting elements<br/></li></ul>', 'image  foreground');
+(85, 11, '<ul><li>Objects closest to us, they appear larger clearer and brighter than those behind</li></ul><ul><li>\r\nTechniques:\r\nget down low<br/>\r\nRaise / Lower your horizon : you change influence that a foreground has on the image.<br/>\r\nAperture : Small aperture (larger number) will have a larger depth of field. This keep much of image in focus as possible from foreground to background<br/>\r\nLook for interesting subjects or elements in foreground with like flowers, rocks with diff textures and contrasting elements<br/></li></ul>', 'image  foreground'),
+(86, 11, '<ul><li>Gives some context, how is subject interacting with environment </li></ul><ul><li>\r\nSense of slow and direction</li></ul><ul><li>\r\nAlso creates a positive space and distance between foreground and background</li></ul><ul><li>\r\nWhere image lives, user spends most time\r\n\r\n1: man is subject, poping colors. Main focus is in Middle\r\n2: Two camels in middle ground\r\n3: </li></ul>', 'image  middleground');
 
 -- --------------------------------------------------------
 
@@ -173,38 +174,38 @@ CREATE TABLE IF NOT EXISTS `learning_info_examples` (
   `image_description` longtext,
   PRIMARY KEY (`id`),
   KEY `learning_info_id` (`learning_info_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=152 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=161 ;
 
 --
 -- Dumping data for table `learning_info_examples`
 --
 
 INSERT INTO `learning_info_examples` (`id`, `learning_info_id`, `image`, `sub_image`, `image_header`, `image_description`) VALUES
-(1, 10, 'https://i1.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/split-lighting-pattern1.jpg?resize=600%2C900&ssl=1', 'https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/split-lighting-by-Darlene-Hildebrandt.png?resize=381%2C284&ssl=1', 'Split Lighting', 'Split lighting is exactly as the name implies – it splits the face exactly into equal halves with one side being in the light, and the other in shadow. It is often used to create dramatic images for things such as a portrait of a musician or an artist. Split lighting tends to be a more masculine pattern and as such is usually more appropriate or applicable on men than it is for women.\r\nTo achieve split lighting simply put the light source 90 degrees to the left or right of the subject, and possibly even slightly behind their head.'),
-(2, 10, 'https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Catch-lights-example.jpg?resize=600%2C400&ssl=1', '', 'Catchlight', 'See how the bright spot is actually hexagon with a dark centre? That’s the light I used which was a small hexagon shaped soft box on my Canon speedlight.\r\n                                                            This is what is known as the “catchlight”. Without the eye of the subject catching this light, the eyes will appear dark, dead and lifeless. You need to ensure that at least one eye has a catchlight to give the subject life. Notice it also lightens the iris and brightens the eye overall. This also adds to the feeling of life and gives them a sparkle.'),
-(3, 10, 'https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Loop-lighting-pattern.jpg?resize=600%2C900&ssl=1', 'https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/loop-lighting-by-Darlene-Hildebrandt.png?resize=399%2C527&ssl=1', 'Loop Lighting', 'Loop lighting is made by creating a small shadow of the subjects noses on their cheeks. To create loop lighting, the light source must be slightly higher than eye level and about 30-45 degrees from the camera (depends on the person, you have to learn how to read peopleï¿½s faces).'),
-(4, 10, 'https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Loop-lighting-pattern-example.jpg?resize=600%2C400&ssl=1', NULL, 'Loop Lighting', 'Look at this image to see where the shadows fall, and on their left sides you can see a small shadow of their noses. In loop lighting the shadow of the nose and that of the cheek do NOT touch. Keep the shadow small and slightly downward pointing, but be aware of having your light source too high which will create odd shadows and cause loss of the catchlights. Loop light is probably the most common or popular lighting pattern as it is easy to create and flatters most people.'),
-(5, 10, 'https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Rembrandt-lighting-pattern.jpg?resize=600%2C900&ssl=1', 'https://i1.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Rembrandt-lighting-by-Darlene-Hildebrandt.png?resize=489%2C507&ssl=1', 'Rembrandt Lighting', 'Rembrandt lighting is so named because the Rembrandt the painter often used this pattern of light in his paintings, as you can see in his self portrait here. Rembrandt lighting is identified by the triangle of light on the cheek. Unlike loop lighting where the shadow of the nose and cheek do not touch, in Rembrandt lighting they do meet which, creates that trapped little triangle of light in the middle. To create proper Rembrandt lighting make sure the eye on the shadow side of the face has light in it and has a catch light, otherwise the eye will be “dead” and not have a nice sparkle. Rembrandt lighting is more dramatic, so like split lighting it creates more mood and a darker feel to your image. Use it appropriately.'),
-(6, 10, 'https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Butterfly-lighting-pattern.jpg?resize=600%2C900&ssl=1', 'https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/butterfly-lighting-by-Darlene-Hildebrandt-1.png?resize=202%2C459&ssl=1', 'Butterfly Lighting', 'Broad lighting is when the subject’s face is slightly turned away from centre, and the side of the face which is toward the camera (is broader) is in the light. This produces a larger area of light on the face, and a shadow side which appears smaller. Broad lighting is sometimes used for “high key” portraits. This type of lighting makes a person’s face look broader or wider (hence the name) and can be used on someone with a very slim face to widen it. Most people however want to look slimmer, not wider so this type of lighting would not be appropriate for someone who is heavier or round faced.\r\n                                                            To create broad lighting the face is turned away from the light source. Notice how the side of the face that is towards the camera has the most light on it and the shadows are falling on the far side of the face, furthest from the camera. Simply put broad lighting illuminates the largest part of the face showing.'),
-(7, 10, 'https://i1.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Broad-lighting.jpg?resize=600%2C900&ssl=1', 'https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/broad-lighting-by-Darlene-Hildebrandt.png?resize=355%2C418&ssl=1', 'Broad Lighting', 'Broad lighting is when the subject’s face is slightly turned away from centre, and the side of the face which is toward the camera (is broader) is in the light. This produces a larger area of light on the face, and a shadow side which appears smaller. Broad lighting is sometimes used for “high key” portraits. This type of lighting makes a person’s face look broader or wider (hence the name) and can be used on someone with a very slim face to widen it. Most people however want to look slimmer, not wider so this type of lighting would not be appropriate for someone who is heavier or round faced.\r\nTo create broad lighting the face is turned away from the light source. Notice how the side of the face that is towards the camera has the most light on it and the shadows are falling on the far side of the face, furthest from the camera. Simply put broad lighting illuminates the largest part of the face showing.'),
-(8, 10, 'https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Short-lighting.jpg?resize=600%2C900&ssl=1', 'https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/short-lighting-by-Darlene-Hildebrandt.png?resize=300%2C351&ssl=1', 'Short Lighting', 'Short lighting is the opposite of broad lighting. As you can see by the example here, short lighting puts the side turned towards the camera (that which appears larger) in more shadow. It is often used for low key, or darker portraits. It puts more of the face in shadow, is more sculpting, add 3D qualities, and is slimming and flattering for most people.\r\n                                                            In short lighting, the face is turned towards the light source this time. Notice how the part of the face that is turned away from the camera has the most light on it and the shadows are falling on the near side of the face, closet to the camera. Simply put short lighting has shadows on the largest part of the face showing.'),
-(9, 4, 'http://vc35photography.epizy.com/resources/Exposure Triangle.jpg', '', '', ''),
-(10, 5, 'http://vc35photography.epizy.com/resources/DOF1.jpg', '', '', ''),
-(11, 5, 'http://vc35photography.epizy.com/resources/DOF2.jpg', '', '', ''),
-(12, 27, 'http://vc35photography.epizy.com/resources/Aperture1.jpg', '', 'BOKEH', 'Lower f value, better BOKEH'),
-(13, 27, 'http://vc35photography.epizy.com/resources/Aperture2.jpg', '', 'Havelock Island,Andaman', ''),
-(14, 27, 'http://vc35photography.epizy.com/resources/Aperture3.jpg', '', '', ''),
-(15, 27, 'http://vc35photography.epizy.com/resources/Aperture4.jpg', '', 'starbust', 'f/22 allows starbust'),
-(16, 27, 'http://vc35photography.epizy.com/resources/Aperture5.jpg', '', '', ''),
-(17, 27, 'http://vc35photography.epizy.com/resources/Aperture6.jpg', '', 'Wildlife', ''),
-(18, 27, 'http://vc35photography.epizy.com/resources/Aperture7.jpg', '', '', ''),
-(19, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance.jpg', '', '', ''),
-(20, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance2.jpg', '', '', ''),
-(21, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance3.jpg', '', '', ''),
-(22, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance4.jpg', '', '', ''),
-(23, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance5.jpg', '', '', ''),
-(24, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance6.jpg', '', '', ''),
-(25, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance7.jpg', '', '', ''),
+(1, 10, 'http://vc35photography.epizy.com/resources/Split-lighting-pattern1.JPG', 'https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/split-lighting-by-Darlene-Hildebrandt.png?resize=381%2C284&ssl=1', 'Split Lighting', 'Split lighting is exactly as the name implies  it splits the face exactly into equal halves with one side being in the light, and the other in shadow. It is often used to create dramatic images for things such as a portrait of a musician or an artist. Split lighting tends to be a more masculine pattern and as such is usually more appropriate or applicable on men than it is for women.\r\nTo achieve split lighting simply put the light source 90 degrees to the left or right of the subject, and possibly even slightly behind their head.'),
+(2, 10, 'http://vc35photography.epizy.com/resources/Catch-lights-example.JPG', '', 'Catchlight', 'See how the bright spot is actually hexagon with a dark centre? That''s the light I used which was a small hexagon shaped soft box on my Canon speed-light.\r\n                                                            This is what is known as the catchlight. Without the eye of the subject catching this light, the eyes will appear dark, dead and lifeless. You need to ensure that at least one eye has a catch-light to give the subject life. Notice it also lightens the iris and brightens the eye overall. This also adds to the feeling of life and gives them a sparkle.'),
+(3, 10, 'http://vc35photography.epizy.com/resources/Loop-lighting-pattern.JPG', 'https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/loop-lighting-by-Darlene-Hildebrandt.png?resize=399%2C527&ssl=1', 'Loop Lighting', 'Loop lighting is made by creating a small shadow of the subjects noses on their cheeks. To create loop lighting, the light source must be slightly higher than eye level and about 30-45 degrees from the camera (depends on the person, you have to learn how to read people''s faces).'),
+(4, 10, 'http://vc35photography.epizy.com/resources/Loop-lighting-pattern-example.JPG', '', 'Loop Lighting', 'Look at this image to see where the shadows fall, and on their left sides you can see a small shadow of their noses. In loop lighting the shadow of the nose and that of the cheek do NOT touch. Keep the shadow small and slightly downward pointing, but be aware of having your light source too high which will create odd shadows and cause loss of the catchlights. Loop light is probably the most common or popular lighting pattern as it is easy to create and flatters most people.'),
+(5, 10, 'http://vc35photography.epizy.com/resources/Rembrandt-lighting-pattern.JPG', 'https://i1.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/Rembrandt-lighting-by-Darlene-Hildebrandt.png?resize=489%2C507&ssl=1', 'Rembrandt Lighting', 'Rembrandt lighting is so named because the Rembrandt the painter often used this pattern of light in his paintings, as you can see in his self portrait here. Rembrandt lighting is identified by the triangle of light on the cheek. Unlike loop lighting where the shadow of the nose and cheek do not touch, in Rembrandt lighting they do meet which, creates that trapped little triangle of light in the middle. To create proper Rembrandt lighting make sure the eye on the shadow side of the face has light in it and has a catch light, otherwise the eye will be dead and not have a nice sparkle. Rembrandt lighting is more dramatic, so like split lighting it creates more mood and a darker feel to your image. Use it appropriately.'),
+(6, 10, 'http://vc35photography.epizy.com/resources/Butterfly-lighting-pattern.JPG', 'https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/butterfly-lighting-by-Darlene-Hildebrandt-1.png?resize=202%2C459&ssl=1', 'Butterfly Lighting', 'Broad lighting is when the subject''s face is slightly turned away from centre, and the side of the face which is toward the camera (is broader) is in the light. This produces a larger area of light on the face, and a shadow side which appears smaller. Broad lighting is sometimes used for high key portraits. This type of lighting makes a person''s face look broader or wider (hence the name) and can be used on someone with a very slim face to widen it. Most people however want to look slimmer, not wider so this type of lighting would not be appropriate for someone who is heavier or round faced.\r\n                                                            To create broad lighting the face is turned away from the light source. Notice how the side of the face that is towards the camera has the most light on it and the shadows are falling on the far side of the face, furthest from the camera. Simply put broad lighting illuminates the largest part of the face showing.'),
+(7, 10, 'http://vc35photography.epizy.com/resources/Broad-lighting.JPG', 'https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/broad-lighting-by-Darlene-Hildebrandt.png?resize=355%2C418&ssl=1', 'Broad Lighting', 'Broad lighting is when the subject''s face is slightly turned away from centre, and the side of the face which is toward the camera (is broader) is in the light. This produces a larger area of light on the face, and a shadow side which appears smaller. Broad lighting is sometimes used for high key portraits. This type of lighting makes a person''s face look broader or wider (hence the name) and can be used on someone with a very slim face to widen it. Most people however want to look slimmer, not wider so this type of lighting would not be appropriate for someone who is heavier or round faced.\r\nTo create broad lighting the face is turned away from the light source. Notice how the side of the face that is towards the camera has the most light on it and the shadows are falling on the far side of the face, furthest from the camera. Simply put broad lighting illuminates the largest part of the face showing.'),
+(8, 10, 'http://vc35photography.epizy.com/resources/Short-lighting.JPG', 'https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2012/05/short-lighting-by-Darlene-Hildebrandt.png?resize=300%2C351&ssl=1', 'Short Lighting', 'Short lighting is the opposite of broad lighting. As you can see by the example here, short lighting puts the side turned towards the camera (that which appears larger) in more shadow. It is often used for low key, or darker portraits. It puts more of the face in shadow, is more sculpting, add 3D qualities, and is slimming and flattering for most people.\r\n                                                            In short lighting, the face is turned towards the light source this time. Notice how the part of the face that is turned away from the camera has the most light on it and the shadows are falling on the near side of the face, closet to the camera. Simply put short lighting has shadows on the largest part of the face showing.'),
+(9, 4, 'http://vc35photography.epizy.com/resources/Exposure Triangle.JPG', '', '', ''),
+(10, 5, 'http://vc35photography.epizy.com/resources/DOF1.JPG', '', '', ''),
+(11, 5, 'http://vc35photography.epizy.com/resources/DOF2.JPG', '', '', ''),
+(12, 27, 'http://vc35photography.epizy.com/resources/Aperture1.JPG', '', 'BOKEH', 'Lower f value, better BOKEH'),
+(13, 27, 'http://vc35photography.epizy.com/resources/Aperture2.JPG', '', 'Havelock Island,Andaman', ''),
+(14, 27, 'http://vc35photography.epizy.com/resources/Aperture3.JPG', '', '', ''),
+(15, 27, 'http://vc35photography.epizy.com/resources/Aperture4.JPG', '', 'starbust', 'f/22 allows starbust'),
+(16, 27, 'http://vc35photography.epizy.com/resources/Aperture5.JPG', '', '', ''),
+(17, 27, 'http://vc35photography.epizy.com/resources/Aperture6.JPG', '', 'Wildlife', ''),
+(18, 27, 'http://vc35photography.epizy.com/resources/Aperture7.JPG', '', '', ''),
+(19, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance.JPG', '', '', ''),
+(20, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance2.JPG', '', '', ''),
+(21, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance3.JPG', '', '', ''),
+(22, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance4.JPG', '', '', ''),
+(23, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance5.JPG', '', '', ''),
+(24, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance6.JPG', '', '', ''),
+(25, 23, 'http://vc35photography.epizy.com/resources/HyperFocalDistance7.JPG', '', '', ''),
 (26, 28, 'http://vc35photography.epizy.com/resources/MotionBlur.JPG', '', '', ''),
 (27, 28, 'http://vc35photography.epizy.com/resources/ShutterSpeed1.JPG', '', '', ''),
 (28, 28, 'http://vc35photography.epizy.com/resources/ShutterSpeed2.JPG', '', '', 'Exposure for long time shows only static objects'),
@@ -213,7 +214,7 @@ INSERT INTO `learning_info_examples` (`id`, `learning_info_id`, `image`, `sub_im
 (31, 28, 'http://vc35photography.epizy.com/resources/ShutterSpeed5.JPG', '', '', ''),
 (32, 28, 'http://vc35photography.epizy.com/resources/ShutterSpeed6.JPG', '', '', 'Waves are removes by large exposure time'),
 (33, 28, 'http://vc35photography.epizy.com/resources/ShutterSpeed7.JPG', '', '', 'To capture this kind of shot, you need to move your camera along with the movement of the object and keep it in focus. It causes blur effect on background'),
-(34, 4, 'http://vc35photography.epizy.com/resources/Exposure Triangle Conc.jpg', '', '', ''),
+(34, 4, 'http://vc35photography.epizy.com/resources/Exposure Triangle Conc.JPG', '', '', ''),
 (35, 29, 'http://vc35photography.epizy.com/resources/ISO1.JPG', '', '', 'ISO 200 onwards noise is visible and images are not usable'),
 (36, 29, 'http://vc35photography.epizy.com/resources/ISO2.JPG', '', '', 'It creates the noise, but you tend to focus on boy. SMoke texture comes out on higher ISO '),
 (37, 29, 'http://vc35photography.epizy.com/resources/ISO3.JPG', '', '', 'Galaxy shot are always above ISO 2000'),
@@ -260,13 +261,13 @@ INSERT INTO `learning_info_examples` (`id`, `learning_info_id`, `image`, `sub_im
 (79, 51, 'https://www.photopills.com/sites/default/files/tutorials/2014/moon-viewfinder.jpg', '', '', ''),
 (80, 51, 'https://www.photopills.com/sites/default/files/articles/2018/photopills-rule-100-en_0.jpg', '', '', ''),
 (81, 51, 'https://www.photopills.com/sites/default/files/tutorials/2014/planner-10_0.jpg', '', '', ''),
-(82, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance2.jpg', '', '', ''),
-(83, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance3.jpg', '', '', ''),
-(84, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance4.jpg', '', '', ''),
-(85, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance5.jpg', '', '', ''),
-(86, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance6.jpg', '', '', ''),
-(87, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance7.jpg', '', '', ''),
-(88, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance8.jpg', '', '', ''),
+(82, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance2.JPG', '', '', ''),
+(83, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance3.JPG', '', '', ''),
+(84, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance4.JPG', '', '', ''),
+(85, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance5.JPG', '', '', ''),
+(86, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance6.JPG', '', '', ''),
+(87, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance7.JPG', '', '', ''),
+(88, 52, 'http://vc35photography.epizy.com/resources/HyperFocalDistance8.JPG', '', '', ''),
 (89, 53, 'http://vc35photography.epizy.com/resources/Histogram1.JPG', '', '', ''),
 (90, 53, 'http://vc35photography.epizy.com/resources/Histogram2.JPG', '', '', ''),
 (91, 53, 'http://vc35photography.epizy.com/resources/Histogram3.JPG', '', '', 'On exposure 0 most of the data is at centre it is L curved'),
@@ -319,17 +320,26 @@ INSERT INTO `learning_info_examples` (`id`, `learning_info_id`, `image`, `sub_im
 (138, 84, 'http://vc35photography.epizy.com/resources/Minimalist6.JPG', '', 'Action in Mid ground', ''),
 (139, 84, 'http://vc35photography.epizy.com/resources/Minimalist7.JPG', '', '', ''),
 (140, 84, 'http://vc35photography.epizy.com/resources/Minimalist8.JPG', '', '', ''),
-(141, 85, 'http://vc35photography.epizy.com/resources/Foreground1.jpg', '', '', ''),
-(142, 85, 'http://vc35photography.epizy.com/resources/Foreground2.jpg', '', 'Chennai Fishermans Cove', ''),
-(143, 85, 'http://vc35photography.epizy.com/resources/Foreground3.jpg', '', '14mm texture and subject is close ', ''),
-(144, 85, 'http://vc35photography.epizy.com/resources/Foreground4.jpg', '', '', ''),
-(145, 85, 'http://vc35photography.epizy.com/resources/Foreground5.jpg', '', '', ''),
-(146, 85, 'http://vc35photography.epizy.com/resources/Foreground6.jpg', '', '', ''),
-(147, 85, 'http://vc35photography.epizy.com/resources/Foreground7.jpg', '', '', ''),
-(148, 85, 'http://vc35photography.epizy.com/resources/Foreground8.jpg', '', '', ''),
-(149, 85, 'http://vc35photography.epizy.com/resources/Foreground9.jpg', '', '', ''),
-(150, 85, 'http://vc35photography.epizy.com/resources/Foreground10.jpg', '', '', ''),
-(151, 85, 'http://vc35photography.epizy.com/resources/Foreground11.jpg', '', '', '');
+(141, 85, 'http://vc35photography.epizy.com/resources/Foreground1.JPG', '', '', ''),
+(142, 85, 'http://vc35photography.epizy.com/resources/Foreground2.JPG', '', 'Chennai Fishermans Cove', ''),
+(143, 85, 'http://vc35photography.epizy.com/resources/Foreground3.JPG', '', '14mm texture and subject is close ', ''),
+(144, 85, 'http://vc35photography.epizy.com/resources/Foreground4.JPG', '', '', ''),
+(145, 85, 'http://vc35photography.epizy.com/resources/Foreground5.JPG', '', '', ''),
+(146, 85, 'http://vc35photography.epizy.com/resources/Foreground6.JPG', '', '', ''),
+(147, 85, 'http://vc35photography.epizy.com/resources/Foreground7.JPG', '', '', ''),
+(148, 85, 'http://vc35photography.epizy.com/resources/Foreground8.JPG', '', '', ''),
+(149, 85, 'http://vc35photography.epizy.com/resources/Foreground9.JPG', '', '', ''),
+(150, 85, 'http://vc35photography.epizy.com/resources/Foreground10.JPG', '', '', ''),
+(151, 85, 'http://vc35photography.epizy.com/resources/Foreground11.JPG', '', '', ''),
+(152, 86, 'http://vc35photography.epizy.com/resources/Middleground1.JPG', '', 'man is subject, poping colors. Main focus is in Middle', ''),
+(153, 86, 'http://vc35photography.epizy.com/resources/Middleground2.JPG', '', 'Two camels in middle ground', ''),
+(154, 86, 'http://vc35photography.epizy.com/resources/Middleground3.JPG', '', '', ''),
+(155, 86, 'http://vc35photography.epizy.com/resources/Middleground4.JPG', '', '', ''),
+(156, 86, 'http://vc35photography.epizy.com/resources/Middleground5.JPG', '', '', ''),
+(157, 86, 'http://vc35photography.epizy.com/resources/Middleground6.JPG', '', '', ''),
+(158, 86, 'http://vc35photography.epizy.com/resources/Middleground7.JPG', '', '', ''),
+(159, 86, 'http://vc35photography.epizy.com/resources/Middleground8.JPG', '', '', ''),
+(160, 86, 'http://vc35photography.epizy.com/resources/Middleground9.JPG', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -352,7 +362,7 @@ CREATE TABLE IF NOT EXISTS `roles` (
 --
 
 INSERT INTO `roles` (`id`, `username`, `passWord1`, `salt`, `active`) VALUES
-(1, 'admin', '9884fead145f1c7e92a5e532b0dbf18dfbd2e5f2', '$%^7**', 1),
+(1, 'admin', '28997f95faab2c2376e1b1bd9808dd6ddedfa7d4', '$%^7**', 1),
 (2, 'guest', 'c4dd04dfccc12a1914956aa9d1ed7ac16dc5a10b', 'YXWCKdedHJ', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

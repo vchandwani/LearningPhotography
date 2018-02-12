@@ -32,6 +32,18 @@ $base-color-light : lighten( $base-color, 10% );
 html * {
   color: #e2e2e2 !important;
 }
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 10px 10px 6px rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: 1px solid slategrey;
+}
 
 input, textarea, select {
   color: #6d6d6d !important;
@@ -311,7 +323,7 @@ footer {
 }
 
 .sub-img {
-  height: 200px !important;
+  height: 120px !important;
   top: 70%;
   position: absolute;
   right: 0;
@@ -331,7 +343,38 @@ footer {
 .search-width {
   width: 70%;
 }
+.item {
+  height: 500px!important;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  height: 100px!important;
+  width: 100px;
+  margin: 0;
+  position: fixed;
+  top: 40%;
+  left: 45%;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  z-index: -1;
+}
 
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.carousel-caption p {
+  max-height: 100px;
+  overflow-y: auto;
+}
 @media screen and (max-width: 1024px) {
   .sub-img {
     height: 70px !important;
@@ -341,10 +384,13 @@ footer {
   }
   .carousel-caption p {
     max-height: 100px;
-    overflow: scroll;
+    overflow-y: auto;
   }
   .header-text {
     margin-left: 150px;
+  }
+  .item {
+    height: 500px!important;
   }
 }
 
@@ -357,10 +403,13 @@ footer {
   }
   .carousel-caption p {
     max-height: 100px;
-    overflow: scroll;
+    overflow-y: auto;
   }
   .header-text {
     margin-left: 100px;
+  }
+  .item {
+    height: 450px!important;
   }
 }
 
@@ -382,13 +431,16 @@ footer {
   }
   .carousel-caption p {
     max-height: 100px;
-    overflow: scroll;
+    overflow-y: auto;
   }
   .header-text {
     margin-left: 50px;
   }
   .search-width {
     width: 100%;
+  }
+  .item {
+    height: 400px!important;
   }
 }
 
@@ -770,4 +822,12 @@ mark {
 }
 .hidden {
   visibility: hidden;
+}
+/* Make alert hidden after 5 secs */
+.alert {
+  animation: cssAnimation 0s 5s forwards;
+  display: block;
+}
+@keyframes cssAnimation {
+  to   { display: none; }
 }

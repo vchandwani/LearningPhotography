@@ -1,5 +1,7 @@
 $(document).ready(function () {
-    
+    $(".alert").fadeTo(2000, 500).slideUp(500, function(){
+        $(".alert").slideUp(500);
+    }); 
     $( "#changePasswordButton" ).click(function() {
         $('#changePasswordDiv').removeClass('hidden');
         $('#loginDiv').addClass('hidden');
@@ -22,4 +24,11 @@ $(document).ready(function () {
         $('#loginDiv').removeClass('hidden');
         $('#changePasswordDiv').addClass('hidden');
     });
+    $('img').each(   
+        function(){
+            $(this).on('load', function() { 
+                // Remove loader
+                $(this).removeClass('loader');
+            })
+        });
 });
